@@ -13,12 +13,12 @@ legend:
   font: { family: FontAwesome, size: 1.2rem }
   css:
     properties:
-      - { name: padding, value: 8px }
-      - { name: background, value: '#EEE' }
-      - { name: border, value: '2px solid #0374e6' }
-      - { name: border-radius, value: '8px' }
+      - { name: padding, value: 0.5em }
+      - { name: background, value: '#FFF' }
+      - { name: border-top, value: '2px solid #2A93FC' }
+      - { name: border-radius, value: '0' }
       - { name: line-height, value: '20px' }
-      - { name: color, value: 'black' }
+      - { name: color, value: '#404040' }
 {% endblock %}
 
 {% block view %}
