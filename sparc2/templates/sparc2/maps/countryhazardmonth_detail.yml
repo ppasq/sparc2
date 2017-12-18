@@ -14,11 +14,11 @@ legend:
   css:
     properties:
       - { name: padding, value: 8px }
-      - { name: background, value: '#FFF' }
-      - { name: border, value: '0' }
-      - { name: border-radius, value: '0' }
+      - { name: background, value: '#EEE' }
+      - { name: border, value: '2px solid #0374e6' }
+      - { name: border-radius, value: '8px' }
       - { name: line-height, value: '20px' }
-      - { name: color, value: '#404040' }
+      - { name: color, value: 'black' }
 {% endblock %}
 
 {% block view %}
