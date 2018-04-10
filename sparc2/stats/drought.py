@@ -30,10 +30,10 @@ def get_summary_drought(table_popatrisk=None, iso_alpha3=None):
     summary = None
 
     prob_classes = [
-      { "min": 0.01, "max": .05, "label": "0.01-0.05" },
-      { "min": .06, "max": .10, "label": "0.06-0.10" },
-      { "min": .11, "max": .19, "label": "0.11-0.19" },
-      { "min": .2, "max": 1.0, "label": "0.20-1.0" }
+      { "min": 0.01, "max": .05, "label": "1-5%" },
+      { "min": .06, "max": .10, "label": "5-10%" },
+      { "min": .11, "max": .19, "label": "10-20%" },
+      { "min": .2, "max": 1.0, "label": "20-100%" }
     ]
 
     values_all = []
