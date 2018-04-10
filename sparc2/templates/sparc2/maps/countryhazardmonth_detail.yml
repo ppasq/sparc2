@@ -1831,20 +1831,70 @@ featurelayers:
       format: 'image/png'
       transparent: true
       url: "http://staging.geonode.wfp.org/cors/geoserver/wms"
-  - id: forecast
+  - id: forecast_1day
     type: WMS
-    title: "Forecast"
-    description: ""
-    source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
+    title: "Cumulated Rainfall: 1 day"
+    description: "ITHACA Extreme Rainfall Detection System"
+    source:
+      name: "ITHACA"
+      attribution: "ITHACA"
     legend: { ui: { source: false } }
     wms:
-      version: "1.1.1"
-      layers: ["geonode:anm_global_0111_0909_19792015_reprojected"]
+      version: "1.1.0"
+      layers: ["erds:apcp_cumulated_24h"]
       styles: []
       format: 'image/png'
       transparent: true
       buffer: 256
-      url: "http://staging.geonode.wfp.org/cors/geoserver/wms"
+      url: "http://erds.ithacaweb.org/geoserver/erds/wms"
+    cartography:
+      - id: default
+        legend:
+          symbol:
+            type: "graphic"
+            width: 16
+            height: 16
+            preview: false
+  - id: forecast_3day
+    type: WMS
+    title: "Cumulated Rainfall: 3 days"
+    description: "ITHACA Extreme Rainfall Detection System"
+    source:
+      name: "ITHACA"
+      attribution: "ITHACA"
+    legend: { ui: { source: false } }
+    wms:
+      version: "1.1.0"
+      layers: ["erds:apcp_cumulated_72h"]
+      styles: []
+      format: 'image/png'
+      transparent: true
+      buffer: 256
+      url: "http://erds.ithacaweb.org/geoserver/erds/wms"
+    cartography:
+      - id: default
+        legend:
+          symbol:
+            type: "graphic"
+            width: 16
+            height: 16
+            preview: false
+  - id: forecast_7day
+    type: WMS
+    title: "Cumulated Rainfall: 7 days"
+    description: "ITHACA Extreme Rainfall Detection System"
+    source:
+      name: "ITHACA"
+      attribution: "ITHACA"
+    legend: { ui: { source: false } }
+    wms:
+      version: "1.1.0"
+      layers: ["erds:apcp_cumulated_144h"]
+      styles: []
+      format: 'image/png'
+      transparent: true
+      buffer: 256
+      url: "http://erds.ithacaweb.org/geoserver/erds/wms"
     cartography:
       - id: default
         legend:
@@ -2277,7 +2327,9 @@ featurelayers:
 
 {% block renderlayers %}
 renderlayers:
-  - forecast
+  - forecast_1day
+  - forecast_3day
+  - forecast_7day
   #- wld_poi_facilities_wfp
   #- wld_trs_supplyroutes_wfp
   {% if hazard == "cyclone" %}{% verbatim %}
@@ -2447,7 +2499,9 @@ sidebar:
       - landslide_events
       - flood_probability
       {% endverbatim %}{% endif %}
-      - forecast
+      - forecast_1day
+      - forecast_3day
+      - forecast_7day
       #- wld_poi_facilities_wfp
       #- wld_trs_supplyroutes_wfp
       - imerg_1day
@@ -2492,7 +2546,10 @@ sidebar:
       - id: forecast_precipitation
         label: Forecast Precipitation
         class: geodash-sidebar-forecast
-        layers: [forecast]
+        layers:
+          - forecast_1day
+          - forecast_3day
+          - forecast_7day
     charts:
       - id: "popatrisk"
         element: "sparc-chart-popatrisk"

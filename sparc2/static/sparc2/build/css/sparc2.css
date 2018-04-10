@@ -203,14 +203,6 @@ body {
 }
 .popover {
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 807px) {
   .geodash-main {
