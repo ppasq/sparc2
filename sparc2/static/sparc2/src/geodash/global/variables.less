@@ -9,11 +9,25 @@
 @screen-sm-max: (@screen-md-min - 1);
 @screen-md-max: (@screen-lg-min - 1);
 
-@wfp-blue: #0088FF;
+@wfp-color-primary: #2A93FC;
+@wfp-color-accent: #1f6ebc;
+@wfp-color-body-text: #404040;
+@wfp-color-background: #ffffff;
 
-@wfp-color-primary: #0374e6;
+@gray-base:              #000;
+@gray-darker:            #303030; // #222
+@gray-dark:              #5e5e5e;   // #333
+@gray:                   #8c8c8c; // #555
+@gray-light:             #bababa; // #777
+@gray-lighter:           #e8e8e8; // #eee
 
-@sparc-font-family-primary: 'Open Sans', sans-serif;
+@brand-primary:         @wfp-color-primary; // @wfp-color-primary
+@brand-success:         #00a878;
+@brand-info:            #fcdc5d;
+@brand-warning:         #ffc759;
+@brand-danger:          #ff5252;
+
+@sparc-font-family-primary: 'Lato', sans-serif;
 
 @geodash-header-height: 61px;
 
@@ -45,7 +59,7 @@
 
 @sparc-welcome-select-font-family: @sparc-font-family-primary;
 @sparc-welcome-select-foreground: white;
-@sparc-welcome-select-background: @wfp-blue;
+@sparc-welcome-select-background: @wfp-color-primary;
 @sparc-welcome-select-dropdown-height: 56px;
 @sparc-welcome-select-dropdown-font-size: 20px;
 @sparc-welcome-select-dropdown-z-index: @geodash-modal-select-dropdown-z-index;
@@ -61,7 +75,7 @@
 @geodash-map-legend-bottom: 70px;
 @geodash-map-legend-right: 4px;
 @geodash-map-legend-width: 358px;
-@geodash-map-legend-background: #337ab7;
+@geodash-map-legend-background: @wfp-color-body-text;
 @geodash-map-legend-z-index: @geodash-map-control-z-index;
 @geodash-map-legend-item-symbol-width: 40px;
 @geodash-map-legend-item-symbol-height: 100%;
@@ -76,27 +90,27 @@
 @geodash-sidebar-width: 460px;
 @geodash-sidebar-left-width: @geodash-sidebar-width;
 @geodash-sidebar-right-width: @geodash-sidebar-width;
-@geodash-sidebar-transition: 1.6s;
-@geodash-map-sidebar-toggle-background: @wfp-blue;
+@geodash-sidebar-transition: 0.6s;
+@geodash-map-sidebar-toggle-background: @wfp-color-primary;
 @geodash-map-sidebar-toggle-color: white;
 @geodash-map-sidebar-toggle-z-index: @geodash-map-control-z-index;
-@geodash-sidebar-background: #337ab7;
+@geodash-sidebar-background: @wfp-color-body-text;
 
-@geodash-sidebar-header-background: @wfp-blue;
+@geodash-sidebar-header-background: @wfp-color-primary;
 @geodash-sidebar-header-font-family: @sparc-font-family-primary;
 @geodash-sidebar-header-color: white;
 
-@geodash-sidebar-border-background: @wfp-blue;
+@geodash-sidebar-border-background: @wfp-color-primary;
 @geodash-sidebar-border-width: 8px;
 @geodash-sidebar-border-radius: 0px;
 
-@geodash-sidebar-selection-background: @wfp-blue;
+@geodash-sidebar-selection-background: @wfp-color-primary;
 @geodash-sidebar-selction-color: white;
 
 @geodash-sidebar-item-height: 28px;
 
-@geodash-sidebar-item-color: black;
-@geodash-sidebar-item-color-hover: #337ab7;
+@geodash-sidebar-item-color: @wfp-color-body-text;
+@geodash-sidebar-item-color-hover: @wfp-color-primary;
 @geodash-sidebar-item-line-height: @geodash-sidebar-item-height;
 @geodash-sidebar-item-font-size: 16px;
 
