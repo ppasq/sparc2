@@ -1879,9 +1879,9 @@ featurelayers:
             width: 16
             height: 16
             preview: false
-  - id: forecast_7day
+  - id: forecast_6day
     type: WMS
-    title: "Cumulated Rainfall: 7 days"
+    title: "Cumulated Rainfall: 6 days"
     description: "ITHACA Extreme Rainfall Detection System"
     source:
       name: "ITHACA"
@@ -2329,7 +2329,7 @@ featurelayers:
 renderlayers:
   - forecast_1day
   - forecast_3day
-  - forecast_7day
+  - forecast_6day
   #- wld_poi_facilities_wfp
   #- wld_trs_supplyroutes_wfp
   {% if hazard == "cyclone" %}{% verbatim %}
@@ -2501,7 +2501,7 @@ sidebar:
       {% endverbatim %}{% endif %}
       - forecast_1day
       - forecast_3day
-      - forecast_7day
+      - forecast_6day
       #- wld_poi_facilities_wfp
       #- wld_trs_supplyroutes_wfp
       - imerg_1day
@@ -2549,7 +2549,7 @@ sidebar:
         layers:
           - forecast_1day
           - forecast_3day
-          - forecast_7day
+          - forecast_6day
     charts:
       - id: "popatrisk"
         element: "sparc-chart-popatrisk"
