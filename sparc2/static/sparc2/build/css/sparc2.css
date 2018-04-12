@@ -518,37 +518,20 @@ body {
   font-size: 14px;*/
 }
 .geodash-sidebar-left {
-  border-right: 8px solid #2A93FC;
   border-radius: 0px;
 }
 .geodash-sidebar {
   box-sizing: border-box;
-  /*h5 { font-size: 1.33rem; }
-  h6 { font-size: 1.125rem; }*/
-}
-.geodash-sidebar h1 {
-  font-size: 2.25rem;
-}
-.geodash-sidebar h2 {
-  font-size: 2rem;
-}
-.geodash-sidebar h3 {
-  font-size: 1.75rem;
-}
-.geodash-sidebar h4 {
-  font-size: 1.5rem;
-}
-.geodash-sidebar h5 {
-  font-size: 1.1rem;
-}
-.geodash-sidebar h6 {
-  font-size: 1rem;
 }
 .geodash-sidebar .footnote {
   font-size: 0.8rem;
 }
 .geodash-sidebar .input-group {
-  margin-bottom: 8px;
+  padding: 0 1rem;
+  margin-bottom: 0.25rem;
+}
+.geodash-sidebar .go {
+  padding: 0.5rem 1rem;
 }
 .geodash-sidebar .twitter-typeahead {
   height: 34px;
@@ -561,41 +544,47 @@ body {
   height: auto;
 }
 .geodash-sidebar .input-group-addon {
+  border: 1px solid #bababa;
+  box-shadow: none;
   padding: 6px 12px;
   line-height: 20px;
   vertical-align: middle;
 }
+.geodash-sidebar .input-group-addon .btn {
+  font-weight: 400;
+  vertical-align: top;
+}
 .geodash-sidebar .geodash-sidebar-header {
   position: relative;
   color: white;
-  /*font-family: @geodash-sidebar-header-font-family;*/
   background: #2A93FC;
   height: 80px;
   padding: 4px;
 }
 .geodash-sidebar .geodash-sidebar-header a {
   color: white;
-}
-.geodash-sidebar .geodash-sidebar-header .geodash-sidebar-header-left {
-  width: 88px;
-  border-right: 1px solid white;
+  text-decoration: none;
 }
 .geodash-sidebar .geodash-sidebar-header .geodash-sidebar-header-left img {
-  padding-left: 12px;
-  height: 72px;
+  border-right: 1px solid white;
+  height: 56px;
+  margin: 8px 0 8px 8px;
+  padding: 0 12px 0 0;
 }
 .geodash-sidebar .geodash-sidebar-header .geodash-sidebar-header-right {
   position: absolute;
-  top: calc(50% - 25px);
-  left: 108px;
+  top: 8px;
+  left: 96px;
 }
 .geodash-sidebar .geodash-sidebar-header .geodash-sidebar-header-right a.geodash-sidebar-header-title {
-  font-size: 28px;
+  font-size: 2.25rem;
+  font-weight: 900;
   line-height: 36px;
 }
 .geodash-sidebar .geodash-sidebar-header .geodash-sidebar-header-right a.geodash-sidebar-header-subtitle {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
 }
 .geodash-sidebar .geodash-sidebar-header .geodash-sidebar-header-right-2 {
   position: absolute;
@@ -616,16 +605,11 @@ body {
   margin-bottom: 10px;
 }
 .geodash-sidebar .geodash-sidebar-layers-selected {
-  background: #2A93FC;
+  background: #e8e8e8;
   padding: 10px;
-  border-radius: 10px;
 }
-.geodash-sidebar .geodash-sidebar-layers-selected a,
-.geodash-sidebar .geodash-sidebar-layers-selected span,
-.geodash-sidebar .geodash-sidebar-layers-selected h4,
-.geodash-sidebar .geodash-sidebar-layers-selected h5,
-.geodash-sidebar .geodash-sidebar-layers-selected h6 {
-  color: white;
+.geodash-sidebar .geodash-sidebar-layers-selected h5 {
+  font-size: 1rem;
 }
 .geodash-sidebar .geodash-sidebar-label {
   width: 100%;
@@ -757,21 +741,15 @@ body {
   position: absolute;
   top: calc(50% - 50px);
   width: 40px;
-  height: 100px;
+  padding: 2em 0;
   z-index: 9999;
-  /* Colors & Background */
   color: white;
   background: #2A93FC;
-  /* Border, Padding, & Margin */
-  padding: 0;
   border: 0;
-  /* Font */
-  font-size: 24px;
-  line-height: 100px;
 }
 .geodash-map-sidebar-toggle.geodash-map-sidebar-toggle-left {
-  left: 0px;
-  border-radius: 0px 6px 6px 0px;
+  left: 0;
+  border-radius: 0;
 }
 .geodash-map-sidebar-toggle.geodash-map-sidebar-toggle-left .icon-arrow-lt {
   display: none;
@@ -780,8 +758,8 @@ body {
   display: block;
 }
 .geodash-map-sidebar-toggle.geodash-map-sidebar-toggle-right {
-  right: 0px;
-  border-radius: 6px 0px 0px 6px;
+  right: 0;
+  border-radius: 0;
 }
 .geodash-map-sidebar-toggle.geodash-map-sidebar-toggle-right .icon-arrow-gt {
   display: none;
@@ -848,11 +826,10 @@ body {
   text-align: center;
   margin-bottom: 4px;
   font-size: 12px;
-  font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.4;
 }
 .geodash-filter-slider .ui-slider .ui-slider-range {
-  background: #337ab7;
+  background: #2A93FC;
 }
 
 /* Widely Used Variables */
