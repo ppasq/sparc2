@@ -617,6 +617,8 @@ legendlayers:
   - imerg_7day
   - osm_humanitarian
   - osm
+  - mapbox.light
+  - mapbox.dark
 {% endblock %}
 
 {% block renderlayers %}
@@ -630,6 +632,8 @@ renderlayers:
   - imerg_7day
   - osm_humanitarian
   - osm
+  - mapbox.light
+  - mapbox.dark
 {% endblock %}
 
 {% block charts %}

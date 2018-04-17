@@ -66,6 +66,8 @@ featurelayers:
 renderlayers:
   - wld_poi_facilities_wfp
   - flood_events_all
+  - mapbox.light
+  - mapbox.dark
   - osm
   - osm_humanitarian
 {% endblock %}

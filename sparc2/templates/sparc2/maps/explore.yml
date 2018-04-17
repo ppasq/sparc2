@@ -239,6 +239,8 @@ renderlayers:
   - imerg_7day
   - osm
   - osm_humanitarian
+  - mapbox.light
+  - mapbox.dark
 {% endblock %}
 
 {% block charts %}

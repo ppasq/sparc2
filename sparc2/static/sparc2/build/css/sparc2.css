@@ -237,6 +237,9 @@ body {
     /*~"calc(100% - @{geodash-header-height})";*/
   }
 }
+.btn-primary {
+  background: #2A93FC;
+}
 .geodash-map-map .ol-control button {
   background-color: #2A93FC;
 }
@@ -406,15 +409,15 @@ body {
 /* Navbars */
 .geodash-map-navbars {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 .geodash-map-navbars .geodash-map-navbar {
   background: rgba(0, 0, 0, 0);
   z-index: 9999;
-  border-radius: 3px;
+  border-radius: 0;
   border: 0;
 }
 .geodash-map-navbars .geodash-map-navbar li {
@@ -426,29 +429,35 @@ body {
   transition: height 1s ease-in-out;
 }
 .geodash-map-navbars .geodash-map-navbar li a:hover {
-  height: 60px;
-  line-height: 38px;
+  /*height: 60px;
+        line-height: 38px;*/
 }
 .geodash-map-navbars .geodash-map-navbar li a.btn-default {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 0;
+  color: #5e5e5e;
+  font-weight: 400;
+}
+.geodash-map-navbars .geodash-map-navbar li a.btn-default:hover {
+  color: #2A93FC;
 }
 .geodash-map-navbars .geodash-map-navbar li a.selected {
-  height: 60px;
-  line-height: 38px;
-  background: #337ab7;
+  background: #2A93FC;
+  border-radius: 0;
+  color: white;
+  font-weight: 400;
 }
 .geodash-map-navbars .geodash-map-navbar.geodash-placement-top li {
   vertical-align: top;
 }
 .geodash-map-navbars .geodash-map-navbar.geodash-placement-top li a {
-  border-radius: 0px 0px 6px 6px;
+  border-radius: 0;
 }
 .geodash-map-navbars .geodash-map-navbar.geodash-placement-bottom li {
   vertical-align: bottom;
 }
 .geodash-map-navbars .geodash-map-navbar.geodash-placement-bottom li a {
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 0;
 }
 
 /* Widely Used Variables */
@@ -511,12 +520,6 @@ body {
 /* Filter */
 /* Sidebar */
 /* Navbars */
-.geodash-sidebar,
-.c3-axis-y-label {
-  /*font-family: Verdana;
-  letter-spacing: 0.1em;
-  font-size: 14px;*/
-}
 .geodash-sidebar-left {
   border-radius: 0px;
 }
@@ -554,12 +557,19 @@ body {
   font-weight: 400;
   vertical-align: top;
 }
+.geodash-sidebar h5 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: .1em;
+}
 .geodash-sidebar .geodash-sidebar-header {
   position: relative;
   color: white;
   background: #2A93FC;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   height: 80px;
-  padding: 4px;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
 }
 .geodash-sidebar .geodash-sidebar-header a {
   color: white;
@@ -605,11 +615,15 @@ body {
   margin-bottom: 10px;
 }
 .geodash-sidebar .geodash-sidebar-layers-selected {
-  background: #e8e8e8;
-  padding: 10px;
+  border-bottom: 1px solid #bababa;
+  margin-bottom: 1.5rem;
+  padding: 0 0 1.5rem;
 }
 .geodash-sidebar .geodash-sidebar-layers-selected h5 {
-  font-size: 1rem;
+  color: #2A93FC;
+}
+.geodash-sidebar .geodash-sidebar-layers-selected a {
+  color: #2A93FC;
 }
 .geodash-sidebar .geodash-sidebar-label {
   width: 100%;
@@ -643,11 +657,11 @@ body {
   width: 20px;
   height: 100%;
   vertical-align: text-bottom;
-  font-size: 20px;
+  font-size: 1rem;
   margin-right: 4px;
 }
 .geodash-sidebar .geodash-sidebar-item .geodash-sidebar-item-icon a {
-  color: #404040;
+  color: #303030;
   cursor: pointer;
 }
 .geodash-sidebar .geodash-sidebar-item .geodash-sidebar-item-icon a i {
@@ -687,10 +701,10 @@ body {
   cursor: pointer;
 }
 .geodash-sidebar .geodash-sidebar-item .geodash-sidebar-item-symbol i.fa {
-  color: black;
+  color: #303030;
 }
 .geodash-sidebar .geodash-sidebar-item .geodash-sidebar-item-symbol i.fa:hover {
-  color: blue;
+  color: #2A93FC;
 }
 .geodash-sidebar .geodash-sidebar-item .geodash-sidebar-item-label {
   display: inline-block;
@@ -698,7 +712,7 @@ body {
   vertical-align: top;
 }
 .geodash-sidebar .geodash-sidebar-item .geodash-sidebar-item-label span {
-  color: #404040;
+  color: #303030;
   vertical-align: middle;
   width: 100%;
   height: 100%;
@@ -850,93 +864,156 @@ body {
 /* Filter */
 /* Sidebar */
 /* Navbars */
-.geodash-sparc-welcome {
+.modal-dialog {
+  color: #404040;
+  min-height: 60%;
+  min-width: 60%;
+}
+.modal-content {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   box-sizing: border-box;
-}
-.geodash-sparc-welcome h1 {
-  font-size: 2.25rem;
-}
-.geodash-sparc-welcome h2 {
-  font-size: 2rem;
-}
-.geodash-sparc-welcome h3 {
-  font-size: 1.75rem;
-}
-.geodash-sparc-welcome h4 {
-  font-size: 1.5rem;
-}
-.geodash-sparc-welcome h5 {
-  font-size: 1.33rem;
-}
-.geodash-sparc-welcome h6 {
-  font-size: 1.125rem;
-}
-.geodash-sparc-welcome .input-group {
-  margin-bottom: 8px;
-}
-.geodash-sparc-welcome .twitter-typeahead {
-  height: 34px;
-  line-height: 20px;
-}
-.geodash-sparc-welcome .twitter-typeahead input.typeahead {
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 20px;
+  display: table;
   height: auto;
 }
-.geodash-sparc-welcome .input-group-addon {
-  padding: 6px 12px;
-  line-height: 20px;
-  vertical-align: middle;
+.modal-content .row {
+  height: 100%;
+  display: table-row;
 }
-.sparc-welcome a {
-  font-family: 'Lato', sans-serif;
+.modal-content .row .no-float {
+  display: table-cell;
+  float: none;
 }
-.sparc-welcome a.btn-primary:hover,
-.sparc-welcome a.btn-primary:focus {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+.modal-content .left {
+  background-color: #2A93FC;
+  background: linear-gradient(90deg, #0474e6 0, #2a93fc);
+  box-sizing: border-box;
+  padding-bottom: 2rem;
 }
-.sparc-welcome .tab-pane .welcome-body {
-  font-family: 'Lato', sans-serif;
+.modal-content .left label {
+  color: white;
+  font-size: .875em;
+  font-weight: 400;
+}
+.modal-content .left img {
+  margin: 2em;
+}
+.modal-content .left .search-risk-form {
+  margin: calc(50% - 72px - 4em - 71px) 2rem;
+  /* FF 4-18 */
+  /* FF 19+ */
+  /* IE 10+ */
+}
+.modal-content .left .search-risk-form .input-group {
+  width: 100%;
+}
+.modal-content .left .search-risk-form .input-group input::placeholder {
+  color: white;
+}
+.modal-content .left .search-risk-form input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.modal-content .left .search-risk-form input:focus:-moz-placeholder {
+  color: transparent;
+}
+.modal-content .left .search-risk-form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.modal-content .left .search-risk-form input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.modal-content .left .search-risk-form .form-control {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* @wfp-color-accent */
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: white;
+  display: block;
   font-size: 14px;
+  height: 34px;
+  line-height: 1.42857143;
+  padding: 6px 12px;
+  width: 100%;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-.sparc-welcome .tab-pane h3.welcome-body {
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
+.modal-content .left .search-risk-form .input-group-addon {
+  background: transparent;
+  border: 0;
+  border-radius: 0.5em 0 0 0.5em;
 }
-.sparc-welcome .tab-pane .input-group {
-  width: 400px;
+.modal-content .left .search-risk-form .btn {
+  padding: 0.25rem 0.5rem;
+  vertical-align: middle;
+  width: 42px;
 }
-.sparc-welcome .tab-pane .input-group-addon {
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
+.modal-content .left .search-risk-form .btn-primary {
+  background: transparent;
 }
-.sparc-welcome .tab-pane .input-group-addon.btn-clear {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
+.modal-content .left .search-risk-form .btn-danger {
+  background: transparent;
 }
-.sparc-welcome .tab-pane .input-group-addon.btn-clear:hover,
-.sparc-welcome .tab-pane .input-group-addon.btn-clear:focus,
-.sparc-welcome .tab-pane .input-group-addon.btn-clear.focus {
-  color: #fff;
-  background-color: #c9302c;
-  border-color: #ac2925;
+.modal-content .left .search-risk-form .btn-primary,
+.modal-content .left .search-risk-form .btn-danger {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-.sparc-welcome .tab-pane .select2-container {
-  height: 56px !important;
+.modal-content .left .search-risk-form .welcome-go .btn-default {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 0.5em;
 }
-.sparc-welcome .tab-pane .select2-container .select2-selection--single {
-  height: 56px !important;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+.modal-content .left .search-risk-form .welcome-go .btn-primary {
+  background-color: #ff5252;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: white;
+  margin-top: 0.5em;
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  -webkit-transition-delay: 0;
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0;
 }
-.sparc-welcome .tab-pane .select2-selection__rendered {
-  font-size: 20px;
-  line-height: 56px !important;
+.modal-content .left .search-risk-form .welcome-go .btn-primary:hover {
+  background: #ff1f1f;
 }
-.sparc-welcome-select-dropdown {
-  z-index: 999999;
+.modal-content .right .modal-body {
+  padding: 4rem 2rem 6rem;
+}
+.modal-content .right .modal-body h1 {
+  font-size: 2.375rem;
+}
+.modal-content .right .modal-body h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+.modal-content .right .modal-body #modal-sparc-welcome-about {
+  font-size: 0.875rem;
+}
+@media (min-width: 808px) {
+  .modal-dialog {
+    width: 808px;
+    margin: 120px auto;
+  }
 }

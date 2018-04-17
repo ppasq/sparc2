@@ -28,7 +28,7 @@ view:
   zoom: 3
   minZoom: 0
   maxZoom: 18
-  baselayer: "osm"
+  baselayer: "mapbox.light"
   featurelayers: [ "popatrisk" ]
   controls: [ "legend" ]
 {% endblock %}
@@ -2385,6 +2385,8 @@ renderlayers:
   - imerg_7day
   - osm
   - osm_humanitarian
+  - mapbox.light
+  - mapbox.dark
 {% endblock %}
 
 {% block charts %}{% endblock %}
@@ -2509,6 +2511,8 @@ sidebar:
       - imerg_7day
       - osm_humanitarian
       - osm
+      - mapbox.light
+      - mapbox.dark
     groups:
       - id: natural_hazard
         label: Natural Hazards
