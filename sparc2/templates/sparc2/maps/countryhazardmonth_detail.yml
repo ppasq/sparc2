@@ -28,7 +28,7 @@ view:
   zoom: 3
   minZoom: 0
   maxZoom: 18
-  baselayer: "osm"
+  baselayer: "mapbox.light"
   featurelayers: [ "popatrisk" ]
   controls: [ "legend" ]
 {% endblock %}
@@ -1831,20 +1831,70 @@ featurelayers:
       format: 'image/png'
       transparent: true
       url: "http://staging.geonode.wfp.org/cors/geoserver/wms"
-  - id: forecast
+  - id: forecast_1day
     type: WMS
-    title: "Forecast"
-    description: ""
-    source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
+    title: "Cumulated Rainfall: 1 day"
+    description: "ITHACA Extreme Rainfall Detection System"
+    source:
+      name: "ITHACA"
+      attribution: "ITHACA"
     legend: { ui: { source: false } }
     wms:
-      version: "1.1.1"
-      layers: ["geonode:anm_global_0111_0909_19792015_reprojected"]
+      version: "1.1.0"
+      layers: ["erds:apcp_cumulated_24h"]
       styles: []
       format: 'image/png'
       transparent: true
       buffer: 256
-      url: "http://staging.geonode.wfp.org/cors/geoserver/wms"
+      url: "http://erds.ithacaweb.org/geoserver/erds/wms"
+    cartography:
+      - id: default
+        legend:
+          symbol:
+            type: "graphic"
+            width: 16
+            height: 16
+            preview: false
+  - id: forecast_3day
+    type: WMS
+    title: "Cumulated Rainfall: 3 days"
+    description: "ITHACA Extreme Rainfall Detection System"
+    source:
+      name: "ITHACA"
+      attribution: "ITHACA"
+    legend: { ui: { source: false } }
+    wms:
+      version: "1.1.0"
+      layers: ["erds:apcp_cumulated_72h"]
+      styles: []
+      format: 'image/png'
+      transparent: true
+      buffer: 256
+      url: "http://erds.ithacaweb.org/geoserver/erds/wms"
+    cartography:
+      - id: default
+        legend:
+          symbol:
+            type: "graphic"
+            width: 16
+            height: 16
+            preview: false
+  - id: forecast_6day
+    type: WMS
+    title: "Cumulated Rainfall: 6 days"
+    description: "ITHACA Extreme Rainfall Detection System"
+    source:
+      name: "ITHACA"
+      attribution: "ITHACA"
+    legend: { ui: { source: false } }
+    wms:
+      version: "1.1.0"
+      layers: ["erds:apcp_cumulated_144h"]
+      styles: []
+      format: 'image/png'
+      transparent: true
+      buffer: 256
+      url: "http://erds.ithacaweb.org/geoserver/erds/wms"
     cartography:
       - id: default
         legend:
@@ -1861,12 +1911,12 @@ featurelayers:
       name: "SERVIR"
       attribution: "SERVIR"
     wms:
-      version: "1.1.1"
+      version: "1.3.0"
       layers: ["2"]
       styles:
       format: 'image/png'
       transparent: true
-      url: "http://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
+      url: "https://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
     cartography:
       - id: default
         legend:
@@ -1882,12 +1932,12 @@ featurelayers:
     source: { name: "SERVIR", attribution: "SERVIR" }
     legend: { ui: { source: false } }
     wms:
-      version: "1.1.1"
+      version: "1.3.0"
       layers: ["5"]
       styles:
       format: 'image/png'
       transparent: true
-      url: "http://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
+      url: "https://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
     cartography:
       - id: default
         legend:
@@ -1903,12 +1953,12 @@ featurelayers:
     source: { name: "SERVIR", attribution: "SERVIR" }
     legend: { ui: { source: false } }
     wms:
-      version: "1.1.1"
+      version: "1.3.0"
       layers: ["8"]
       styles:
       format: 'image/png'
       transparent: true
-      url: "http://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
+      url: "https://gis1.servirglobal.net/arcgis/services/Global/IMERG_Accumulations/MapServer/WMSServer"
     cartography:
       - id: default
         legend:
@@ -2277,7 +2327,9 @@ featurelayers:
 
 {% block renderlayers %}
 renderlayers:
-  - forecast
+  - forecast_1day
+  - forecast_3day
+  - forecast_6day
   #- wld_poi_facilities_wfp
   #- wld_trs_supplyroutes_wfp
   {% if hazard == "cyclone" %}{% verbatim %}
@@ -2333,6 +2385,8 @@ renderlayers:
   - imerg_7day
   - osm
   - osm_humanitarian
+  - mapbox.light
+  - mapbox.dark
 {% endblock %}
 
 {% block charts %}{% endblock %}
@@ -2447,7 +2501,9 @@ sidebar:
       - landslide_events
       - flood_probability
       {% endverbatim %}{% endif %}
-      - forecast
+      - forecast_1day
+      - forecast_3day
+      - forecast_6day
       #- wld_poi_facilities_wfp
       #- wld_trs_supplyroutes_wfp
       - imerg_1day
@@ -2455,6 +2511,8 @@ sidebar:
       - imerg_7day
       - osm_humanitarian
       - osm
+      - mapbox.light
+      - mapbox.dark
     groups:
       - id: natural_hazard
         label: Natural Hazards
@@ -2492,7 +2550,10 @@ sidebar:
       - id: forecast_precipitation
         label: Forecast Precipitation
         class: geodash-sidebar-forecast
-        layers: [forecast]
+        layers:
+          - forecast_1day
+          - forecast_3day
+          - forecast_6day
     charts:
       - id: "popatrisk"
         element: "sparc-chart-popatrisk"
