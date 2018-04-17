@@ -237,7 +237,7 @@ body {
     /*~"calc(100% - @{geodash-header-height})";*/
   }
 }
-.btn-primary {
+.btn-primary.btn {
   background: #2A93FC;
 }
 .geodash-map-map .ol-control button {
@@ -526,12 +526,21 @@ body {
 .geodash-sidebar {
   box-sizing: border-box;
 }
+.geodash-sidebar [type=text].form-control,
+.geodash-sidebar input[type=text] {
+  box-shadow: none;
+}
 .geodash-sidebar .footnote {
   font-size: 0.8rem;
 }
 .geodash-sidebar .input-group {
   padding: 0 1rem;
   margin-bottom: 0.25rem;
+}
+.geodash-sidebar .input-group .btn,
+.geodash-sidebar .input-group .btn-default {
+  color: #8c8c8c;
+  vertical-align: middle;
 }
 .geodash-sidebar .go {
   padding: 0.5rem 1rem;
@@ -547,15 +556,12 @@ body {
   height: auto;
 }
 .geodash-sidebar .input-group-addon {
-  border: 1px solid #bababa;
+  background-color: white;
+  border: 1px solid #e8e8e8;
   box-shadow: none;
   padding: 6px 12px;
   line-height: 20px;
   vertical-align: middle;
-}
-.geodash-sidebar .input-group-addon .btn {
-  font-weight: 400;
-  vertical-align: top;
 }
 .geodash-sidebar h5 {
   font-size: 1.5rem;
