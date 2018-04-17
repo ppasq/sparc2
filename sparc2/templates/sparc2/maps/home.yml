@@ -68,8 +68,8 @@ renderlayers:
   - flood_events_all
   - mapbox.light
   - mapbox.dark
-  - osm
-  - osm_humanitarian
+#  - osm
+#  - osm_humanitarian
 {% endblock %}
 
 {% block charts %}
