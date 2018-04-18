@@ -108,7 +108,7 @@ overlays:
     css: {% include "sparc2/_includes/dashboard/intent/css.yml" %}
   - id: submit_issue
     type: text
-    title: "Submit Issue"
+    title: "Feedback"
     position: { top: calc(8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px + 10px + 1.2rem + 10px + 8px), left: 8px, bottom: auto, right: auto }
     text:
       content: ""
@@ -116,7 +116,7 @@ overlays:
     link:
       url: "https://docs.google.com/forms/d/e/1FAIpQLSfgmXj6lVIfaZcWxkxGX-4DGqv6Twq1RSvGB0PR5UhxryEkXA/viewform"
       target: "_blank"
-    tooltip: { placement: right, content: "Submit an Issue" }
+    tooltip: { placement: right, content: "Feedback" }
     css: {% include "sparc2/_includes/dashboard/intent/css.yml" %}
 {% endblock %}
 
@@ -226,11 +226,11 @@ featurelayers:
           fields:
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
         - id: "popup_vam_fcs"
           tab: { label: "FCS" }
@@ -275,7 +275,7 @@ featurelayers:
               label: Forest Change (2001 - 2012)
             - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_crop') | formatFloat: 2 | add : '%' }}"
               label: Crop Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'erosion_propensity') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'erosion_propensity') | formatFloat: 1 | add : '%'  }}"
               label: Erosion Propensity
     filters:
       - layer: popatrisk
@@ -467,7 +467,7 @@ featurelayers:
                     text: 'Pop at Risk'
                     position: 'outer-middle'
               hazard: drought
-              colors: # Changed!
+              colors:
                 1-5%: "#fcdc5d"
                 5-10%: "#ffb45a"
                 10-20%: "#ff8856"
@@ -479,58 +479,58 @@ featurelayers:
           fields:
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
-        - id: "popup_vam_fcs"
-          tab:
-            label: "FCS"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
-              label: VAM FCS Date
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
-              label: VAM FCS Source
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
-              label: VAM FCS Poor
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
-              label: VAM FCS Borderline
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
-              label: VAM FCS Acceptable
-        - id: "popup_vam_csi"
-          tab:
-            label: "CSI"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
-              label: VAM CSI Date
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
-              label: VAM CSI Source
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
-              label: VAM CSI No
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
-              label: VAM CSI Low
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
-              label: VAM CSI Medium
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
-              label: VAM CSI high
+        #- id: "popup_vam_fcs"
+        #  tab:
+        #    label: "FCS"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
+        #      label: VAM FCS Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
+        #      label: VAM FCS Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
+        #      label: VAM FCS Poor
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
+        #      label: VAM FCS Borderline
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
+        #      label: VAM FCS Acceptable
+        #- id: "popup_vam_csi"
+        #  tab:
+        #    label: "CSI"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
+        #      label: VAM CSI Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
+        #      label: VAM CSI Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
+        #      label: VAM CSI No
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
+        #      label: VAM CSI Low
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
+        #      label: VAM CSI Medium
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
+        #      label: VAM CSI high
         - id: "popup_context"
           tab: { label: "Context" }
           fields:
             - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code,'ldi') }}"
               label: LDI
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_mean') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_mean') | formatFloat: 2 | add : '%' }}"
               label: Mean Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_positive') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_positive') | formatFloat: 2 | add : '%' }}"
               label: Positive Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_negative') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_negative') | formatFloat: 2 | add : '%' }}"
               label: Negative Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_forest') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_forest') | formatFloat: 2 | add : '%' }}"
               label: Forest Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_crop') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_crop') | formatFloat: 2 | add : '%' }}"
               label: Crop Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'erosion_propensity') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'erosion_propensity') | formatFloat: 1 | add : '%' }}"
               label: Erosion Propensity
     filters:
       - layer: popatrisk
@@ -713,11 +713,11 @@ featurelayers:
           fields:
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
         - id: "popup_vam_fcs"
           tab:
@@ -754,17 +754,17 @@ featurelayers:
           fields:
             - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code,'ldi') }}"
               label: LDI
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_mean') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_mean') | formatFloat: 2 | add : '%' }}"
               label: Mean Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_positive') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_positive') | formatFloat: 2 | add : '%' }}"
               label: Positive Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_negative') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_negative') | formatFloat: 2 | add : '%' }}"
               label: Negative Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_forest') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_forest') | formatFloat: 2 | add : '%' }}"
               label: Forest Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_crop') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_crop') | formatFloat: 2 | add : '%' }}"
               label: Crop Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'erosion_propensity') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'erosion_propensity') | formatFloat: 1 | add : '%' }}"
               label: Erosion Propensity
     filters:
       - layer: popatrisk
@@ -945,11 +945,11 @@ featurelayers:
           fields:
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
         - id: "popup_vam_fcs"
           tab:
@@ -986,17 +986,17 @@ featurelayers:
           fields:
             - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code,'ldi') }}"
               label: LDI
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_mean') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_mean') | formatFloat: 2 | add : '%' }}"
               label: Mean Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_positive') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_positive') | formatFloat: 2 | add : '%' }}"
               label: Positive Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_negative') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_negative') | formatFloat: 2 | add : '%' }}"
               label: Negative Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_forest') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_forest') | formatFloat: 2 | add : '%' }}"
               label: Forest Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_crop') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'delta_crop') | formatFloat: 2 | add : '%' }}"
               label: Crop Change (2001 - 2012)
-            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'erosion_propensity') }}"
+            - value: "{{ context(feature.attributes.admin1_code, feature.attributes.admin2_code, 'erosion_propensity') | formatFloat: 1 | add : '%' }}"
               label: Erosion Propensity
     filters:
       - layer: popatrisk
@@ -1308,7 +1308,7 @@ featurelayers:
                   layer: context_mean_change
                   attribute: "delta_mean"
                   mask: "mask"
-                  classes: #TODO?
+                  classes:
                     - { label: "High", color: 'rgb(181, 0, 22)' }
                     - { label: "Medium", color: 'rgb(251, 112, 80)' }
                     - { label: "Low", color: 'rgb(222, 197, 192)' }
@@ -1330,11 +1330,11 @@ featurelayers:
             - { label: Mean Change, value: "{{ feature.attributes.delta_mean }}" }
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
   - id: context_positive_change
     type: geojson
@@ -1409,11 +1409,11 @@ featurelayers:
             - { label: "{{ layer.title }}", value: "{{ feature.attributes.delta_positive | formatFloat : 2 | add : '%' }}" }
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
   - id: context_negative_change
     type: geojson
@@ -1470,7 +1470,7 @@ featurelayers:
                   layer: context_negative_change
                   attribute: "delta_negative"
                   mask: "mask"
-                  classes: #TODO?
+                  classes:
                     - { label: "Low", color: 'rgb(222, 197, 192)' }
                     - { label: "Medium", color: 'rgb(251, 112, 80)' }
                     - { label: "High", color: 'rgb(181, 0, 22)' }
@@ -1488,11 +1488,11 @@ featurelayers:
             - { label: "{{ layer.title }}", value: "{{ feature.attributes.delta_negative | formatFloat : 2 | add : '%' }}" }
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
   - id: context_forest_change
     type: geojson
@@ -1549,7 +1549,7 @@ featurelayers:
                   layer: context_forest_change
                   attribute: "delta_forest"
                   mask: "mask"
-                  classes: #TODO?
+                  classes:
                     - { label: "High", color: 'rgb(181, 0, 38)' }
                     - { label: "Medium", color: 'rgb(253, 141, 60)' }
                     - { label: "Low", color: 'rgb(255, 255, 178)' }
@@ -1570,11 +1570,11 @@ featurelayers:
             - { label: "{{ layer.title }}", value: "{{ feature.attributes.delta_forest | formatFloat : 2 | add : '%' }}" }
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
   - id: context_crop_change
     type: geojson
@@ -1631,7 +1631,7 @@ featurelayers:
                   layer: context_crop_change
                   attribute: "delta_crop"
                   mask: "mask"
-                  classes: # TODO?
+                  classes:
                     - { label: "High", color: 'rgb(181, 0, 38)' }
                     - { label: "Medium", color: 'rgb(253, 141, 60)' }
                     - { label: "Low", color: 'rgb(255, 255, 178)' }
@@ -1652,11 +1652,11 @@ featurelayers:
             - { label: "{{ layer.title }}", value: "{{ feature.attributes.delta_crop | formatFloat : 2 | add : '%' }}" }
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
   - id: context_erosion
     type: geojson
@@ -1712,7 +1712,7 @@ featurelayers:
                 options:
                   layer: context_erosion
                   attribute: "erosion_propensity"
-                  classes: # TODO?
+                  classes:
                     - { label: "Zero", color: '#aaaaaa' }
                     - { label: "Low", color: 'rgb(255, 255, 212)' }
                     - { label: "Medium", color: 'rgb(254, 153, 41)' }
@@ -1729,11 +1729,11 @@ featurelayers:
             - { label: "Erosion Propensity", value: "{{ feature.attributes.erosion_propensity }}" }
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
   - id: context_ldi
     type: geojson
@@ -1790,7 +1790,7 @@ featurelayers:
                   layer: context_ldi
                   attribute: "ldi"
                   mask: "mask"
-                  classes: # TODO?
+                  classes:
                     - { label: "1", color: 'rgb(143, 199, 142)' }
                     - { label: "2", color: 'rgb(196, 214, 178)' }
                     - { label: "3", color: 'rgb(254, 217, 157)' }
@@ -1812,11 +1812,11 @@ featurelayers:
             - { label: "LDI", value: "{{ feature.attributes.ldi }}" }
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
-            - value: "{{ feature.attributes.admin0_name }} ({{ feature.attributes.admin0_code }})"
+            - value: "{{ feature.attributes.admin0_name }}"
               label: Admin 0
-            - value: "{{ feature.attributes.admin1_name }} ({{ feature.attributes.admin1_code }})"
+            - value: "{{ feature.attributes.admin1_name }}"
               label: Admin 1
-            - value: "{{ feature.attributes.admin2_name }} ({{ feature.attributes.admin2_code }})"
+            - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
   - id: landscan
     type: WMS
@@ -2452,9 +2452,9 @@ sidebar:
       - context_crop_change
       - context_erosion
       - context_ldi
-      - landscan
-      - vam_fcs
-      - vam_csi
+      #- landscan
+      #- vam_fcs
+      #- vam_csi
       - cyclone_probability
       - cyclone_events
       {% endverbatim %}{% elif hazard == "drought" %}{% verbatim %}
@@ -2466,9 +2466,9 @@ sidebar:
       - context_crop_change
       - context_erosion
       - context_ldi
-      - landscan
-      - vam_fcs
-      - vam_csi
+      #- landscan
+      #- vam_fcs
+      #- vam_csi
       - wlddsi_fot01d3
       {% endverbatim %}{% elif hazard == "flood" %}{% verbatim %}
       - popatrisk
@@ -2479,9 +2479,9 @@ sidebar:
       - context_crop_change
       - context_erosion
       - context_ldi
-      - landscan
-      - vam_fcs
-      - vam_csi
+      #- landscan
+      #- vam_fcs
+      #- vam_csi
       - flood_events
       - landslide_events
       - flood_probability
@@ -2494,9 +2494,9 @@ sidebar:
       - context_crop_change
       - context_erosion
       - context_ldi
-      - landscan
-      - vam_fcs
-      - vam_csi
+      #- landscan
+      #- vam_fcs
+      #- vam_csi
       - flood_events
       - landslide_events
       - flood_probability
@@ -2529,16 +2529,16 @@ sidebar:
           - context_crop_change
           - context_erosion
           - context_ldi
-      - id: vulnerability_factors
-        label: Vulnerability Factors
-        class: geodash-sidebar-layers-vulnerability-factors
-        layers:
-          - vam_fcs
-          - vam_csi
-      - id: population_distribution
-        label: Population Distribution
-        class: geodash-sidebar-layers-population-distribution
-        layers: [landscan]
+      #- id: vulnerability_factors
+      #  label: Vulnerability Factors
+      #  class: geodash-sidebar-layers-vulnerability-factors
+      #  layers:
+      #    - vam_fcs
+      #    - vam_csi
+      #- id: population_distribution
+      #  label: Population Distribution
+      #  class: geodash-sidebar-layers-population-distribution
+      #  layers: [landscan]
       #- id: wfp_operations
       #  label: WFP Operations
       #  class: geodash-sidebar-layers-wfpoperations
