@@ -566,6 +566,9 @@ body {
   line-height: 20px;
   vertical-align: middle;
 }
+.geodash-sidebar .geodash-filter .btn-group label {
+  font-size: 0.75rem;
+}
 .geodash-sidebar h5 {
   font-size: 1.5rem;
   font-weight: 300;
