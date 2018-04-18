@@ -1,0 +1,62 @@
+{% extends "geodash/base.html" %}
+{% load geodash_tags %}
+{% block extra_head %}
+  {% block map_config %}
+    {% if dashboards_json %}
+      <script type="text/javascript" language="Javascript">
+        geodash.dashboards = {{ dashboards_json | safe }};
+      </script>
+    {% endif %}
+  {% endblock %}
+  {% block initial_state %}
+    {% if state_schema_json %}
+      <script type="text/javascript" language="Javascript">
+        geodash.state_schema = {{ state_schema_json | safe }};
+      </script>
+    {% endif %}
+  {% endblock %}
+  {% block initial_data %}
+  <script type="text/javascript" language="Javascript">
+      geodash.initial_data = {"data":{}};
+  </script>
+  {% endblock %}
+  {% block server_templates %}
+    {% if server_templates %}
+      <script type="text/javascript" language="Javascript">
+          geodash.templates.server = {{ server_templates | safe }};
+      </script>
+    {% endif %}
+  {% endblock %}
+{% endblock %}
+
+{% block init %}
+<script type="text/javascript" language="Javascript">$(function(){geodash.init.all();});</script>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    {% block header %}{% endblock %}
+    <div
+      id="geodash-main"
+      data-geodash-dashboard-name="main"
+      data-geodash-controllers="GeoDashControllerMain"
+      {% if dashboard_url %}data-geodash-dashboard-config-url="{{ dashboard_url }}"{% endif %}
+      {% if state_url %}data-geodash-dashboard-initial-state-url="{{ state_url }}"{% endif %}
+      {% if state_schema_url %}data-geodash-dashboard-state-schema-url="{{ state_schema_url }}"{% endif %}
+      {% if dashboard_resources_json %}data-geodash-dashboard-resources="{{ dashboard_resources_json }}"{% endif %}
+      class="geodash-dashboard"
+      geodash-main>
+      <div class="row" style="margin-top: 2rem">
+        <div class="col-md-4 col-md-offset-2">
+          <a href="/">
+            <img src="https://executiveboard.wfp.org/themes/custom/wfp_eb/dist/images/logos/dark/en-full.svg">
+          </a>
+        </div>
+        <!-- <div class="col-md-4"><a href="/"><i class="fa fa-arrow-right"></i></a></div>
+        <div class="col-md-2"></div> -->
+      </div>
+    </div>
+    {% block footer %}{% endblock %}
+</div>
+{% block extra_content %}{% endblock %}
+{% endblock %}
