@@ -232,34 +232,34 @@ featurelayers:
               label: Admin 1
             - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
-        - id: "popup_vam_fcs"
-          tab: { label: "FCS" }
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
-              label: VAM FCS Date
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
-              label: VAM FCS Source
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
-              label: VAM FCS Poor
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
-              label: VAM FCS Borderline
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
-              label: VAM FCS Acceptable
-        - id: "popup_vam_csi"
-          tab: { label: "CSI" }
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
-              label: VAM CSI Date
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
-              label: VAM CSI Source
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
-              label: VAM CSI No
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
-              label: VAM CSI Low
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
-              label: VAM CSI Medium
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
-              label: VAM CSI high
+        #- id: "popup_vam_fcs"
+        #  tab: { label: "FCS" }
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
+        #      label: VAM FCS Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
+        #      label: VAM FCS Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
+        #      label: VAM FCS Poor
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
+        #      label: VAM FCS Borderline
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
+        #      label: VAM FCS Acceptable
+        #- id: "popup_vam_csi"
+        #  tab: { label: "CSI" }
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
+        #      label: VAM CSI Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
+        #      label: VAM CSI Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
+        #      label: VAM CSI No
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
+        #      label: VAM CSI Low
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
+        #      label: VAM CSI Medium
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
+        #      label: VAM CSI high
         - id: "popup_context"
           tab: { label: "Context" }
           fields:
@@ -701,7 +701,7 @@ featurelayers:
                     position: 'outer-middle'
               hazard: flood
               subtype: "bullet"
-              colors: # Done!
+              colors:
                 rp25: "#0370dd"
                 rp100: "#2A93fc"
                 rp1000: "#86C2fd"
@@ -719,36 +719,36 @@ featurelayers:
               label: Admin 1
             - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
-        - id: "popup_vam_fcs"
-          tab:
-            label: "FCS"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
-              label: VAM FCS Date
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
-              label: VAM FCS Source
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
-              label: VAM FCS Poor
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
-              label: VAM FCS Borderline
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
-              label: VAM FCS Acceptable
-        - id: "popup_vam_csi"
-          tab:
-            label: "CSI"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
-              label: VAM CSI Date
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
-              label: VAM CSI Source
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
-              label: VAM CSI No
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
-              label: VAM CSI Low
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
-              label: VAM CSI Medium
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
-              label: VAM CSI high
+        # - id: "popup_vam_fcs"
+        #  tab:
+        #    label: "FCS"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
+        #      label: VAM FCS Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
+        #      label: VAM FCS Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
+        #      label: VAM FCS Poor
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
+        #      label: VAM FCS Borderline
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
+        #      label: VAM FCS Acceptable
+        #- id: "popup_vam_csi"
+        #  tab:
+        #    label: "CSI"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
+        #      label: VAM CSI Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
+        #      label: VAM CSI Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
+        #      label: VAM CSI No
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
+        #      label: VAM CSI Low
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
+        #      label: VAM CSI Medium
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
+        #      label: VAM CSI high
         - id: "popup_context"
           tab: { label: "Context" }
           fields:
@@ -951,36 +951,36 @@ featurelayers:
               label: Admin 1
             - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
-        - id: "popup_vam_fcs"
-          tab:
-            label: "FCS"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
-              label: VAM FCS Date
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
-              label: VAM FCS Source
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
-              label: VAM FCS Poor
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
-              label: VAM FCS Borderline
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
-              label: VAM FCS Acceptable
-        - id: "popup_vam_csi"
-          tab:
-            label: "CSI"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
-              label: VAM CSI Date
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
-              label: VAM CSI Source
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
-              label: VAM CSI No
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
-              label: VAM CSI Low
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
-              label: VAM CSI Medium
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
-              label: VAM CSI high
+        #- id: "popup_vam_fcs"
+        #  tab:
+        #    label: "FCS"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
+        #      label: VAM FCS Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
+        #      label: VAM FCS Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
+        #      label: VAM FCS Poor
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
+        #      label: VAM FCS Borderline
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
+        #      label: VAM FCS Acceptable
+        #- id: "popup_vam_csi"
+        #  tab:
+        #    label: "CSI"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
+        #      label: VAM CSI Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
+        #      label: VAM CSI Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
+        #      label: VAM CSI No
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
+        #      label: VAM CSI Low
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
+        #      label: VAM CSI Medium
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
+        #      label: VAM CSI high
         - id: "popup_context"
           tab: { label: "Context" }
           fields:
@@ -2383,10 +2383,10 @@ renderlayers:
   - imerg_1day
   - imerg_3day
   - imerg_7day
-  - osm
-  - osm_humanitarian
   - mapbox.light
   - mapbox.dark
+  - osm
+  - osm_humanitarian
 {% endblock %}
 
 {% block charts %}{% endblock %}
@@ -2509,10 +2509,10 @@ sidebar:
       - imerg_1day
       - imerg_3day
       - imerg_7day
-      - osm_humanitarian
-      - osm
       - mapbox.light
       - mapbox.dark
+      - osm_humanitarian
+      - osm
     groups:
       - id: natural_hazard
         label: Natural Hazards
