@@ -1726,7 +1726,8 @@ featurelayers:
         - id: "popup_overview"
           tab: { label: "overview" }
           fields:
-            - { label: "Erosion Propensity", value: "{{ feature.attributes.erosion_propensity }}" }
+            - value: "{{ feature.attributes.erosion_propensity | formatFloat: 1 | add : '%' }}"
+              label: Erosion Propensity
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
             - value: "{{ feature.attributes.admin0_name }}"
