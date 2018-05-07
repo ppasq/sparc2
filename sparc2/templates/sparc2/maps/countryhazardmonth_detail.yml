@@ -232,34 +232,34 @@ featurelayers:
               label: Admin 1
             - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
-        - id: "popup_vam_fcs"
-          tab: { label: "FCS" }
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
-              label: VAM FCS Date
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
-              label: VAM FCS Source
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
-              label: VAM FCS Poor
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
-              label: VAM FCS Borderline
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
-              label: VAM FCS Acceptable
-        - id: "popup_vam_csi"
-          tab: { label: "CSI" }
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
-              label: VAM CSI Date
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
-              label: VAM CSI Source
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
-              label: VAM CSI No
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
-              label: VAM CSI Low
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
-              label: VAM CSI Medium
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
-              label: VAM CSI high
+        #- id: "popup_vam_fcs"
+        #  tab: { label: "FCS" }
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
+        #      label: VAM FCS Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
+        #      label: VAM FCS Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
+        #      label: VAM FCS Poor
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
+        #      label: VAM FCS Borderline
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
+        #      label: VAM FCS Acceptable
+        #- id: "popup_vam_csi"
+        #  tab: { label: "CSI" }
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
+        #      label: VAM CSI Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
+        #      label: VAM CSI Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
+        #      label: VAM CSI No
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
+        #      label: VAM CSI Low
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
+        #      label: VAM CSI Medium
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
+        #      label: VAM CSI high
         - id: "popup_context"
           tab: { label: "Context" }
           fields:
@@ -701,7 +701,7 @@ featurelayers:
                     position: 'outer-middle'
               hazard: flood
               subtype: "bullet"
-              colors: # Done!
+              colors:
                 rp25: "#0370dd"
                 rp100: "#2A93fc"
                 rp1000: "#86C2fd"
@@ -719,36 +719,36 @@ featurelayers:
               label: Admin 1
             - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
-        - id: "popup_vam_fcs"
-          tab:
-            label: "FCS"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
-              label: VAM FCS Date
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
-              label: VAM FCS Source
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
-              label: VAM FCS Poor
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
-              label: VAM FCS Borderline
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
-              label: VAM FCS Acceptable
-        - id: "popup_vam_csi"
-          tab:
-            label: "CSI"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
-              label: VAM CSI Date
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
-              label: VAM CSI Source
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
-              label: VAM CSI No
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
-              label: VAM CSI Low
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
-              label: VAM CSI Medium
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
-              label: VAM CSI high
+        # - id: "popup_vam_fcs"
+        #  tab:
+        #    label: "FCS"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
+        #      label: VAM FCS Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
+        #      label: VAM FCS Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
+        #      label: VAM FCS Poor
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
+        #      label: VAM FCS Borderline
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
+        #      label: VAM FCS Acceptable
+        #- id: "popup_vam_csi"
+        #  tab:
+        #    label: "CSI"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
+        #      label: VAM CSI Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
+        #      label: VAM CSI Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
+        #      label: VAM CSI No
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
+        #      label: VAM CSI Low
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
+        #      label: VAM CSI Medium
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
+        #      label: VAM CSI high
         - id: "popup_context"
           tab: { label: "Context" }
           fields:
@@ -951,36 +951,36 @@ featurelayers:
               label: Admin 1
             - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
-        - id: "popup_vam_fcs"
-          tab:
-            label: "FCS"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
-              label: VAM FCS Date
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
-              label: VAM FCS Source
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
-              label: VAM FCS Poor
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
-              label: VAM FCS Borderline
-            - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
-              label: VAM FCS Acceptable
-        - id: "popup_vam_csi"
-          tab:
-            label: "CSI"
-          fields:
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
-              label: VAM CSI Date
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
-              label: VAM CSI Source
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
-              label: VAM CSI No
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
-              label: VAM CSI Low
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
-              label: VAM CSI Medium
-            - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
-              label: VAM CSI high
+        #- id: "popup_vam_fcs"
+        #  tab:
+        #    label: "FCS"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'fcs.year') }}"
+        #      label: VAM FCS Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.source') }}"
+        #      label: VAM FCS Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.poor') | formatFloat: 2 }}"
+        #      label: VAM FCS Poor
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.borderline') | formatFloat: 2 }}"
+        #      label: VAM FCS Borderline
+        #    - value: "{{ vam(feature.attributes.admin1_code,'fcs.acceptable') | formatFloat: 2 }}"
+        #      label: VAM FCS Acceptable
+        #- id: "popup_vam_csi"
+        #  tab:
+        #    label: "CSI"
+        #  fields:
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.month') | formatMonth : 'long' }} {{ vam(feature.attributes.admin1_code,'csi.year') }}"
+        #      label: VAM CSI Date
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.source') }}"
+        #      label: VAM CSI Source
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.no') | formatFloat: 2 }}"
+        #      label: VAM CSI No
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.low') | formatFloat: 2 }}"
+        #      label: VAM CSI Low
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.medium') | formatFloat: 2 }}"
+        #      label: VAM CSI Medium
+        #    - value: "{{ vam(feature.attributes.admin1_code,'csi.high') | formatFloat: 2 }}"
+        #      label: VAM CSI high
         - id: "popup_context"
           tab: { label: "Context" }
           fields:
@@ -1255,8 +1255,8 @@ featurelayers:
               label: VAM CSI high
   - id: context_mean_change
     type: geojson
-    title: "Vegetation Balance (2001 vs. 2012)"
-    description: "Data Elaborated from NASA – MODIS 2001 & 2012. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
+    title: "Vegetation Balance"
+    description: "Data Elaborated from NASA – MODIS 2001 & 2013. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1285,13 +1285,13 @@ featurelayers:
     carto:
       styles:
         - id: delta_mean
-          title: "Vegetation Balance (2001 vs. 2012)"
-          description: "Data Elaborated from NASA – MODIS 2001 & 2012. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
+          title: "Vegetation Balance"
+          description: "Data Elaborated from NASA – MODIS 2001 & 2013. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: Default Symbolizer
-              description: "Data Elaborated from NASA – MODIS 2001 & 2012. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
+              description: "Data Elaborated from NASA – MODIS 2001 & 2013. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
               type: polygon
               metadata:
                 range: [{ label: "| Overall Vegetation Loss" }, { label: "Overall Vegetation Gain |" }]
@@ -1369,12 +1369,12 @@ featurelayers:
       styles:
         - id: delta_positive
           title: "Surface % of Vegetation Gain"
-          description: "Data elaborated considering NASA – MODIS 2001 & 2012. Percentage of surfaces that experienced increase in vegetated surface."
+          description: "Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of surfaces that experienced increase in vegetated surface."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: Default Symbolizer
-              description: "Data elaborated considering NASA – MODIS 2001 & 2012. Percentage of surfaces that experienced increase in vegetated surface."
+              description: "Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of surfaces that experienced increase in vegetated surface."
               type: polygon
               metadata:
                 range: [{ label: "| Low Vegetation Gain" }, { label: "High Vegetation Gain |" }]
@@ -1448,12 +1448,12 @@ featurelayers:
       styles:
         - id: delta_positive
           title: "Surface % of Vegetation Loss"
-          description: "Data elaborated considering NASA – MODIS 2001 & 2012. Percentage of Surface that experienced decrease in vegetated surface."
+          description: "Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of Surface that experienced decrease in vegetated surface."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: Default Symbolizer
-              description: "Data elaborated considering NASA – MODIS 2001 & 2012. Percentage of Surface that experienced decrease in vegetated surface."
+              description: "Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of Surface that experienced decrease in vegetated surface."
               type: polygon
               metadata:
                 range: [{ label: "| Low Vegetation Loss" }, { label: "High Vegetation Loss |" }]
@@ -1527,12 +1527,12 @@ featurelayers:
       styles:
         - id: delta_forest
           title: "Surface % of Forest Change"
-          description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012.  Positive percentage indicates increase in Forest surfaces.  Negative percentage indicates decrease in Forest surfaces."
+          description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013.  Positive percentage indicates increase in Forest surfaces.  Negative percentage indicates decrease in Forest surfaces."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: "Surface % of Forest Change"
-              description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012.  Positive percentage indicates increase in Forest surfaces.  Negative percentage indicates decrease in Forest surfaces."
+              description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013.  Positive percentage indicates increase in Forest surfaces.  Negative percentage indicates decrease in Forest surfaces."
               type: polygon
               metadata:
                 range: [{ label: "| Forest Decrease" }, { label: "Forest Increase |" }]
@@ -1609,12 +1609,12 @@ featurelayers:
       styles:
         - id: delta_forest
           title: "Surface % of Cropland Change"
-          description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012.  Positive percentage indicates increase in Cropland surfaces.  Negative percentage indicates decrease in Cropland surfaces."
+          description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013.  Positive percentage indicates increase in Cropland surfaces.  Negative percentage indicates decrease in Cropland surfaces."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: "Surface % of Cropland Change"
-              description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012.  Positive percentage indicates increase in Cropland surfaces.  Negative percentage indicates decrease in Cropland surfaces."
+              description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013.  Positive percentage indicates increase in Cropland surfaces.  Negative percentage indicates decrease in Cropland surfaces."
               type: polygon
               metadata:
                 range: [{ label: "| Cropland Decrease" }, { label: "Cropland Increase |" }]
@@ -1726,7 +1726,8 @@ featurelayers:
         - id: "popup_overview"
           tab: { label: "overview" }
           fields:
-            - { label: "Erosion Propensity", value: "{{ feature.attributes.erosion_propensity }}" }
+            - value: "{{ feature.attributes.erosion_propensity | formatFloat: 1 | add : '%' }}"
+              label: Erosion Propensity
             - attribute: iso_alpha3
               label: ISO Alpha-3 Country Code
             - value: "{{ feature.attributes.admin0_name }}"
@@ -2383,10 +2384,10 @@ renderlayers:
   - imerg_1day
   - imerg_3day
   - imerg_7day
-  - osm
-  - osm_humanitarian
   - mapbox.light
   - mapbox.dark
+  - osm
+  - osm_humanitarian
 {% endblock %}
 
 {% block charts %}{% endblock %}
@@ -2509,10 +2510,10 @@ sidebar:
       - imerg_1day
       - imerg_3day
       - imerg_7day
-      - osm_humanitarian
-      - osm
       - mapbox.light
       - mapbox.dark
+      - osm_humanitarian
+      - osm
     groups:
       - id: natural_hazard
         label: Natural Hazards
@@ -2564,11 +2565,11 @@ sidebar:
         tooltip: { name: flood_name, value: flood_value }
         {% elif hazard == "drought" %}
         title: "**Population at Risk by Month for {{ country_title }}**"
-        description: "The chart above displays the number of people living in `{{ hazard }}-prone areas`, who may potentially be exposed to `{{ hazard }}` per month. The different colours indicate the probability of those people being affected; the darker the shade, the more likely that they will be affected as shown below.\n- 0 - 5% Less than 1 event every 20 years.\n- 5 - 10% Between 1 event every 20 years to 1 event every 10 years.\n- 10 - 20% Between 1 event every 10 years to 1 event every 5 years.\n- 20 - 100% More than 1 event every 5 years.\n\nYou can choose to display only certain levels of probability by toggling the interactive legend under the chart: click on a probability class once to turn it off, click it again to turn it back on."
+        description: "The chart above displays the number of people living in `{{ hazard }}-prone areas`, who may potentially be exposed to `{{ hazard }}` per month. The different colours indicate the probability of those people being affected; the darker the shade, the more likely that they will be affected as shown below.\n- 1 - 5% Less than 1 event every 20 years.\n- 5 - 10% Between 1 event every 20 years to 1 event every 10 years.\n- 10 - 20% Between 1 event every 10 years to 1 event every 5 years.\n- 20 - 100% More than 1 event every 5 years.\n\nYou can choose to display only certain levels of probability by toggling the interactive legend under the chart: click on a probability class once to turn it off, click it again to turn it back on."
         tooltip: { name: flood_name, value: {{ hazard }}_value }
         {% elif hazard == "cyclone" %}
         title: "**Population at Risk by Month for {{ country_title }}**"
-        description: "The chart above displays the number of people living in `{{ hazard }}-prone areas`, who may potentially be exposed to `{{ hazard }}` per month. The different colours indicate the probability of those people being affected; the darker the shade, the more likely that they will be affected as shown below.\n- 0 - 10% Less than 1 event every 20 years.\n- 10 - 20% Between 1 event every 20 years to 1 event every 18 years.\n- 20 - 30% Between 1 event every 18 years to 1 event every 16 years.\n- 30 - 40% Between 1 event every 16 years to 1 event every 14 years.\n- 40 - 50% Between 1 event every 14 years to 1 event every 12 years.\n- 50 - 60% Between 1 event every 12 years to 1 event every 10 years.\n- 60 - 70% Between 1 event every 10 years to 1 event every 8 years.\n- 70 - 80% Between 1 event every 8 years to 1 event every 6 years.\n- 80 - 90% Between 1 event every 6 years to 1 event every 4 years.\n- 90 - 100% More than 1 event every 4 years.\n\nYou can choose to display only certain levels of probability by toggling the interactive legend under the chart: click on a probability class once to turn it off, click it again to turn it back on."
+        description: "The chart above displays the number of people living in `{{ hazard }}-prone areas`, who may potentially be exposed to `{{ hazard }}` per month. The different colours indicate the probability of those people being affected; the darker the shade, the more likely that they will be affected as shown below.\n- 1 - 10% Less than 1 event every 20 years.\n- 10 - 20% Between 1 event every 20 years to 1 event every 18 years.\n- 20 - 30% Between 1 event every 18 years to 1 event every 16 years.\n- 30 - 40% Between 1 event every 16 years to 1 event every 14 years.\n- 40 - 50% Between 1 event every 14 years to 1 event every 12 years.\n- 50 - 60% Between 1 event every 12 years to 1 event every 10 years.\n- 60 - 70% Between 1 event every 10 years to 1 event every 8 years.\n- 70 - 80% Between 1 event every 8 years to 1 event every 6 years.\n- 80 - 90% Between 1 event every 6 years to 1 event every 4 years.\n- 90 - 100% More than 1 event every 4 years.\n\nYou can choose to display only certain levels of probability by toggling the interactive legend under the chart: click on a probability class once to turn it off, click it again to turn it back on."
         tooltip: { name: flood_name, value: {{ hazard }}_value }
         {% else %}
         title: "**Population at Risk by Month for {{ country_title }}**"
