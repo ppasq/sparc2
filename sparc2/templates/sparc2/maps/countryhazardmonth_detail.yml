@@ -1255,8 +1255,8 @@ featurelayers:
               label: VAM CSI high
   - id: context_mean_change
     type: geojson
-    title: "Vegetation Balance (2001 vs. 2012)"
-    description: "Data Elaborated from NASA – MODIS 2001 & 2012. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
+    title: "Vegetation Balance"
+    description: "Data Elaborated from NASA – MODIS 2001 & 2013. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1285,13 +1285,13 @@ featurelayers:
     carto:
       styles:
         - id: delta_mean
-          title: "Vegetation Balance (2001 vs. 2012)"
-          description: "Data Elaborated from NASA – MODIS 2001 & 2012. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
+          title: "Vegetation Balance"
+          description: "Data Elaborated from NASA – MODIS 2001 & 2013. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: Default Symbolizer
-              description: "Data Elaborated from NASA – MODIS 2001 & 2012. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
+              description: "Data Elaborated from NASA – MODIS 2001 & 2013. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
               type: polygon
               metadata:
                 range: [{ label: "| Overall Vegetation Loss" }, { label: "Overall Vegetation Gain |" }]
@@ -1369,12 +1369,12 @@ featurelayers:
       styles:
         - id: delta_positive
           title: "Surface % of Vegetation Gain"
-          description: "Data elaborated considering NASA – MODIS 2001 & 2012. Percentage of surfaces that experienced increase in vegetated surface."
+          description: "Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of surfaces that experienced increase in vegetated surface."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: Default Symbolizer
-              description: "Data elaborated considering NASA – MODIS 2001 & 2012. Percentage of surfaces that experienced increase in vegetated surface."
+              description: "Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of surfaces that experienced increase in vegetated surface."
               type: polygon
               metadata:
                 range: [{ label: "| Low Vegetation Gain" }, { label: "High Vegetation Gain |" }]
@@ -1448,12 +1448,12 @@ featurelayers:
       styles:
         - id: delta_positive
           title: "Surface % of Vegetation Loss"
-          description: "Data elaborated considering NASA – MODIS 2001 & 2012. Percentage of Surface that experienced decrease in vegetated surface."
+          description: "Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of Surface that experienced decrease in vegetated surface."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: Default Symbolizer
-              description: "Data elaborated considering NASA – MODIS 2001 & 2012. Percentage of Surface that experienced decrease in vegetated surface."
+              description: "Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of Surface that experienced decrease in vegetated surface."
               type: polygon
               metadata:
                 range: [{ label: "| Low Vegetation Loss" }, { label: "High Vegetation Loss |" }]
@@ -1527,12 +1527,12 @@ featurelayers:
       styles:
         - id: delta_forest
           title: "Surface % of Forest Change"
-          description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012.  Positive percentage indicates increase in Forest surfaces.  Negative percentage indicates decrease in Forest surfaces."
+          description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013.  Positive percentage indicates increase in Forest surfaces.  Negative percentage indicates decrease in Forest surfaces."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: "Surface % of Forest Change"
-              description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012.  Positive percentage indicates increase in Forest surfaces.  Negative percentage indicates decrease in Forest surfaces."
+              description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013.  Positive percentage indicates increase in Forest surfaces.  Negative percentage indicates decrease in Forest surfaces."
               type: polygon
               metadata:
                 range: [{ label: "| Forest Decrease" }, { label: "Forest Increase |" }]
@@ -1609,12 +1609,12 @@ featurelayers:
       styles:
         - id: delta_forest
           title: "Surface % of Cropland Change"
-          description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012.  Positive percentage indicates increase in Cropland surfaces.  Negative percentage indicates decrease in Cropland surfaces."
+          description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013.  Positive percentage indicates increase in Cropland surfaces.  Negative percentage indicates decrease in Cropland surfaces."
           legend: { type: graduated }
           symbolizers:
             - id: default
               title: "Surface % of Cropland Change"
-              description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012.  Positive percentage indicates increase in Cropland surfaces.  Negative percentage indicates decrease in Cropland surfaces."
+              description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013.  Positive percentage indicates increase in Cropland surfaces.  Negative percentage indicates decrease in Cropland surfaces."
               type: polygon
               metadata:
                 range: [{ label: "| Cropland Decrease" }, { label: "Cropland Increase |" }]
