@@ -298,6 +298,9 @@ body {
   min-width: 320px;
   padding: 10px 0;
 }
+.popover-content hr {
+  margin: 5px 0;
+}
 .popover-content span {
   margin-left: 10px;
 }
