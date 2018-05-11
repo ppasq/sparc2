@@ -187,7 +187,7 @@ featurelayers:
                   breakpoints: "popatrisk_natural_adjusted"
                   filters: ["vam_filter_fcs", "vam_filter_csi"]
   {% endverbatim %}{% if hazard == "cyclone" %}{% verbatim %}
-    description: "The population at risk of cyclone for each month aggregated at the administrative level 2 district."
+    description: "The population at risk of cyclone for each month aggregated at the administrative level 2 district. Cyclone Population risk calculated considering historical storm occurrence disaggregated by monthly weights from ibTRACS (UNEP GRID version) and crossed with population presence (Landscan)."
     popup:
       title: "Population at Risk: {{ feature.attributes.admin2_name }}, {{ feature.attributes.admin1_name }}"
       maxWidth: 550
@@ -444,7 +444,7 @@ featurelayers:
             max: 100
             step: 1
   {% endverbatim %}{% elif hazard == "drought" %}{% verbatim %}
-    description: "The population at risk of drought for each month aggregated at the administrative level 2 district."
+    description: "The population at risk of drought for each month aggregated at the administrative level 2 district. Drought population at risk calculated considering negative rain anomalies by month from the ECWMF historical data, crossed with population presence (Landscan)."
     popup:
       title: "Population at Risk: {{ feature.attributes.admin2_name }}, {{ feature.attributes.admin1_name }}"
       maxWidth: 550
@@ -677,7 +677,7 @@ featurelayers:
             max: 100
             step: 1
   {% endverbatim %}{% elif hazard == "flood" %}{% verbatim %}
-    description: "The population at risk of flood for each month aggregated at the administrative level 2 district."
+    description: "The population at risk of flood for each month aggregated at the administrative level 2 district. Flood population at risk calculated considering flood frequency expressed in ‘Return Period’ (RP) by GAR crossed with population presence (Landscan). (RP= probability that an event of certain intensity happens within a given period)"
     popup:
       title: "Population at Risk: {{ feature.attributes.admin2_name }}, {{ feature.attributes.admin1_name }}"
       maxWidth: 550
@@ -910,7 +910,7 @@ featurelayers:
             max: 100
             step: 1
   {% endverbatim %}{% elif hazard == "landslide" %}{% verbatim %}
-    description: "The population at risk of landslide for each month aggregated at the administrative level 2 district."
+    description: "The population at risk of landslide for each month aggregated at the administrative level 2 district. Landslide Population at risk elaborated considering the landslide frequency from GAR crossed by the ‘population presence’ (Landscan) and disaggregated by month considering the ‘monthly rain incidence’ (WorldClim)"
     popup:
       title: "Population at Risk: {{ feature.attributes.admin2_name }}, {{ feature.attributes.admin1_name }}"
       maxWidth: 550
@@ -1256,7 +1256,7 @@ featurelayers:
   - id: context_mean_change
     type: geojson
     title: "Vegetation Balance"
-    description: "Data Elaborated from NASA – MODIS 2001 & 2013. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area."
+    description: "Data Elaborated from NASA – MODIS 2001 & 2013. Vegetation balance performed between the total vegetation gains versus the total vegetation loss per administrative area. Considering the presence of vegetation and the relative ecosystem services, it has been fixed an ecological value per each Land cover class. Variations on ecological value have defined negative and positive changes. Land cover class and related ecological values considered: Forest (6); Wetland (6); Shrubland (5); Grassland (4); Cropland (3); Barren or Sparsely vegetated (2); Urban and built-up (1); Snow Ice (0); Water (0)."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1339,7 +1339,7 @@ featurelayers:
   - id: context_positive_change
     type: geojson
     title: "Surface % of Vegetation Gain"
-    description: "Context Factors, Vegetation Gain (2001 - 2012)"
+    description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of surfaces that experienced positive land cover change, ecological improve. High percentage values indicate large areas under positive land cover changes."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1391,7 +1391,7 @@ featurelayers:
                   layer: context_positive_change
                   attribute: "delta_positive"
                   mask: "mask"
-                  classes: #TODO?
+                  classes:
                     - { label: "Low", color: 'rgb(227, 252, 216)' }
                     - { label: "Medium", color: 'rgb(122, 199, 123)' }
                     - { label: "High", color: 'rgb(0, 68, 27)' }
@@ -1418,7 +1418,7 @@ featurelayers:
   - id: context_negative_change
     type: geojson
     title: "Surface % of Vegetation Loss"
-    description: "Surface % of Vegetation Loss"
+    description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013. Percentage of surfaces that experienced negative land cover change, ecological deterioration. High percentage values indicate large areas under negative land cover changes."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1497,7 +1497,7 @@ featurelayers:
   - id: context_forest_change
     type: geojson
     title: "Surface % of Forest Change"
-    description: "Surface % of Forest Change"
+    description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2013. Positive values indicate increase in Forest surfaces. Negative values indicate decrease in Forest surfaces. ‘Forest’ class generalized merging the original MODIS class: ‘Evergreen Broadleaf forest’; ‘Evergreen Needleleaf forest’; ‘Deciduous Needleleaf forest’; ‘Deciduous Broadleaf forest’."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1579,7 +1579,7 @@ featurelayers:
   - id: context_crop_change
     type: geojson
     title: "Surface % of Cropland Change"
-    description: "Surface % of Cropland Change"
+    description: "Land Cover Data elaborated considering NASA – MODIS 2001 & 2012. Positive percentage indicates increase in Cropland surfaces. Negative percentage indicates decrease in Cropland surfaces. ‘Cropland’ class generalized from original MODIS class: ‘Cropland/Natural vegetation mosaic’; ‘Cropland’."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1661,7 +1661,7 @@ featurelayers:
   - id: context_erosion
     type: geojson
     title: "Erosion Propensity"
-    description: "Context Factors, Erosion Propensity"
+    description: "Erosion layer elaborated considering the RUSLE equation (combining by analytical formulas: Rain incidence, Slope length, Lithology, Land cover). Erosion percentage indicates areas under erosion process (areas characterized by erosion > 5 Tons/ha per year). High values indicate large surfaces under erosion."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1739,7 +1739,7 @@ featurelayers:
   - id: context_ldi
     type: geojson
     title: "Land Degradation Index"
-    description: "Context Factors, Land Degradation Index"
+    description: "Land Degradation Index combines the negative land cover change and erosion propensity information. High LDI levels indicate high land deterioration on a qualitative scale (un-dimensionless) 1-9. Values next to 1 represent very low negative impact; value next to 9 represent strong negative impact. The LDI could be considered like a land degradation synthesis index."
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     geojson: { local: "layers.context.data.geojson", projection: "EPSG:4326" }
     legend: { ui: { source: false } }
@@ -1835,7 +1835,7 @@ featurelayers:
   - id: forecast_1day
     type: WMS
     title: "FC Cumulated Rainfall: 1 day"
-    description: "ITHACA Extreme Rainfall Detection System"
+    description: "Forecast precipitation accumulation for next 24 hours."
     source:
       name: "ITHACA"
       attribution: "ITHACA"
@@ -1859,7 +1859,7 @@ featurelayers:
   - id: forecast_3day
     type: WMS
     title: "FC Cumulated Rainfall: 3 days"
-    description: "ITHACA Extreme Rainfall Detection System"
+    description: "Forecast precipitation accumulation for next 3 days."
     source:
       name: "ITHACA"
       attribution: "ITHACA"
@@ -1883,7 +1883,7 @@ featurelayers:
   - id: forecast_6day
     type: WMS
     title: "FC Cumulated Rainfall: 6 days"
-    description: "ITHACA Extreme Rainfall Detection System"
+    description: "Forecast precipitation accumulation for next 6 days."
     source:
       name: "ITHACA"
       attribution: "ITHACA"
@@ -1907,7 +1907,7 @@ featurelayers:
   - id: nrt_1day
     type: WMS
     title: "NRT Cumulated Rainfall: 1 day"
-    description: "ITHACA Extreme Rainfall Detection System"
+    description: "Rainfall accumulation considering the past 24h (mm). GPM - IMERG, version 4.5. NASA's Precipitation Processing Center."
     source:
       name: "ITHACA"
       attribution: "ITHACA"
@@ -1929,7 +1929,7 @@ featurelayers:
   - id: nrt_2day
     type: WMS
     title: "NRT Cumulated Rainfall: 2 days"
-    description: "ITHACA Extreme Rainfall Detection System"
+    description: "Rainfall accumulation considering the past 2 days (mm). GPM - IMERG, version 4.5. NASA's Precipitation Processing Center."
     source:
       name: "ITHACA"
       attribution: "ITHACA"
@@ -1951,7 +1951,7 @@ featurelayers:
   - id: nrt_3day
     type: WMS
     title: "NRT Cumulated Rainfall: 3 days"
-    description: "ITHACA Extreme Rainfall Detection System"
+    description: "Rainfall accumulation considering the past 3 days (mm). GPM - IMERG, version 4.5. NASA's Precipitation Processing Center."
     source:
       name: "ITHACA"
       attribution: "ITHACA"
