@@ -8,6 +8,9 @@ body {
     height: 100%;
 }
 
+.screen {display: inline}
+.print {display: none}
+
 .wrapper {
     min-height: 100%;
     height: auto !important;
@@ -266,5 +269,101 @@ body {
 .geodash-map-map {
   .ol-control button {
     background-color: @wfp-color-primary;
+  }
+}
+
+@media print {
+
+  a[href]:after {
+    content: none !important;
+  }
+
+  .screen {display: none}
+  .print {display: block}
+
+  #geodash-sidebar-left {
+    background: none;
+
+    ul[role=tablist] {
+      display:none;
+    }
+    .geodash-main .geodash-sidebar {
+    }
+    .geodash-sidebar-header h2 {
+      color: @wfp-color-primary;
+      width: 100%;
+    }
+    .search-risk-form {
+      display:none;
+    }
+  }
+  .sparc-calendar {
+    display:none;
+  }
+  #geodash-map-sidebar-toggle-left {
+    display:none;
+  }
+  #geodash-map-legend {
+    max-width: 5cm;
+  }
+  .geodash-map-overlays {
+    display: none;
+  }
+  /*.geodash-map-navbars {
+    display: none;
+  }*/
+  .geodash-map-navbars {
+    li a.btn-default {
+      display: none;
+    }
+    li a.selected {
+      display: block;
+    }
+  }
+
+}
+
+.popover-content {
+  min-width: 320px;
+  padding: 10px 0;
+  hr {
+    margin: 5px 0;
+  }
+  span {
+    margin-left: 10px;
+  }
+  .nav > li > a {
+    padding: 5px 0;
+  }
+  .tab-content {
+    padding: 10px;
+  }
+}
+
+@media print and (orientation: landscape) {
+  #geodash-sidebar-left-charts {
+    min-height: 16cm;
+    max-height: 19cm;
+  }
+  .geodash-map .sidebar-open {
+    min-width: 15cm;
+    max-width: 18cm;
+  }
+  .geodash-sidebar .footnote {
+    font-size: 0.5rem;
+  }
+}
+
+@media print and (orientation: portrait) {
+  #geodash-sidebar-left-charts {
+    min-height: 24cm;
+    max-width: 12cm;
+  }
+  .geodash-map {
+    min-width: 24cm;
+  }
+  .geodash-map .sidebar-open {
+    min-width: 5cm;
+    max-width: 6cm;
   }
 }
