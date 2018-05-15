@@ -253,7 +253,8 @@ body {
   a[href]:after {
     content: none !important;
   }
-  .screen {
+  .screen,
+  .ol-overlay-container {
     display: none;
   }
   .print {
@@ -265,10 +266,6 @@ body {
   #geodash-sidebar-left ul[role=tablist] {
     display: none;
   }
-  #geodash-sidebar-left .geodash-sidebar-header h2 {
-    color: #2A93FC;
-    width: 100%;
-  }
   #geodash-sidebar-left .search-risk-form {
     display: none;
   }
@@ -278,19 +275,19 @@ body {
   #geodash-map-sidebar-toggle-left {
     display: none;
   }
-  #geodash-map-legend {
-    max-width: 5cm;
-  }
   .geodash-map-overlays {
     display: none;
   }
-  /*.geodash-map-navbars {
-    display: none;
-  }*/
   .geodash-map-navbars li a.btn-default {
     display: none;
   }
   .geodash-map-navbars li a.selected {
+    display: block;
+  }
+  .ol-unselectable {
+    display: none;
+  }
+  .ol-unselectable:first-child {
     display: block;
   }
 }
