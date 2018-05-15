@@ -278,8 +278,10 @@ body {
     content: none !important;
   }
 
-  .screen {display: none}
-  .print {display: block}
+  .screen, .ol-overlay-container {display: none}
+  .print {
+    display: block;
+  }
 
   #geodash-sidebar-left {
     background: none;
@@ -289,9 +291,8 @@ body {
     }
     .geodash-main .geodash-sidebar {
     }
-    .geodash-sidebar-header h2 {
-      color: @wfp-color-primary;
-      width: 100%;
+    .geodash-sidebar-header-title {
+
     }
     .search-risk-form {
       display:none;
@@ -304,14 +305,10 @@ body {
     display:none;
   }
   #geodash-map-legend {
-    max-width: 5cm;
   }
   .geodash-map-overlays {
     display: none;
   }
-  /*.geodash-map-navbars {
-    display: none;
-  }*/
   .geodash-map-navbars {
     li a.btn-default {
       display: none;
@@ -320,6 +317,13 @@ body {
       display: block;
     }
   }
+
+  .ol-unselectable {
+      display: none;
+    }
+  .ol-unselectable:first-child {
+      display: block;
+    }
 
 }
 
