@@ -1835,10 +1835,10 @@ featurelayers:
   - id: forecast_1day
     type: WMS
     title: "FC Cumulated Rainfall: 1 day"
-    description: "Forecast precipitation accumulation for next 24 hours."
+    description: "Forecast precipitation accumulation for the next 24 hours. The Global Forecast System (GFS) is a weather forecast model produced by the National Centers for Environmental Prediction (NCEP). Dozens of atmospheric and land-soil variables are available through this dataset, from temperatures, winds, and precipitation to soil moisture and atmospheric ozone concentration. The entire globe is covered by the GFS at a base horizontal resolution of 18 miles (28 kilometers) between grid points, which is used by the operational forecasters who predict weather out to 16 days in the future. Horizontal resolution drops to 44 miles (70 kilometers) between grid point for forecasts between one week and two weeks."
     source:
-      name: "ITHACA"
-      attribution: "ITHACA"
+      name: "National Centers for Environmental Prediction (NCEP). Cumulated rainfall data processed by ITHACA."
+      attribution: "National Centers for Environmental Prediction (NCEP). Cumulated rainfall data processed by ITHACA."
     legend: { ui: { source: false } }
     wms:
       version: "1.1.0"
@@ -1859,10 +1859,10 @@ featurelayers:
   - id: forecast_3day
     type: WMS
     title: "FC Cumulated Rainfall: 3 days"
-    description: "Forecast precipitation accumulation for next 3 days."
+    description: "Forecast precipitation accumulation for the next 3 days. The Global Forecast System (GFS) is a weather forecast model produced by the National Centers for Environmental Prediction (NCEP). Dozens of atmospheric and land-soil variables are available through this dataset, from temperatures, winds, and precipitation to soil moisture and atmospheric ozone concentration. The entire globe is covered by the GFS at a base horizontal resolution of 18 miles (28 kilometers) between grid points, which is used by the operational forecasters who predict weather out to 16 days in the future. Horizontal resolution drops to 44 miles (70 kilometers) between grid point for forecasts between one week and two weeks."
     source:
-      name: "ITHACA"
-      attribution: "ITHACA"
+      name: "National Centers for Environmental Prediction (NCEP). Cumulated rainfall data processed by ITHACA."
+      attribution: "National Centers for Environmental Prediction (NCEP). Cumulated rainfall data processed by ITHACA."
     legend: { ui: { source: false } }
     wms:
       version: "1.1.0"
@@ -1883,10 +1883,10 @@ featurelayers:
   - id: forecast_6day
     type: WMS
     title: "FC Cumulated Rainfall: 6 days"
-    description: "Forecast precipitation accumulation for next 6 days."
+    description: "Forecast precipitation accumulation for the next 6 days. The Global Forecast System (GFS) is a weather forecast model produced by the National Centers for Environmental Prediction (NCEP). Dozens of atmospheric and land-soil variables are available through this dataset, from temperatures, winds, and precipitation to soil moisture and atmospheric ozone concentration. The entire globe is covered by the GFS at a base horizontal resolution of 18 miles (28 kilometers) between grid points, which is used by the operational forecasters who predict weather out to 16 days in the future. Horizontal resolution drops to 44 miles (70 kilometers) between grid point for forecasts between one week and two weeks."
     source:
-      name: "ITHACA"
-      attribution: "ITHACA"
+      name: "National Centers for Environmental Prediction (NCEP). Cumulated rainfall data processed by ITHACA."
+      attribution: "National Centers for Environmental Prediction (NCEP). Cumulated rainfall data processed by ITHACA."
     legend: { ui: { source: false } }
     wms:
       version: "1.1.0"
@@ -1907,10 +1907,10 @@ featurelayers:
   - id: nrt_1day
     type: WMS
     title: "NRT Cumulated Rainfall: 1 day"
-    description: "Rainfall accumulation considering the past 24h (mm). GPM - IMERG, version 4.5. NASA's Precipitation Processing Center."
+    description: "Rainfall accumulation considering the past 24h (mm). The Global Precipitation Measurement (GPM) mission is an international network of satellites that provide the next-generation global observations of rain and snow. Building upon the success of the Tropical Rainfall Measuring Mission (TRMM), the GPM concept centers on the deployment of a “Core” satellite carrying an advanced radar / radiometer system to measure precipitation from space and serve as a reference standard to unify precipitation measurements from a constellation of research and operational satellites. Through improved measurements of precipitation globally, the GPM mission is helping to advance our understanding of Earth's water and energy cycle, improve forecasting of extreme events that cause natural hazards and disasters, and extend current capabilities in using accurate and timely information of precipitation to directly benefit society. GPM, initiated by NASA and the Japan Aerospace Exploration Agency (JAXA) as a global successor to TRMM, comprises a consortium of international space agencies, including the Centre National d’Études Spatiales (CNES), the Indian Space Research Organization (ISRO), the National Oceanic and Atmospheric Administration (NOAA), the European Organization for the Exploitation of Meteorological Satellites (EUMETSAT), and others."
     source:
-      name: "ITHACA"
-      attribution: "ITHACA"
+      name: "GPM - IMERG, version 4.5. NASA's Precipitation Processing Center. Data processed by ITHACA."
+      attribution: "GPM - IMERG, version 4.5. NASA's Precipitation Processing Center. Cumulated rainfall data processed by ITHACA."
     wms:
       version: "1.1.0"
       layers: ["erds:precip_024h"]
@@ -1926,16 +1926,16 @@ featurelayers:
             width: 16
             height: 16
             preview: false
-  - id: nrt_2day
+  - id: nrt_3day
     type: WMS
-    title: "NRT Cumulated Rainfall: 2 days"
-    description: "Rainfall accumulation considering the past 2 days (mm). GPM - IMERG, version 4.5. NASA's Precipitation Processing Center."
+    title: "NRT Cumulated Rainfall: 3 days"
+    description: "Rainfall accumulation considering the past 3 days (mm). The Global Precipitation Measurement (GPM) mission is an international network of satellites that provide the next-generation global observations of rain and snow. Building upon the success of the Tropical Rainfall Measuring Mission (TRMM), the GPM concept centers on the deployment of a “Core” satellite carrying an advanced radar / radiometer system to measure precipitation from space and serve as a reference standard to unify precipitation measurements from a constellation of research and operational satellites. Through improved measurements of precipitation globally, the GPM mission is helping to advance our understanding of Earth's water and energy cycle, improve forecasting of extreme events that cause natural hazards and disasters, and extend current capabilities in using accurate and timely information of precipitation to directly benefit society. GPM, initiated by NASA and the Japan Aerospace Exploration Agency (JAXA) as a global successor to TRMM, comprises a consortium of international space agencies, including the Centre National d’Études Spatiales (CNES), the Indian Space Research Organization (ISRO), the National Oceanic and Atmospheric Administration (NOAA), the European Organization for the Exploitation of Meteorological Satellites (EUMETSAT), and others."
     source:
-      name: "ITHACA"
-      attribution: "ITHACA"
+      name: "GPM - IMERG, version 4.5. NASA's Precipitation Processing Center. Data processed by ITHACA."
+      attribution: "GPM - IMERG, version 4.5. NASA's Precipitation Processing Center. Cumulated rainfall data processed by ITHACA."
     wms:
       version: "1.1.0"
-      layers: ["erds:precip_048h"]
+      layers: ["erds:precip_072h"]
       styles: []
       format: 'image/png'
       transparent: true
@@ -1948,16 +1948,16 @@ featurelayers:
             width: 16
             height: 16
             preview: false
-  - id: nrt_3day
+  - id: nrt_4day
     type: WMS
-    title: "NRT Cumulated Rainfall: 3 days"
-    description: "Rainfall accumulation considering the past 3 days (mm). GPM - IMERG, version 4.5. NASA's Precipitation Processing Center."
+    title: "NRT Cumulated Rainfall: 4 days"
+    description: "Rainfall accumulation considering the past 4 days (mm). The Global Precipitation Measurement (GPM) mission is an international network of satellites that provide the next-generation global observations of rain and snow. Building upon the success of the Tropical Rainfall Measuring Mission (TRMM), the GPM concept centers on the deployment of a “Core” satellite carrying an advanced radar / radiometer system to measure precipitation from space and serve as a reference standard to unify precipitation measurements from a constellation of research and operational satellites. Through improved measurements of precipitation globally, the GPM mission is helping to advance our understanding of Earth's water and energy cycle, improve forecasting of extreme events that cause natural hazards and disasters, and extend current capabilities in using accurate and timely information of precipitation to directly benefit society. GPM, initiated by NASA and the Japan Aerospace Exploration Agency (JAXA) as a global successor to TRMM, comprises a consortium of international space agencies, including the Centre National d’Études Spatiales (CNES), the Indian Space Research Organization (ISRO), the National Oceanic and Atmospheric Administration (NOAA), the European Organization for the Exploitation of Meteorological Satellites (EUMETSAT), and others."
     source:
-      name: "ITHACA"
-      attribution: "ITHACA"
+      name: "GPM - IMERG, version 4.5. NASA's Precipitation Processing Center. Cumulated rainfall data processed by ITHACA."
+      attribution: "GPM - IMERG, version 4.5. NASA's Precipitation Processing Center. Data processed by ITHACA."
     wms:
       version: "1.1.0"
-      layers: ["erds:precip_072h"]
+      layers: ["erds:precip_096h"]
       styles: []
       format: 'image/png'
       transparent: true
@@ -2163,12 +2163,12 @@ featurelayers:
     source: {% endverbatim %}{% include "sparc2/_includes/dashboard/layer/source.yml" %}{% verbatim %}
     legend: { ui: { source: false } }
     wms:
-      version: "1.1.1"
-      layers: {% endverbatim %}["geonode:cat1_5_sep_cls2","geonode:cat1_5_sep_cls2","geonode:cat1_5_sep_cls2","geonode:cat1_5_sep_cls2","geonode:cat1_5_sep_cls2","geonode:cat1_5_sep_cls2","geonode:cat1_5_sep_cls2"]{% verbatim %}
-      styles: ["cyclone1","cyclone2","cyclone3","cyclone4","cyclone5","cyclone6","cyclone7"]
+      version: "1.3.0"
+      layers: {% endverbatim %}["geonode:cat1_5_aug_cls2"]{% verbatim %}
+      styles: ["cat1_5_aug_cls2"]
       format: 'image/png'
       transparent: true
-      url: "http://10.11.40.84/geoserver/geonode/wms"
+      url: "https://staging.geonode.wfp.org/cors/geoserver/wms"
     cartography:
       - id: default
         type: graphic
@@ -2387,8 +2387,8 @@ renderlayers:
   - landscan
   - vam
   - nrt_1day
-  - nrt_2day
   - nrt_3day
+  - nrt_4day
   - mapbox.light
   - mapbox.dark
   - osm
@@ -2513,8 +2513,8 @@ sidebar:
       #- wld_poi_facilities_wfp
       #- wld_trs_supplyroutes_wfp
       - nrt_1day
-      - nrt_2day
       - nrt_3day
+      - nrt_4day
       - mapbox.light
       - mapbox.dark
       - osm_humanitarian
@@ -2552,7 +2552,7 @@ sidebar:
       - id: accumulated rainfall
         label: Near-Real-Time Precipitation
         class: geodash-sidebar-wfplayers
-        layers: [nrt_1day, nrt_2day, nrt_3day]
+        layers: [nrt_1day, nrt_3day, nrt_4day]
       - id: forecast_precipitation
         label: Forecast Precipitation
         class: geodash-sidebar-forecast
@@ -2590,7 +2590,7 @@ sidebar:
               position: 'outer-middle'
         {% if hazard == "cyclone" %}{% verbatim %}
         hazard: cyclone
-        colors: # Done!
+        colors:
           0-10%: "#00a878"
           10-20%: "#61b374"
           20-30%: "#8ebe6f"
