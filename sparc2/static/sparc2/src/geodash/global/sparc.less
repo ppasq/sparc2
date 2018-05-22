@@ -8,6 +8,26 @@ body {
     height: 100%;
 }
 
+.geodash-bootloader-status {
+  a {
+    color: @wfp-color-primary;
+  }
+}
+.geodash-bootloader-step {
+  h6 {
+    font-size: 1rem;
+  }
+}
+.geodash-bootloader-step-internals {
+  margin-top: 2rem;
+}
+
+.lead {
+  a {
+    color: @wfp-color-primary;
+  }
+}
+
 .screen {display: inline}
 .print {display: none}
 
@@ -229,6 +249,20 @@ body {
   font-family: @sparc-font-family-primary;
 }
 
+body.modal-open {
+  .modal-header {
+    h5 {
+      font-size: 1.25rem;
+    }
+  }
+  .tab-content {
+    font-size: 14px;
+    h6 {
+      font-size: 1rem;
+    }
+  }
+}
+
 @media (max-width: @screen-xs-max) {
   .geodash-main {
     position: relative;
@@ -272,27 +306,43 @@ body {
   }
 }
 
+.ol-attribution.ol-logo-only {
+  bottom: 56px;
+}
+.ol-scale-line {
+  background: rgba(255,255,255, .8);
+  bottom: 56px;
+  .ol-scale-line-inner {
+    border: 1px solid @wfp-color-body-text;
+    border-top: none;
+    color: @wfp-color-body-text;
+  }
+}
+
 @media print {
+
+  body { -webkit-print-color-adjust: exact; } //Does it work?
 
   a[href]:after {
     content: none !important;
   }
 
   .screen, .ol-overlay-container {display: none}
-  .print {
-    display: block;
+  .print {display: block;}
+
+  .geodash-sidebar-header-country {
+    font-size: 2rem;
+    margin-top: -1cm;
+    position: absolute;
+    right: 0;
+    top: 1cm;
   }
 
   #geodash-sidebar-left {
-    background: none;
+    /*background: none;*/
 
     ul[role=tablist] {
       display:none;
-    }
-    .geodash-main .geodash-sidebar {
-    }
-    .geodash-sidebar-header-title {
-
     }
     .search-risk-form {
       display:none;
@@ -324,7 +374,9 @@ body {
   .ol-unselectable:first-child {
       display: block;
     }
-
+  .ol-scale-line .ol-unselectable {
+    display: block;
+  }
 }
 
 .popover-content {

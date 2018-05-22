@@ -22,6 +22,18 @@ html {
 body {
   height: 100%;
 }
+.geodash-bootloader-status a {
+  color: #2A93FC;
+}
+.geodash-bootloader-step h6 {
+  font-size: 1rem;
+}
+.geodash-bootloader-step-internals {
+  margin-top: 2rem;
+}
+.lead a {
+  color: #2A93FC;
+}
 .screen {
   display: inline;
 }
@@ -210,6 +222,15 @@ body {
 .popover {
   font-family: 'Lato', sans-serif;
 }
+body.modal-open .modal-header h5 {
+  font-size: 1.25rem;
+}
+body.modal-open .tab-content {
+  font-size: 14px;
+}
+body.modal-open .tab-content h6 {
+  font-size: 1rem;
+}
 @media (max-width: 807px) {
   .geodash-main {
     position: relative;
@@ -249,7 +270,22 @@ body {
 .geodash-map-map .ol-control button {
   background-color: #2A93FC;
 }
+.ol-attribution.ol-logo-only {
+  bottom: 56px;
+}
+.ol-scale-line {
+  background: rgba(255, 255, 255, 0.8);
+  bottom: 56px;
+}
+.ol-scale-line .ol-scale-line-inner {
+  border: 1px solid #404040;
+  border-top: none;
+  color: #404040;
+}
 @media print {
+  body {
+    -webkit-print-color-adjust: exact;
+  }
   a[href]:after {
     content: none !important;
   }
@@ -260,8 +296,15 @@ body {
   .print {
     display: block;
   }
+  .geodash-sidebar-header-country {
+    font-size: 2rem;
+    margin-top: -1cm;
+    position: absolute;
+    right: 0;
+    top: 1cm;
+  }
   #geodash-sidebar-left {
-    background: none;
+    /*background: none;*/
   }
   #geodash-sidebar-left ul[role=tablist] {
     display: none;
@@ -288,6 +331,9 @@ body {
     display: none;
   }
   .ol-unselectable:first-child {
+    display: block;
+  }
+  .ol-scale-line .ol-unselectable {
     display: block;
   }
 }
@@ -966,12 +1012,12 @@ body {
 /* Filter */
 /* Sidebar */
 /* Navbars */
-.modal-dialog {
+#geodash-modal-sparc-welcome .modal-dialog {
   color: #404040;
   min-height: 60%;
   min-width: 60%;
 }
-.modal-content {
+#geodash-modal-sparc-welcome .modal-content {
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -979,53 +1025,53 @@ body {
   display: table;
   height: auto;
 }
-.modal-content .row {
+#geodash-modal-sparc-welcome .modal-content .row {
   height: 100%;
   display: table-row;
 }
-.modal-content .row .no-float {
+#geodash-modal-sparc-welcome .modal-content .row .no-float {
   display: table-cell;
   float: none;
 }
-.modal-content .left {
+#geodash-modal-sparc-welcome .modal-content .left {
   background-color: #2A93FC;
   background: linear-gradient(90deg, #0474e6 0, #2a93fc);
   box-sizing: border-box;
   padding-bottom: 2rem;
 }
-.modal-content .left label {
+#geodash-modal-sparc-welcome .modal-content .left label {
   color: white;
   font-size: .875em;
   font-weight: 400;
 }
-.modal-content .left img {
+#geodash-modal-sparc-welcome .modal-content .left img {
   margin: 2em;
 }
-.modal-content .left .search-risk-form {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form {
   margin: calc(50% - 72px - 4em - 71px) 2rem;
   /* FF 4-18 */
   /* FF 19+ */
   /* IE 10+ */
 }
-.modal-content .left .search-risk-form .input-group {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .input-group {
   width: 100%;
 }
-.modal-content .left .search-risk-form .input-group input::placeholder {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .input-group input::placeholder {
   color: white;
 }
-.modal-content .left .search-risk-form input:focus::-webkit-input-placeholder {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form input:focus::-webkit-input-placeholder {
   color: transparent;
 }
-.modal-content .left .search-risk-form input:focus:-moz-placeholder {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form input:focus:-moz-placeholder {
   color: transparent;
 }
-.modal-content .left .search-risk-form input:focus::-moz-placeholder {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form input:focus::-moz-placeholder {
   color: transparent;
 }
-.modal-content .left .search-risk-form input:focus:-ms-input-placeholder {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form input:focus:-ms-input-placeholder {
   color: transparent;
 }
-.modal-content .left .search-risk-form .form-control {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .form-control {
   background-color: rgba(0, 0, 0, 0.2);
   /* @wfp-color-accent */
   background-image: none;
@@ -1044,24 +1090,24 @@ body {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-.modal-content .left .search-risk-form .input-group-addon {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .input-group-addon {
   background: transparent;
   border: 0;
   border-radius: 0.5em 0 0 0.5em;
 }
-.modal-content .left .search-risk-form .btn {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .btn {
   padding: 0.25rem 0.5rem;
   vertical-align: middle;
   width: 42px;
 }
-.modal-content .left .search-risk-form .btn-primary {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .btn-primary {
   background: transparent;
 }
-.modal-content .left .search-risk-form .btn-danger {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .btn-danger {
   background: transparent;
 }
-.modal-content .left .search-risk-form .btn-primary,
-.modal-content .left .search-risk-form .btn-danger {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .btn-primary,
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .btn-danger {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   background-image: none;
@@ -1074,14 +1120,14 @@ body {
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-.modal-content .left .search-risk-form .welcome-go .btn-default {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .welcome-go .btn-default {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.5em;
   color: rgba(0, 0, 0, 0.4);
   margin-top: 0.5em;
 }
-.modal-content .left .search-risk-form .welcome-go .btn-primary {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .welcome-go .btn-primary {
   background-color: #ff5252;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.5em;
@@ -1096,25 +1142,25 @@ body {
   transition-timing-function: linear;
   transition-delay: 0;
 }
-.modal-content .left .search-risk-form .welcome-go .btn-primary:hover {
+#geodash-modal-sparc-welcome .modal-content .left .search-risk-form .welcome-go .btn-primary:hover {
   background: #ff1f1f;
 }
-.modal-content .right .modal-body {
+#geodash-modal-sparc-welcome .modal-content .right .modal-body {
   padding: 4rem 2rem 6rem;
 }
-.modal-content .right .modal-body h1 {
+#geodash-modal-sparc-welcome .modal-content .right .modal-body h1 {
   font-size: 2.375rem;
 }
-.modal-content .right .modal-body h3 {
+#geodash-modal-sparc-welcome .modal-content .right .modal-body h3 {
   font-size: 1.5rem;
   font-weight: 300;
   padding-bottom: 2rem;
 }
-.modal-content .right .modal-body #modal-sparc-welcome-about {
+#geodash-modal-sparc-welcome .modal-content .right .modal-body #modal-sparc-welcome-about {
   font-size: 0.875rem;
 }
 @media (min-width: 808px) {
-  .modal-dialog {
+  #geodash-modal-sparc-welcome .modal-dialog {
     width: 808px;
     margin: 120px auto;
   }
