@@ -245,7 +245,7 @@ var init_sparc_controller = function(that, app)
 
 geodash.meta = {};
 geodash.meta.projects = [{"name":"geodash","version":"0.0.1","description":"geodash 0.0.1"},{"name":"sparc2","version":"0.0.1","description":"SPARC 2.x"}];
-geodash.meta.plugins = [{"controllers":["GeoDashControllerBase.js","GeoDashControllerModal.js"],"directives":["svg/ngSvgText.js","svg/svg.js","geodashBase.js","onLinkDone.js","onRepeatDone.js","geodashBtnClose.js","geodashBtnInfo.js","geodashBtn.js","geodashLabel.js","geodashTab.js","geodashTabs.js"],"enumerations":["dates.js"],"templates":["geodash_tab.tpl.html","geodash_tabs.tpl.html","geodash_btn_close.tpl.html","geodash_btn_info.tpl.html","geodash_btn.tpl.html","geodash_label.tpl.html"],"filters":[],"handlers":[],"schemas":["base.yml","baselayers.yml","assets.yml","featurelayers.yml","controls.yml","view.yml","servers.yml","pages.yml",{"id":"css","path":"lib/css.yml"},{"id":"intent","path":"lib/intent.yml"},{"id":"intents","path":"lib/intents.yml"},{"id":"placement","path":"lib/placement.yml"},{"id":"position","path":"lib/position.yml"},{"id":"tooltip","path":"lib/tooltip.yml"}],"modals":[],"less":["base.less"],"project":"geodash","id":"file:///home/vagrant/geodash-plugin-base.git"},{"name":"geodash-plugin-handlers","controllers":[],"directives":[],"enumerations":[],"templates":[],"filters":[],"handlers":["clickedOnMap.js","filterChanged.js","hideLayer.js","hideLayers.js","layerLoaded.js","requestToggleComponent.js","selectStyle.js","showLayer.js","showLayers.js","stateChanged.js","switchBaseLayer.js","ol3/toggleComponent.js","toggleFeatureLayer.js","toggleControl.js","viewChanged.js","zoomIn.js","zoomOut.js","zoomToLayer.js","zoomToLocation.js","flyToExtent.js","flyToLocation.js","ol3/printMap.js","ol3/toggleFullScreen.js"],"schemas":[],"modals":[],"less":[],"project":"geodash","id":"geodash-plugin-handlers"},{"name":"geodash-plugin-filters","filters":["default.js","percent.js","tabLabel.js","as_float.js","add.js","title.js","as_array.js","sortItemsByArray.js","breakpoint.js","breakpoints.js","position_x.js","width_x.js","length.js","layer_is_visible.js","common/append.js","common/default_if_undefined.js","common/default_if_undefined_or_blank.js","common/extract.js","common/extractTest.js","common/inArray.js","common/not.js","common/prepend.js","common/parseTrue.js","common/ternary.js","common/ternary_defined.js","common/yaml.js","array/arrayToObject.js","array/join.js","array/first.js","array/last.js","array/choose.js","css/css.js","css/ellipsis.js","format/formatBreakPoint.js","format/formatFloat.js","format/formatInteger.js","format/formatArray.js","format/formatMonth.js","math/eq.js","math/lte.js","math/gte.js","math/gt.js","string/replace.js","string/split.js","string/stringToObject.js","string/md2html.js","url/url_shapefile.js","url/url_geojson.js","url/url_kml.js","url/url_describefeaturetype.js"],"project":"geodash","id":"geodash-plugin-filters"},{"name":"geodash-plugin-legend","controllers":["GeoDashControllerLegend.js"],"directives":["geodashMapLegend.js"],"templates":["map_legend.tpl.html"],"less":["legend.less"],"schemas":["legend.yml"],"project":"geodash","id":"geodash-plugin-legend"},{"controllers":[],"directives":["geodashModalWelcome.js"],"templates":["modal/geodash_modal_welcome.tpl.html"],"project":"geodash","id":"welcome"},{"controllers":[],"directives":["geodashModalAbout.js"],"templates":["geodash_modal_about.tpl.html"],"project":"geodash","id":"about"},{"controllers":[],"directives":["geodashModalDownload.js"],"templates":["geodash_modal_download.tpl.html"],"project":"geodash","id":"download"},{"name":"geodash-plugin-overlays","controllers":["GeoDashControllerOverlays.js"],"directives":["geodashMapOverlays.js"],"templates":["map_overlays.tpl.html"],"less":["map_overlays.less"],"schemas":["map_overlays_schema.yml"],"project":"geodash","id":"geodash-plugin-overlays"},{"name":"geodash-plugin-navbars","controllers":["GeoDashControllerMapNavbars.js"],"directives":["geodashMapNavbars.js"],"templates":["map_navbars.tpl.html"],"less":["map_navbars.less"],"schemas":["map_navbars.yml"],"project":"geodash","id":"geodash-plugin-navbars"},{"controllers":[],"directives":["geodashSidebarToggleLeft.js"],"templates":["geodash_sidebar_toggle_left.tpl.html"],"project":"geodash","id":"sidebar_toggle_left"},{"controllers":[],"directives":["geodashSidebarToggleRight.js"],"templates":["geodash_sidebar_toggle_right.tpl.html"],"project":"geodash","id":"sidebar_toggle_right"},{"name":"sparc2","endpoints":["endpoints.yml"],"project":"sparc2","id":"sparc2"},{"name":"geodash-plugin-map-map","controllers":[{"name":"GeoDashControllerMapMap","path":"GeoDashControllerMapMap.js","handlers":[{"event":"toggleComponent","handler":"toggleComponent"}]}],"directives":["geodashMapMap.js"],"templates":["map_map.tpl.html"],"less":["map_map.less"],"project":"sparc2","id":"geodash-plugin-map-map"},{"name":"sparc2-plugin-sidebar","controllers":["SPARCControllerSidebar.js","SPARCControllerModalLayer.js"],"directives":["sparcSidebar.js","sparcSidebarFeatureLayer.js","sparcModalFilterMore.js","sparcFilterCheckbox.js","sparcFilterRadio.js","sparcFilterSlider.js","sparcModalLayer.js"],"templates":["sparc_sidebar.tpl.html","sparc_sidebar_featurelayer.tpl.html","filter/filter_checkbox.tpl.html","filter/filter_radio.tpl.html","filter/filter_slider.tpl.html","modal/sparc_modal_layer.tpl.html"],"less":["sidebar.less","sidebar-toggle.less","filter.less"],"modals":[{"name":"sparc_modal_layer","ui":{"mainClass":"","tabs":[{"target":"sparc-modal-layer-general","label":"General"},{"target":"sparc-modal-layer-source","label":"Source"},{"target":"sparc-modal-layer-download","label":"Download"},{"target":"sparc-modal-layer-links","label":"Links"}]}}],"project":"sparc2","id":"sparc2-plugin-sidebar"},{"name":"sparc2-plugin-welcome","controllers":["SPARCControllerModalWelcome.js"],"directives":["sparcModalWelcome.js"],"templates":["sparc_modal_welcome.tpl.html"],"less":["sparc_welcome.less"],"modals":[{"name":"sparc_welcome","ui":{"mainClass":"","tabs":[{"target":"modal-sparc-welcome-intro","label":"Introduction"},{"target":"modal-sparc-welcome-about","label":"About"}]}}],"project":"sparc2","id":"sparc2-plugin-welcome"},{"name":"geodash-plugin-main","controllers":[{"name":"GeoDashControllerMain","path":"GeoDashControllerMain.js","handlers":[{"event":"clickedOnMap","handler":"clickedOnMap"},{"event":"filterChanged","handler":"filterChanged"},{"event":"hideLayer","handler":"hideLayer"},{"event":"hideLayers","handler":"hideLayers"},{"event":"layerLoaded","handler":"layerLoaded"},{"event":"requestToggleComponent","handler":"requestToggleComponent"},{"event":"selectStyle","handler":"selectStyle"},{"event":"showLayer","handler":"showLayer"},{"event":"showLayers","handler":"showLayers"},{"event":"stateChanged","handler":"stateChanged"},{"event":"switchBaseLayer","handler":"switchBaseLayer"},{"event":"viewChanged","handler":"viewChanged"},{"event":"zoomIn","handler":"zoomIn"},{"event":"zoomOut","handler":"zoomOut"},{"event":"zoomToLayer","handler":"zoomToLayer"},{"event":"zoomToLocation","handler":"zoomToLocation"},{"event":"flyToLocation","handler":"flyToLocation"},{"event":"flyToExtent","handler":"flyToExtent"},{"event":"printMap","handler":"printMap"},{"event":"toggleFullScreen","handler":"toggleFullScreen"},{"event":"toggleFeatureLayer","handler":"toggleFeatureLayer"},{"event":"toggleControl","handler":"toggleControl"}]}],"directives":["geodashMain.js"],"templates":["main.tpl.html"],"handlers":[],"project":"sparc2","id":"geodash-plugin-main"}];
+geodash.meta.plugins = [{"controllers":["GeoDashControllerBase.js","GeoDashControllerModal.js"],"directives":["svg/ngSvgText.js","svg/svg.js","geodashBase.js","onLinkDone.js","onRepeatDone.js","geodashBtnClose.js","geodashBtnInfo.js","geodashBtn.js","geodashLabel.js","geodashTab.js","geodashTabs.js"],"enumerations":["dates.js"],"templates":["geodash_tab.tpl.html","geodash_tabs.tpl.html","geodash_btn_close.tpl.html","geodash_btn_info.tpl.html","geodash_btn.tpl.html","geodash_label.tpl.html"],"filters":[],"handlers":[],"schemas":["base.yml","baselayers.yml","assets.yml","featurelayers.yml","controls.yml","view.yml","servers.yml","pages.yml",{"id":"css","path":"lib/css.yml"},{"id":"intent","path":"lib/intent.yml"},{"id":"intents","path":"lib/intents.yml"},{"id":"placement","path":"lib/placement.yml"},{"id":"position","path":"lib/position.yml"},{"id":"tooltip","path":"lib/tooltip.yml"}],"modals":[],"less":["base.less"],"project":"geodash","id":"file:///home/vagrant/geodash-plugin-base.git"},{"name":"geodash-plugin-handlers","controllers":[],"directives":[],"enumerations":[],"templates":[],"filters":[],"handlers":["clickedOnMap.js","filterChanged.js","hideLayer.js","hideLayers.js","hideModal.js","layerLoaded.js","requestToggleComponent.js","selectStyle.js","showLayer.js","showLayers.js","showModal.js","stateChanged.js","switchBaseLayer.js","ol3/toggleComponent.js","toggleFeatureLayer.js","toggleControl.js","viewChanged.js","zoomIn.js","zoomOut.js","zoomToLayer.js","zoomToLocation.js","flyToExtent.js","flyToLocation.js","flyToCurrentLocation.js","ol3/printMap.js","ol3/toggleFullScreen.js","startGeolocation.js","stopGeolocation.js","toggleGeolocation.js"],"schemas":[],"modals":[],"less":[],"project":"geodash","id":"geodash-plugin-handlers"},{"name":"geodash-plugin-filters","filters":["default.js","percent.js","tabLabel.js","as_float.js","add.js","title.js","as_array.js","sortItemsByArray.js","breakpoint.js","breakpoints.js","position_x.js","width_x.js","length.js","layer_is_visible.js","common/append.js","common/default_if_undefined.js","common/default_if_undefined_or_blank.js","common/extract.js","common/extractTest.js","common/inArray.js","common/not.js","common/prepend.js","common/parseTrue.js","common/ternary.js","common/ternary_defined.js","common/yaml.js","array/arrayToObject.js","array/join.js","array/first.js","array/last.js","array/choose.js","css/css.js","css/ellipsis.js","format/formatBreakPoint.js","format/formatFloat.js","format/formatInteger.js","format/formatArray.js","format/formatMonth.js","math/eq.js","math/lte.js","math/gte.js","math/gt.js","string/replace.js","string/split.js","string/stringToObject.js","string/md2html.js","url/url_shapefile.js","url/url_geojson.js","url/url_kml.js","url/url_describefeaturetype.js"],"project":"geodash","id":"geodash-plugin-filters"},{"name":"geodash-plugin-legend","controllers":["GeoDashControllerLegend.js"],"directives":["geodashMapLegend.js"],"templates":["map_legend.tpl.html"],"less":["legend.less"],"schemas":["legend.yml"],"project":"geodash","id":"geodash-plugin-legend"},{"controllers":[],"directives":["geodashModalWelcome.js"],"templates":["modal/geodash_modal_welcome.tpl.html"],"project":"geodash","id":"welcome"},{"controllers":[],"directives":["geodashModalAbout.js"],"templates":["geodash_modal_about.tpl.html"],"project":"geodash","id":"about"},{"controllers":[],"directives":["geodashModalDownload.js"],"templates":["geodash_modal_download.tpl.html"],"project":"geodash","id":"download"},{"name":"geodash-plugin-overlays","controllers":["GeoDashControllerOverlays.js"],"directives":["geodashMapOverlays.js"],"templates":["map_overlays.tpl.html"],"less":["map_overlays.less"],"schemas":["map_overlays_schema.yml"],"project":"geodash","id":"geodash-plugin-overlays"},{"name":"geodash-plugin-navbars","controllers":["GeoDashControllerMapNavbars.js"],"directives":["geodashMapNavbars.js"],"templates":["map_navbars.tpl.html"],"less":["map_navbars.less"],"schemas":["map_navbars.yml"],"project":"geodash","id":"geodash-plugin-navbars"},{"controllers":[],"directives":["geodashSidebarToggleLeft.js"],"templates":["geodash_sidebar_toggle_left.tpl.html"],"project":"geodash","id":"sidebar_toggle_left"},{"controllers":[],"directives":["geodashSidebarToggleRight.js"],"templates":["geodash_sidebar_toggle_right.tpl.html"],"project":"geodash","id":"sidebar_toggle_right"},{"name":"sparc2","endpoints":["endpoints.yml"],"project":"sparc2","id":"sparc2"},{"name":"geodash-plugin-map-map","controllers":[{"name":"GeoDashControllerMapMap","path":"GeoDashControllerMapMap.js","handlers":[{"event":"toggleComponent","handler":"toggleComponent"}]}],"directives":["geodashMapMap.js"],"templates":["map_map.tpl.html"],"less":["map_map.less"],"project":"sparc2","id":"geodash-plugin-map-map"},{"name":"sparc2-plugin-sidebar","controllers":["SPARCControllerSidebar.js","SPARCControllerModalLayer.js"],"directives":["sparcSidebar.js","sparcSidebarFeatureLayer.js","sparcModalFilterMore.js","sparcFilterCheckbox.js","sparcFilterRadio.js","sparcFilterSlider.js","sparcModalLayer.js"],"templates":["sparc_sidebar.tpl.html","sparc_sidebar_featurelayer.tpl.html","filter/filter_checkbox.tpl.html","filter/filter_radio.tpl.html","filter/filter_slider.tpl.html","modal/sparc_modal_layer.tpl.html"],"less":["sidebar.less","sidebar-toggle.less","filter.less"],"modals":[{"name":"sparc_modal_layer","ui":{"mainClass":"","tabs":[{"target":"sparc-modal-layer-general","label":"General"},{"target":"sparc-modal-layer-source","label":"Source"},{"target":"sparc-modal-layer-download","label":"Download"},{"target":"sparc-modal-layer-links","label":"Links"}]}}],"project":"sparc2","id":"sparc2-plugin-sidebar"},{"name":"sparc2-plugin-welcome","controllers":["SPARCControllerModalWelcome.js"],"directives":["sparcModalWelcome.js"],"templates":["sparc_modal_welcome.tpl.html"],"less":["sparc_welcome.less"],"modals":[{"name":"sparc_welcome","ui":{"mainClass":"","tabs":[{"target":"modal-sparc-welcome-intro","label":"Introduction"},{"target":"modal-sparc-welcome-about","label":"About"}]}}],"project":"sparc2","id":"sparc2-plugin-welcome"},{"name":"geodash-plugin-main","controllers":[{"name":"GeoDashControllerMain","path":"GeoDashControllerMain.js","handlers":[{"event":"clickedOnMap","handler":"clickedOnMap"},{"event":"filterChanged","handler":"filterChanged"},{"event":"hideLayer","handler":"hideLayer"},{"event":"hideLayers","handler":"hideLayers"},{"event":"layerLoaded","handler":"layerLoaded"},{"event":"requestToggleComponent","handler":"requestToggleComponent"},{"event":"selectStyle","handler":"selectStyle"},{"event":"showLayer","handler":"showLayer"},{"event":"showLayers","handler":"showLayers"},{"event":"stateChanged","handler":"stateChanged"},{"event":"switchBaseLayer","handler":"switchBaseLayer"},{"event":"viewChanged","handler":"viewChanged"},{"event":"zoomIn","handler":"zoomIn"},{"event":"zoomOut","handler":"zoomOut"},{"event":"zoomToLayer","handler":"zoomToLayer"},{"event":"zoomToLocation","handler":"zoomToLocation"},{"event":"flyToLocation","handler":"flyToLocation"},{"event":"flyToExtent","handler":"flyToExtent"},{"event":"printMap","handler":"printMap"},{"event":"toggleFullScreen","handler":"toggleFullScreen"},{"event":"toggleFeatureLayer","handler":"toggleFeatureLayer"},{"event":"toggleControl","handler":"toggleControl"}]}],"directives":["geodashMain.js"],"templates":["main.tpl.html"],"handlers":[],"project":"sparc2","id":"geodash-plugin-main"}];
 geodash.meta.controllers = [{"name":"GeoDashControllerMapMap","handlers":[{"event":"toggleComponent","handler":"toggleComponent"}]},{"name":"GeoDashControllerMain","handlers":[{"event":"clickedOnMap","handler":"clickedOnMap"},{"event":"filterChanged","handler":"filterChanged"},{"event":"hideLayer","handler":"hideLayer"},{"event":"hideLayers","handler":"hideLayers"},{"event":"layerLoaded","handler":"layerLoaded"},{"event":"requestToggleComponent","handler":"requestToggleComponent"},{"event":"selectStyle","handler":"selectStyle"},{"event":"showLayer","handler":"showLayer"},{"event":"showLayers","handler":"showLayers"},{"event":"stateChanged","handler":"stateChanged"},{"event":"switchBaseLayer","handler":"switchBaseLayer"},{"event":"viewChanged","handler":"viewChanged"},{"event":"zoomIn","handler":"zoomIn"},{"event":"zoomOut","handler":"zoomOut"},{"event":"zoomToLayer","handler":"zoomToLayer"},{"event":"zoomToLocation","handler":"zoomToLocation"},{"event":"flyToLocation","handler":"flyToLocation"},{"event":"flyToExtent","handler":"flyToExtent"},{"event":"printMap","handler":"printMap"},{"event":"toggleFullScreen","handler":"toggleFullScreen"},{"event":"toggleFeatureLayer","handler":"toggleFeatureLayer"},{"event":"toggleControl","handler":"toggleControl"}]}];
 geodash.meta.modals = [{"name":"sparc_modal_layer","ui":{"mainClass":"","tabs":[{"target":"sparc-modal-layer-general","label":"General"},{"target":"sparc-modal-layer-source","label":"Source"},{"target":"sparc-modal-layer-download","label":"Download"},{"target":"sparc-modal-layer-links","label":"Links"}]}},{"name":"sparc_welcome","ui":{"mainClass":"","tabs":[{"target":"modal-sparc-welcome-intro","label":"Introduction"},{"target":"modal-sparc-welcome-about","label":"About"}]}}];
 geodash.templates = {static:{}};
@@ -1250,9 +1250,10 @@ geodash.handlers["clickedOnMap"] = function($scope, $interpolate, $http, $q, eve
           'location': geodash.normalize.point(ol.proj.toLonLat(map.getCoordinateFromPixel([args.pixel.x, args.pixel.y]), map.getView().getProjection()))
         };
       },
-      null,
-      function(layer) {
-        return $.inArray(layer.get('id'), featurelayers_geojson) != -1;
+      {
+        layerFilter: function(layer) {
+          return $.inArray(layer.get('id'), featurelayers_geojson) != -1;
+        }
       }
     );
   }
@@ -1278,19 +1279,21 @@ geodash.handlers["clickedOnMap"] = function($scope, $interpolate, $http, $q, eve
           var fl = featurelayers_by_featuretype[featureAndLocation.feature.featuretype] || featurelayers_by_featuretype["geonode:"+featureAndLocation.feature.featuretype];
           $scope.$broadcast("openPopup", {
             'featureLayer': fl,
-            'feature': featureAndLocation.feature,
+            'feature': geodash.normalize.feature(featureAndLocation.feature),
             'location': geodash.normalize.point(featureAndLocation.location)
           });
         }
         else
         {
-          $("#popup").popover('destroy');
+          $("#popup").popover('dispose');
+          map.getOverlays().item(0).setPosition(undefined);
         }
       });
     }
     else
     {
-      $("#popup").popover('destroy');
+      $("#popup").popover('dispose');
+      map.getOverlays().item(0).setPosition(undefined);
     }
   }
 };
@@ -1339,6 +1342,44 @@ geodash.handlers["hideLayers"] = function($scope, $interpolate, $http, $q, event
         $scope.refreshMap($scope.state);
       }
     }
+};
+
+geodash.handlers.hideModal = function($scope, $interpolate, $http, $q, event, args)
+{
+  var id = args["id_hide"] || args["id"];
+
+  try { $("#"+id).modal('hide'); } catch(err){ console.log(err); };
+
+  try {
+    
+    var that = $("#"+id);
+    $("body").removeClass("modal-open");
+    $("body").css({"padding-right": "0"});
+    that.removeClass("show");
+    that.css({"display": "none"});
+    $(".modal-backdrop").remove();
+    var bsModal = that.data('bs.modal');
+    bsModal["_isShown"] = false;
+    bsModal["_isTransitioning"] = false;
+    that.data('bs.modal', bsModal);
+
+  } catch(err){ console.log(err); };
+
+  try {
+    var modal_scope = geodash.util.getScope(id);
+    var aClear = args["clear"];
+    if("clear" in args && args["clear"] != undefined)
+    {
+      modal_scope.$apply(function () {
+        $.each(aClear,function(i, x){
+          modal_scope[x] = undefined;
+        });
+      });
+    }
+  } catch(err) {
+    console.log(err);
+  }
+
 };
 
 geodash.handlers["layerLoaded"] = function($scope, $interpolate, $http, $q, event, args) {
@@ -1404,6 +1445,71 @@ geodash.handlers["showLayers"] = function($scope, $interpolate, $http, $q, event
         $scope.refreshMap($scope.state);
       }
     }
+};
+
+geodash.handlers.showModal = function($scope, $interpolate, $http, $q, event, args) {
+  console.log('event', event);
+  console.log('args', args);
+  //
+  var id = args["id_show"] || args["id"];
+  var modal_scope = geodash.util.getScope(id);
+  var modal_scope_new = geodash.api.buildScope(event, args);
+  var modalOptions = args['modal'] || {};
+  modalOptions['show'] = false;
+  modal_scope.$apply(function () {
+    // Update Scope
+    //modal_scope = $.extend(modal_scope, modal_scope_new);
+    //$.each(modal_scope_new, function(key, value){ modal_scope[key] = value; });
+    /////////////////
+    modal_scope.push(modal_scope_new);// Pushes New Scope to Modal's Stack
+    /////////////////
+    setTimeout(function(){
+      // Update Modal Tab Selection
+      // See https://github.com/angular-ui/bootstrap/issues/1741
+      var modalElement = $("#"+id);
+      if(geodash.util.isDefined(modal_scope.focus))
+      {
+        $(modal_scope.focus).focus();
+      }
+      var targetTab = modal_scope.tab;
+      if(geodash.util.isDefined(targetTab))
+      {
+        modalElement.find('.nav-tabs li').each(function(){
+          var that = $(this);
+          var thisTab = that.find('a').attr('href').substring(1);
+          if(targetTab == thisTab)
+          {
+              that.addClass('active');
+          }
+          else
+          {
+              that.removeClass('active');
+          }
+        });
+        modalElement.find('.tab-pane').each(function(){
+          var that = $(this);
+          if(targetTab == that.attr('id'))
+          {
+              that.addClass('in active');
+          }
+          else
+          {
+              that.removeClass('in active');
+          }
+        });
+      }
+      else
+      {
+        modalElement.find('.nav-tabs li').slice(0, 1).addClass('active');
+        modalElement.find('.nav-tabs li').slice(1).removeClass('active');
+        modalElement.find('.tab-pane').slice(0, 1).addClass('in active');
+        modalElement.find('.tab-pane').slice(1).removeClass('in active');
+      }
+      geodash.ui.update(id);
+      $("#"+id).modal(modalOptions);
+      $("#"+id).modal('toggle');
+    },0);
+  });
 };
 
 geodash.handlers["stateChanged"] = function($scope, $interpolate, $http, $q, event, args) {
@@ -1493,12 +1599,12 @@ geodash.handlers.toggleControl = function($scope, $interpolate, $http, $q, event
 geodash.handlers["viewChanged"] = function($scope, $interpolate, $http, $q, event, args) {
   console.log('event', event);
   console.log('args', args);
-  $scope.state.view = $.extend($scope.state.view, args);
-  var url = buildPageURL($interpolate, $scope.dashboard, $scope.state);
-  if(url != undefined)
-  {
-    history.replaceState($scope.state, "", url);
-  }
+
+  $.extend($scope.state.view, args);
+
+  geodash.history.pushState($interpolate, $scope);
+
+  $scope.refreshMap($scope.state); // Notify other components of view change
 };
 
 geodash.handlers.zoomIn = function($scope, $interpolate, $http, $q, event, args)
@@ -1506,7 +1612,8 @@ geodash.handlers.zoomIn = function($scope, $interpolate, $http, $q, event, args)
   var z = geodash.var.map.getView().getZoom();
   var maxZoom = extract("dashboard.view.maxZoom", $scope, 18);
   var newZoom = Math.min(z+1, maxZoom);
-  $scope.$broadcast("changeView", { 'zoom': newZoom });
+  var animate = extract("animate", args, true);
+  $scope.$broadcast("changeView", { 'zoom': newZoom, 'animate': animate });
 };
 
 geodash.handlers.zoomOut = function($scope, $interpolate, $http, $q, event, args)
@@ -1514,7 +1621,8 @@ geodash.handlers.zoomOut = function($scope, $interpolate, $http, $q, event, args
   var z = geodash.var.map.getView().getZoom();
   var minZoom = extract("dashboard.view.minZoom", $scope, 0);
   var newZoom = Math.max(z-1, minZoom);
-  $scope.$broadcast("changeView", { 'zoom': newZoom });
+  var animate = extract("animate", args, true);
+  $scope.$broadcast("changeView", { 'zoom': newZoom, 'animate': animate });
 };
 
 geodash.handlers["zoomToLayer"] = function($scope, $interpolate, $http, $q, event, args) {
@@ -1560,6 +1668,44 @@ geodash.handlers.flyToLocation = function($scope, $interpolate, $http, $q, event
     });
 };
 
+geodash.handlers.flyToCurrentLocation = function($scope, $interpolate, $http, $q, event, args)
+{
+    var $scope = geodash.util.getScope("geodash-main");
+    var v = geodash.var.map.getView();
+    if(navigator.geolocation)
+    {
+      var duration = extract("duration", args);
+      navigator.geolocation.getCurrentPosition(
+        function(position){
+          $scope.$broadcast("changeView", {
+            "lat": extract(["coords","latitude"], position, 0.0),
+            "lon": extract(["coords","longitude"], position, 0.0),
+            "zoom": 14,
+            "projection": "EPSG:4326",
+            "animations": ["pan", "bounce"],
+            "duration": duration
+          });
+        },
+        function showError(error) {
+          switch(error.code) {
+              case error.PERMISSION_DENIED:
+                  console.log("User denied the request for Geolocation.");
+                  break;
+              case error.POSITION_UNAVAILABLE:
+                  console.log("Location information is unavailable.");
+                  break;
+              case error.TIMEOUT:
+                  console.log("The request to get user location timed out.");
+                  break;
+              case error.UNKNOWN_ERROR:
+                  console.log("An unknown error occurred.");
+                  break;
+          }
+        }
+      );
+    }
+};
+
 geodash.handlers.printMap = function() {
   $('.geodash-sidebar-header-country, #geodash-sidebar-left-charts-chart-popatrisk, #map, .geodash-map-legend-layer, .ol-scale-line').printThis({
     canvas: true,
@@ -1567,7 +1713,6 @@ geodash.handlers.printMap = function() {
     footer: "<p style='margin-top: 1cm'><img style='height: 1cm; margin-left: 0.5cm; margin-right: 1cm; margin-top: -2.5cm; position: fixed; z-index: 99999' src='/static/sparc2/build/img/north_pointer.svg'><br><small>Data Sources:<br>Boundaries: WFP, UNGIWG, GAUL. Roads and settlements: OSM, GeoNames.<br>The boundaries and names and the designations used on this map do not imply official endorsement or acceptance by the United Nations.</small></p>"
   });
 };
-
 geodash.handlers.toggleFullScreen = function($scope, $interpolate, $http, $q, event, args)
 {
     if(ol.control.FullScreen.isFullScreenSupported())
@@ -1587,6 +1732,152 @@ geodash.handlers.toggleFullScreen = function($scope, $interpolate, $http, $q, ev
         }
       }
     }
+};
+
+geodash.handlers.startGeolocation = function($scope, $interpolate, $http, $q, event, args)
+{
+  var $scope = geodash.util.getScope("geodash-main");
+  var v = geodash.var.map.getView();
+  if(navigator.geolocation)
+  {
+    if(! geodash.util.isDefined(extract("var.geolocation.watch", geodash)))
+    {
+      geodash.var.geolocation.watch = navigator.geolocation.watchPosition(
+        function(position){
+          var lon = extract(["coords", "longitude"], position, 0.0);
+          var lat = extract(["coords", "latitude"], position, 0.0);
+          if(lon != 0.0 && lat != 0.0)
+          {
+            var accuracy = extract(["coords", "accuracy"], position, 0.0);
+            var coords = [lon, lat];
+            geodash.var.geolocation.lonlat = coords;
+            var fl = extract("var.featurelayers.current_position", geodash);
+            if(geodash.util.isDefined(fl))
+            {
+              var geom = new ol.geom.Point(ol.proj.transform(coords, "EPSG:4326", v.getProjection()));
+              var source = fl.getSource();
+              var features = source.getFeatures();
+              if(features.length > 0)
+              {
+                features[0].setProperties({"accuracy": accuracy});
+                features[0].setGeometry(geom);
+              }
+              else
+              {
+                source.addFeature(new ol.Feature({
+                  "accuracy": accuracy,
+                  "geometry": geom
+                }));
+              }
+            }
+          }
+        },
+        function showError(error) {
+          switch(error.code) {
+              case error.PERMISSION_DENIED:
+                  console.log("User denied the request for Geolocation.");
+                  break;
+              case error.POSITION_UNAVAILABLE:
+                  console.log("Location information is unavailable.");
+                  break;
+              case error.TIMEOUT:
+                  console.log("The request to get user location timed out.");
+                  break;
+              case error.UNKNOWN_ERROR:
+                  console.log("An unknown error occurred.");
+                  break;
+          }
+        }
+      );
+    }
+  }
+};
+
+geodash.handlers.stopGeolocation = function($scope, $interpolate, $http, $q, event, args)
+{
+    if(navigator.geolocation)
+    {
+      var watch_id = extract("var.geolocation.watch", geodash, undefined);
+      if(geodash.util.isDefined(watch_id))
+      {
+        navigator.geolocation.clearWatch(watch_id);
+        geodash.var.geolocation.watch = undefined;
+        if(geodash.util.isDefined(fl))
+        {
+          fl.getSource().clear();
+        }
+      }
+    }
+};
+
+geodash.handlers.toggleGeolocation = function($scope, $interpolate, $http, $q, event, args)
+{
+  var $scope = geodash.util.getScope("geodash-main");
+  var v = geodash.var.map.getView();
+  if(navigator.geolocation)
+  {
+    var watch_id = extract("var.geolocation.watch", geodash, undefined);
+    if(geodash.util.isDefined(watch_id))
+    {
+      navigator.geolocation.clearWatch(watch_id)
+      geodash.var.geolocation.watch = undefined;
+      var fl = extract("var.featurelayers.current_position", geodash);
+      if(geodash.util.isDefined(fl))
+      {
+        fl.getSource().clear();
+      }
+    }
+    else
+    {
+      geodash.var.geolocation.watch = navigator.geolocation.watchPosition(
+        function(position){
+          var lon = extract(["coords", "longitude"], position, 0.0);
+          var lat = extract(["coords", "latitude"], position, 0.0);
+          if(lon != 0.0 && lat != 0.0)
+          {
+            var accuracy = extract(["coords", "accuracy"], position, 0.0);
+            var coords = [lon, lat];
+            geodash.var.geolocation.lonlat = coords;
+            var fl = extract("var.featurelayers.current_position", geodash);
+            if(geodash.util.isDefined(fl))
+            {
+              var geom = new ol.geom.Point(ol.proj.transform(coords, "EPSG:4326", v.getProjection()));
+              var source = fl.getSource();
+              var features = source.getFeatures();
+              if(features.length > 0)
+              {
+                features[0].setProperties({"accuracy": accuracy});
+                features[0].setGeometry(geom);
+              }
+              else
+              {
+                source.addFeature(new ol.Feature({
+                  "accuracy": accuracy,
+                  "geometry": geom
+                }));
+              }
+            }
+          }
+        },
+        function showError(error) {
+          switch(error.code) {
+              case error.PERMISSION_DENIED:
+                  console.log("User denied the request for Geolocation.");
+                  break;
+              case error.POSITION_UNAVAILABLE:
+                  console.log("Location information is unavailable.");
+                  break;
+              case error.TIMEOUT:
+                  console.log("The request to get user location timed out.");
+                  break;
+              case error.UNKNOWN_ERROR:
+                  console.log("An unknown error occurred.");
+                  break;
+          }
+        }
+      );
+    }
+  }
 };
 
 geodash.directives.ngSvgText = function()
