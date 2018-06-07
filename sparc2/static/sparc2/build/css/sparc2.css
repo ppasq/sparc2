@@ -20,19 +20,24 @@ html {
   height: 100%;
 }
 body {
+  background-color: #2A93FC;
+  background: linear-gradient(90deg, #0474e6 0, #2a93fc);
   height: 100%;
 }
 .geodash-bootloader-status a {
   color: #2A93FC;
+  display: none !important;
 }
 .geodash-bootloader-step h6 {
   font-size: 1rem;
+  /*display: none !important;*/
 }
 .geodash-bootloader-step-internals {
   margin-top: 2rem;
+  display: none !important;
 }
 .lead a {
-  color: #2A93FC;
+  color: white;
 }
 .screen {
   display: inline;
@@ -658,6 +663,7 @@ body.modal-open .tab-content h6 {
 /* Sidebar */
 /* Navbars */
 .geodash-sidebar-left {
+  background: white;
   border-radius: 0px;
 }
 .geodash-sidebar {
