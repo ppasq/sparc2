@@ -1819,6 +1819,29 @@ featurelayers:
               label: Admin 1
             - value: "{{ feature.attributes.admin2_name }}"
               label: Admin 2
+  - id: world_pop
+    type: WMS
+    title: "World Population (GPW)"
+    description: "Gridded Population of the World (GPW), v4"
+    source:
+      name: "NASA"
+      attribution: "NASA"
+    legend: { ui: { source: false } }
+    wms:
+      version: "1.1.0"
+      layers: ["sparc:world_pop_pyramid"]
+      styles: 
+      format: 'image/png'
+      transparent: true
+      url: "http://sparc.wfp.org/geoserver/wms"
+    cartography:
+      - id: default
+        legend:
+          symbol:
+            type: "graphic"
+            width: 16
+            height: 16
+            preview: false
   - id: landscan
     type: WMS
     title: "Landscan (2013)"
@@ -1843,7 +1866,7 @@ featurelayers:
     wms:
       version: "1.1.0"
       layers: ["erds:apcp_cumulated_24h"]
-      styles: []
+      styles: ["erds_precip_sparc"]
       format: 'image/png'
       transparent: true
       buffer: 256
@@ -1867,7 +1890,7 @@ featurelayers:
     wms:
       version: "1.1.0"
       layers: ["erds:apcp_cumulated_72h"]
-      styles: []
+      styles: ["erds_precip_sparc"]
       format: 'image/png'
       transparent: true
       buffer: 256
@@ -1891,7 +1914,7 @@ featurelayers:
     wms:
       version: "1.1.0"
       layers: ["erds:apcp_cumulated_144h"]
-      styles: []
+      styles: ["erds_precip_sparc"]
       format: 'image/png'
       transparent: true
       buffer: 256
@@ -1914,7 +1937,7 @@ featurelayers:
     wms:
       version: "1.1.0"
       layers: ["erds:precip_024h"]
-      styles: []
+      styles: ["erds_precip_sparc"]
       format: 'image/png'
       transparent: true
       url: "http://erds.ithacaweb.org/geoserver/erds/wms"
@@ -1936,7 +1959,7 @@ featurelayers:
     wms:
       version: "1.1.0"
       layers: ["erds:precip_072h"]
-      styles: []
+      styles: ["erds_precip_sparc"]
       format: 'image/png'
       transparent: true
       url: "http://erds.ithacaweb.org/geoserver/erds/wms"
@@ -1958,7 +1981,7 @@ featurelayers:
     wms:
       version: "1.1.0"
       layers: ["erds:precip_096h"]
-      styles: []
+      styles: ["erds_precip_sparc"]
       format: 'image/png'
       transparent: true
       url: "http://erds.ithacaweb.org/geoserver/erds/wms"
@@ -2912,7 +2935,7 @@ renderlayers:
   - flood_probability
   {% endverbatim %}{% endif %}
   - wlddsi_fot02d3
-  - landscan
+  - world_pop
   - vam
   - nrt_1day
   - nrt_3day
@@ -2986,7 +3009,7 @@ sidebar:
       - context_crop_change
       - context_erosion
       - context_ldi
-      #- landscan
+      - world_pop
       #- vam_fcs
       #- vam_csi
       - cyclone_probability_jan
@@ -3023,7 +3046,7 @@ sidebar:
       - context_crop_change
       - context_erosion
       - context_ldi
-      #- landscan
+      - world_pop
       #- vam_fcs
       #- vam_csi
       {% endverbatim %}{% elif hazard == "flood" %}{% verbatim %}
@@ -3035,7 +3058,7 @@ sidebar:
       - context_crop_change
       - context_erosion
       - context_ldi
-      #- landscan
+      - world_pop
       #- vam_fcs
       #- vam_csi
       - flood_events
@@ -3050,7 +3073,7 @@ sidebar:
       - context_crop_change
       - context_erosion
       - context_ldi
-      #- landscan
+      - world_pop
       #- vam_fcs
       #- vam_csi
       - flood_events
@@ -3085,6 +3108,10 @@ sidebar:
           - context_crop_change
           - context_erosion
           - context_ldi
+      - id: population_distribution
+        label: Population Distribution
+        class: geodash-sidebar-layers-population-distribution
+        layers: [world_pop]
       #- id: vulnerability_factors
       #  label: Vulnerability Factors
       #  class: geodash-sidebar-layers-vulnerability-factors
@@ -3153,7 +3180,7 @@ sidebar:
           90-100%: "#ff5252"
         {% endverbatim %}{% elif hazard == "drought" %}{% verbatim %}
         hazard: drought
-        colors: # Done!
+        colors:
           1-5%: "#fcdc5d"
           5-10%: "#ffb45a"
           10-20%: "#ff8856"

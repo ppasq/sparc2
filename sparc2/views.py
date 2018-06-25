@@ -209,8 +209,8 @@ class api_state_home(geodash_data_view):
                 "lat": dashboard["view"]["latitude"],
                 "lon": dashboard["view"]["longitude"],
                 "z": dashboard["view"]["zoom"],
-                "baselayer": "osm",
-                "featurelayers": ["wld_poi_facilities_wfp", "flood_events_all"]
+                "baselayer": "mapbox.dark",
+                "featurelayers": ["forecast_6day"]
             },
             "filters": {},
             "styles": {}
@@ -265,7 +265,7 @@ class api_state_countryhazardmonth(geodash_data_view):
         }))
         #############
         view = {
-            "baselayer": "osm",
+            "baselayer": "mapbox.dark",
             "featurelayers": ["popatrisk"]
         }
         response = requests.get(settings.SITEURL+"api/data/countries.json?grep=iso.alpha3%3D"+iso3)

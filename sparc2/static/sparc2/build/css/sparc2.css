@@ -338,6 +338,9 @@ body.modal-open .tab-content h6 {
   .ol-unselectable:first-child {
     display: block;
   }
+  .ol-unselectable:last-child {
+    display: block;
+  }
   .ol-scale-line .ol-unselectable {
     display: block;
   }

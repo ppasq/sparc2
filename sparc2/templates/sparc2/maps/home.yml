@@ -1,38 +1,51 @@
 {% extends "sparc2/maps/base.yml" %}
 
 {% block title %}
-title: SPARC
+title: SPARC2
 {% endblock %}
 
-{% block view %}{{ block.super }}{% endblock %}
+{% block view %}
+view:
+ baselayer: "mapbox.satellite"
+ latitude: 0
+ longitude: 0
+ zoom: 3
+ minZoom: 0
+ maxZoom: 18
+{% endblock %}
 
-{% block baselayers %}{{ block.super }}{% endblock %}
+{% block baselayers %}
+baselayer: mapbox.dark
+baselayers:
+  - id: "mapbox.satellite"
+    type: xyz
+    title: "Mapbox Dark"
+    description: "Mapbox Basemap, Satellite"
+    source:
+      name: "Mapbox Dark"
+      attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery &copy; <a href=\"http://mapbox.com\">Mapbox</a>"
+    tile:
+      url: "https://api.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
+{% endblock %}
 
 {% block featurelayers %}{% verbatim %}
 featurelayers:
-  - id: wld_poi_facilities_wfp
+  - id: forecast_6day
     type: WMS
-    title: "Global WFP Facilities"
-    description: "WFP Facilities worldwide, Country Office, Sub-Office, Field Office, Area Office, Humanitarian Response Depot."
-    visible: true
+    title: "FC Cumulated Rainfall: 6 days"
+    description: "Forecast precipitation accumulation for the next 6 days. The Global Forecast System (GFS) is a weather forecast model produced by the National Centers for Environmental Prediction (NCEP). Dozens of atmospheric and land-soil variables are available through this dataset, from temperatures, winds, and precipitation to soil moisture and atmospheric ozone concentration. The entire globe is covered by the GFS at a base horizontal resolution of 18 miles (28 kilometers) between grid points, which is used by the operational forecasters who predict weather out to 16 days in the future. Horizontal resolution drops to 44 miles (70 kilometers) between grid point for forecasts between one week and two weeks."
     source:
-      name: "WFP"
-      attribution: "WFP GeoNode"
+      name: "National Centers for Environmental Prediction (NCEP). Cumulated rainfall data processed by ITHACA."
+      attribution: "National Centers for Environmental Prediction (NCEP). Cumulated rainfall data processed by ITHACA."
+    legend: { ui: { source: false } }
     wms:
-      version: "1.1.1"
-      layers: ["geonode:wld_poi_facilities_wfp"]
+      version: "1.1.0"
+      layers: ["erds:apcp_cumulated_144h"]
       styles: []
       format: 'image/png'
       transparent: true
       buffer: 256
-      url: "http://geonode.wfp.org/cors/geoserver/wms"
-      cql_filter: "(facility IN ('Country Office') AND status = 'Open')"
-    wfs:
-      version: "1.0.0"  # Needs to 1.0.0 or returns bad results for some reason.
-      url: "http://geonode.wfp.org/cors/geoserver/wfs"
-      geometry: shape
-    kml:
-      url: "http://geonode.wfp.org/cors/geoserver/wms/kml"
+      url: "http://erds.ithacaweb.org/geoserver/erds/wms"
     cartography:
       - id: default
         legend:
@@ -41,22 +54,6 @@ featurelayers:
             width: 16
             height: 16
             preview: false
-    legend:
-      label: "Global WFP Facilities"
-  - id: flood_events_all
-    enabled: true
-    type: geojson
-    title: "Flood Events (Heatmap)"
-    description: "This layer contains a heatmap of flood events."
-    visible: true
-    source:
-      name: "World Food Programme, Emergency Preparedness & Support Response Division, GIS (WFP/OSEP/GIS)"
-      attribution: "WFP/OSEP/GIS"
-    geojson: { url: "/api/data/country/all/hazard/flood/dataset/events/WLD_NHR_FloodEvents.json" }
-    heatmap:
-      radius: 4
-      blur: 10
-      weight: count
 {% endverbatim %}{% endblock %}
 
 {% block legendlayers %}
@@ -64,12 +61,8 @@ featurelayers:
 
 {% block renderlayers %}
 renderlayers:
-  - wld_poi_facilities_wfp
-  - flood_events_all
-  - mapbox.light
   - mapbox.dark
-#  - osm
-#  - osm_humanitarian
+  - forecast_6day
 {% endblock %}
 
 {% block charts %}
