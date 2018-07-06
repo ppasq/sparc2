@@ -3093,6 +3093,10 @@ sidebar:
       - osm_humanitarian
       - osm
     groups:
+      - id: population_at_risk
+        label: Population at Risk
+        class: geodash-sidebar-layers-population-distribution
+        layers: [popatrisk]
       - id: natural_hazard
         label: Natural Hazards
         class: geodash-sidebar-layers-natural-hazards
@@ -3111,7 +3115,7 @@ sidebar:
       - id: population_distribution
         label: Population Distribution
         class: geodash-sidebar-layers-population-distribution
-        layers: [popatrisk, world_pop]
+        layers: [world_pop]
       #- id: vulnerability_factors
       #  label: Vulnerability Factors
       #  class: geodash-sidebar-layers-vulnerability-factors
