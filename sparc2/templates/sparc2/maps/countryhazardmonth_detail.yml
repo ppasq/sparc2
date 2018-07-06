@@ -1830,7 +1830,7 @@ featurelayers:
     wms:
       version: "1.1.0"
       layers: ["sparc:world_pop_pyramid"]
-      styles: 
+      styles:
       format: 'image/png'
       transparent: true
       url: "http://sparc.wfp.org/geoserver/wms"
@@ -3096,7 +3096,7 @@ sidebar:
       - id: natural_hazard
         label: Natural Hazards
         class: geodash-sidebar-layers-natural-hazards
-        layers: [flood_probability, cyclone_probability_jan, cyclone_probability_feb, cyclone_probability_mar, cyclone_probability_apr, cyclone_probability_may, cyclone_probability_jun, cyclone_probability_jul, cyclone_probability_aug, cyclone_probability_sep, cyclone_probability_oct, cyclone_probability_nov, cyclone_probability_dec, popatrisk, cyclone_events, flood_events, landslide_events, wlddsi_fot01d3, wlddsi_fot02d3, wlddsi_fot03d3, wlddsi_fot04d3, wlddsi_fot05d3, wlddsi_fot06d3, wlddsi_fot07d3, wlddsi_fot08d3, wlddsi_fot09d3, wlddsi_fot10d3, wlddsi_fot11d3, wlddsi_fot12d3]
+        layers: [flood_probability, cyclone_probability_jan, cyclone_probability_feb, cyclone_probability_mar, cyclone_probability_apr, cyclone_probability_may, cyclone_probability_jun, cyclone_probability_jul, cyclone_probability_aug, cyclone_probability_sep, cyclone_probability_oct, cyclone_probability_nov, cyclone_probability_dec, cyclone_events, flood_events, landslide_events, wlddsi_fot01d3, wlddsi_fot02d3, wlddsi_fot03d3, wlddsi_fot04d3, wlddsi_fot05d3, wlddsi_fot06d3, wlddsi_fot07d3, wlddsi_fot08d3, wlddsi_fot09d3, wlddsi_fot10d3, wlddsi_fot11d3, wlddsi_fot12d3]
       - id: context_factors
         label: Land Degradation
         class: geodash-sidebar-layers-context-factors
@@ -3111,7 +3111,7 @@ sidebar:
       - id: population_distribution
         label: Population Distribution
         class: geodash-sidebar-layers-population-distribution
-        layers: [world_pop]
+        layers: [popatrisk, world_pop]
       #- id: vulnerability_factors
       #  label: Vulnerability Factors
       #  class: geodash-sidebar-layers-vulnerability-factors
