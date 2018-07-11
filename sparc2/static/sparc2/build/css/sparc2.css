@@ -30,7 +30,7 @@ body {
 }
 .geodash-bootloader-step h6 {
   font-size: 1rem;
-  /*display: none !important;*/
+  display: none !important;
 }
 .geodash-bootloader-step-internals {
   margin-top: 2rem;
