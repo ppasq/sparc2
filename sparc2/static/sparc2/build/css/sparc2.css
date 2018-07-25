@@ -374,6 +374,10 @@ body.modal-open .tab-content h6 {
   .geodash-sidebar .footnote {
     font-size: 0.5rem;
   }
+  .ol-scale-line {
+    bottom: 10px;
+    position: absolute;
+  }
 }
 @media print and (orientation: portrait) {
   #geodash-sidebar-left-charts {
@@ -386,6 +390,10 @@ body.modal-open .tab-content h6 {
   .geodash-map .sidebar-open {
     min-width: 5cm;
     max-width: 6cm;
+  }
+  .ol-scale-line {
+    bottom: 10px;
+    position: absolute;
   }
 }
 
@@ -626,8 +634,6 @@ body.modal-open .tab-content h6 {
 .geodash-popup-plain {
   word-wrap: break-word;
   text-align: center;
-  font-family: Verdana;
-  font-size: 14px;
 }
 .geodash-popup-plain .geodash-popup-plain-value {
   font-size: 18px;
@@ -1169,9 +1175,29 @@ body.modal-open .tab-content h6 {
 #geodash-modal-sparc-welcome .modal-content .right .modal-body #modal-sparc-welcome-about {
   font-size: 0.875rem;
 }
+#geodash-modal-sparc-welcome .modal-content .right .nav-tabs {
+  border: 0;
+}
+#geodash-modal-sparc-welcome .modal-content .right .nav-tabs > li.active > a {
+  border: 0;
+  display: none;
+}
+#geodash-modal-sparc-welcome .modal-content .right .nav-tabs > li > a {
+  padding-left: 0;
+}
+#geodash-modal-sparc-welcome .modal-content .right .video-tutorial {
+  min-width: calc(540px - 4rem);
+}
 @media (min-width: 808px) {
   #geodash-modal-sparc-welcome .modal-dialog {
     width: 808px;
     margin: 120px auto;
+  }
+  #geodash-modal-sparc-welcome .search-risk-form {
+    margin: calc(50% + 72px) 2rem;
+  }
+  #geodash-modal-sparc-welcome .video-tutorial {
+    min-width: calc(404px - 2rem);
+    max-width: calc(560px - 2rem);
   }
 }

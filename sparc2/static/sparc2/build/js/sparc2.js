@@ -245,7 +245,7 @@ var init_sparc_controller = function(that, app)
 
 geodash.meta = {};
 geodash.meta.projects = [{"name":"geodash","version":"0.0.1","description":"geodash 0.0.1"},{"name":"sparc2","version":"0.0.1","description":"SPARC 2.x"}];
-geodash.meta.plugins = [{"controllers":["GeoDashControllerBase.js","GeoDashControllerModal.js"],"directives":["svg/ngSvgText.js","svg/svg.js","geodashBase.js","onLinkDone.js","onRepeatDone.js","geodashBtnClose.js","geodashBtnInfo.js","geodashBtn.js","geodashLabel.js","geodashTab.js","geodashTabs.js"],"enumerations":["dates.js"],"templates":["geodash_tab.tpl.html","geodash_tabs.tpl.html","geodash_btn_close.tpl.html","geodash_btn_info.tpl.html","geodash_btn.tpl.html","geodash_label.tpl.html"],"filters":[],"handlers":[],"schemas":["base.yml","baselayers.yml","assets.yml","featurelayers.yml","controls.yml","view.yml","servers.yml","pages.yml",{"id":"css","path":"lib/css.yml"},{"id":"intent","path":"lib/intent.yml"},{"id":"intents","path":"lib/intents.yml"},{"id":"placement","path":"lib/placement.yml"},{"id":"position","path":"lib/position.yml"},{"id":"tooltip","path":"lib/tooltip.yml"}],"modals":[],"less":["base.less"],"project":"geodash","id":"file:///home/vagrant/geodash-plugin-base.git"},{"name":"geodash-plugin-handlers","controllers":[],"directives":[],"enumerations":[],"templates":[],"filters":[],"handlers":["clickedOnMap.js","filterChanged.js","hideLayer.js","hideLayers.js","hideModal.js","layerLoaded.js","requestToggleComponent.js","selectStyle.js","showLayer.js","showLayers.js","showModal.js","stateChanged.js","switchBaseLayer.js","ol3/toggleComponent.js","toggleFeatureLayer.js","toggleControl.js","viewChanged.js","zoomIn.js","zoomOut.js","zoomToLayer.js","zoomToLocation.js","flyToExtent.js","flyToLocation.js","flyToCurrentLocation.js","ol3/printMap.js","ol3/toggleFullScreen.js","startGeolocation.js","stopGeolocation.js","toggleGeolocation.js"],"schemas":[],"modals":[],"less":[],"project":"geodash","id":"geodash-plugin-handlers"},{"name":"geodash-plugin-filters","filters":["default.js","percent.js","tabLabel.js","as_float.js","add.js","title.js","as_array.js","sortItemsByArray.js","breakpoint.js","breakpoints.js","position_x.js","width_x.js","length.js","layer_is_visible.js","common/append.js","common/default_if_undefined.js","common/default_if_undefined_or_blank.js","common/extract.js","common/extractTest.js","common/inArray.js","common/not.js","common/prepend.js","common/parseTrue.js","common/ternary.js","common/ternary_defined.js","common/yaml.js","array/arrayToObject.js","array/join.js","array/first.js","array/last.js","array/choose.js","css/css.js","css/ellipsis.js","format/formatBreakPoint.js","format/formatFloat.js","format/formatInteger.js","format/formatArray.js","format/formatMonth.js","math/eq.js","math/lte.js","math/gte.js","math/gt.js","string/replace.js","string/split.js","string/stringToObject.js","string/md2html.js","url/url_shapefile.js","url/url_geojson.js","url/url_kml.js","url/url_describefeaturetype.js"],"project":"geodash","id":"geodash-plugin-filters"},{"name":"geodash-plugin-legend","controllers":["GeoDashControllerLegend.js"],"directives":["geodashMapLegend.js"],"templates":["map_legend.tpl.html"],"less":["legend.less"],"schemas":["legend.yml"],"project":"geodash","id":"geodash-plugin-legend"},{"controllers":[],"directives":["geodashModalWelcome.js"],"templates":["modal/geodash_modal_welcome.tpl.html"],"project":"geodash","id":"welcome"},{"controllers":[],"directives":["geodashModalAbout.js"],"templates":["geodash_modal_about.tpl.html"],"project":"geodash","id":"about"},{"controllers":[],"directives":["geodashModalDownload.js"],"templates":["geodash_modal_download.tpl.html"],"project":"geodash","id":"download"},{"name":"geodash-plugin-overlays","controllers":["GeoDashControllerOverlays.js"],"directives":["geodashMapOverlays.js"],"templates":["map_overlays.tpl.html"],"less":["map_overlays.less"],"schemas":["map_overlays_schema.yml"],"project":"geodash","id":"geodash-plugin-overlays"},{"name":"geodash-plugin-navbars","controllers":["GeoDashControllerMapNavbars.js"],"directives":["geodashMapNavbars.js"],"templates":["map_navbars.tpl.html"],"less":["map_navbars.less"],"schemas":["map_navbars.yml"],"project":"geodash","id":"geodash-plugin-navbars"},{"controllers":[],"directives":["geodashSidebarToggleLeft.js"],"templates":["geodash_sidebar_toggle_left.tpl.html"],"project":"geodash","id":"sidebar_toggle_left"},{"controllers":[],"directives":["geodashSidebarToggleRight.js"],"templates":["geodash_sidebar_toggle_right.tpl.html"],"project":"geodash","id":"sidebar_toggle_right"},{"name":"sparc2","endpoints":["endpoints.yml"],"project":"sparc2","id":"sparc2"},{"name":"geodash-plugin-map-map","controllers":[{"name":"GeoDashControllerMapMap","path":"GeoDashControllerMapMap.js","handlers":[{"event":"toggleComponent","handler":"toggleComponent"}]}],"directives":["geodashMapMap.js"],"templates":["map_map.tpl.html"],"less":["map_map.less"],"project":"sparc2","id":"geodash-plugin-map-map"},{"name":"sparc2-plugin-sidebar","controllers":["SPARCControllerSidebar.js","SPARCControllerModalLayer.js"],"directives":["sparcSidebar.js","sparcSidebarFeatureLayer.js","sparcModalFilterMore.js","sparcFilterCheckbox.js","sparcFilterRadio.js","sparcFilterSlider.js","sparcModalLayer.js"],"templates":["sparc_sidebar.tpl.html","sparc_sidebar_featurelayer.tpl.html","filter/filter_checkbox.tpl.html","filter/filter_radio.tpl.html","filter/filter_slider.tpl.html","modal/sparc_modal_layer.tpl.html"],"less":["sidebar.less","sidebar-toggle.less","filter.less"],"modals":[{"name":"sparc_modal_layer","ui":{"mainClass":"","tabs":[{"target":"sparc-modal-layer-general","label":"General"},{"target":"sparc-modal-layer-source","label":"Source"},{"target":"sparc-modal-layer-download","label":"Download"},{"target":"sparc-modal-layer-links","label":"Links"}]}}],"project":"sparc2","id":"sparc2-plugin-sidebar"},{"name":"sparc2-plugin-welcome","controllers":["SPARCControllerModalWelcome.js"],"directives":["sparcModalWelcome.js"],"templates":["sparc_modal_welcome.tpl.html"],"less":["sparc_welcome.less"],"modals":[{"name":"sparc_welcome","ui":{"mainClass":"","tabs":[{"target":"modal-sparc-welcome-intro","label":"Introduction"},{"target":"modal-sparc-welcome-about","label":"About"}]}}],"project":"sparc2","id":"sparc2-plugin-welcome"},{"name":"geodash-plugin-main","controllers":[{"name":"GeoDashControllerMain","path":"GeoDashControllerMain.js","handlers":[{"event":"clickedOnMap","handler":"clickedOnMap"},{"event":"filterChanged","handler":"filterChanged"},{"event":"hideLayer","handler":"hideLayer"},{"event":"hideLayers","handler":"hideLayers"},{"event":"layerLoaded","handler":"layerLoaded"},{"event":"requestToggleComponent","handler":"requestToggleComponent"},{"event":"selectStyle","handler":"selectStyle"},{"event":"showLayer","handler":"showLayer"},{"event":"showLayers","handler":"showLayers"},{"event":"stateChanged","handler":"stateChanged"},{"event":"switchBaseLayer","handler":"switchBaseLayer"},{"event":"viewChanged","handler":"viewChanged"},{"event":"zoomIn","handler":"zoomIn"},{"event":"zoomOut","handler":"zoomOut"},{"event":"zoomToLayer","handler":"zoomToLayer"},{"event":"zoomToLocation","handler":"zoomToLocation"},{"event":"flyToLocation","handler":"flyToLocation"},{"event":"flyToExtent","handler":"flyToExtent"},{"event":"printMap","handler":"printMap"},{"event":"toggleFullScreen","handler":"toggleFullScreen"},{"event":"toggleFeatureLayer","handler":"toggleFeatureLayer"},{"event":"toggleControl","handler":"toggleControl"}]}],"directives":["geodashMain.js"],"templates":["main.tpl.html"],"handlers":[],"project":"sparc2","id":"geodash-plugin-main"}];
+geodash.meta.plugins = [{"controllers":["GeoDashControllerBase.js","GeoDashControllerModal.js"],"directives":["svg/ngSvgText.js","svg/svg.js","geodashBase.js","onLinkDone.js","onRepeatDone.js","geodashBtnClose.js","geodashBtnInfo.js","geodashBtn.js","geodashLabel.js","geodashTab.js","geodashTabs.js"],"enumerations":["dates.js"],"templates":["geodash_tab.tpl.html","geodash_tabs.tpl.html","geodash_btn_close.tpl.html","geodash_btn_info.tpl.html","geodash_btn.tpl.html","geodash_label.tpl.html"],"filters":[],"handlers":[],"schemas":["base.yml","baselayers.yml","assets.yml","featurelayers.yml","controls.yml","view.yml","servers.yml","pages.yml",{"id":"css","path":"lib/css.yml"},{"id":"intent","path":"lib/intent.yml"},{"id":"intents","path":"lib/intents.yml"},{"id":"placement","path":"lib/placement.yml"},{"id":"position","path":"lib/position.yml"},{"id":"tooltip","path":"lib/tooltip.yml"}],"modals":[],"less":["base.less"],"project":"geodash","id":"file:///home/vagrant/geodash-plugin-base.git"},{"name":"geodash-plugin-handlers","controllers":[],"directives":[],"enumerations":[],"templates":[],"filters":[],"handlers":["clickedOnMap.js","filterChanged.js","hideLayer.js","hideLayers.js","layerLoaded.js","requestToggleComponent.js","selectStyle.js","showLayer.js","showLayers.js","stateChanged.js","switchBaseLayer.js","ol3/toggleComponent.js","toggleFeatureLayer.js","toggleControl.js","viewChanged.js","zoomIn.js","zoomOut.js","zoomToLayer.js","zoomToLocation.js","flyToExtent.js","flyToLocation.js","ol3/printMap.js","ol3/toggleFullScreen.js"],"schemas":[],"modals":[],"less":[],"project":"geodash","id":"geodash-plugin-handlers"},{"name":"geodash-plugin-filters","filters":["default.js","percent.js","tabLabel.js","as_float.js","add.js","title.js","as_array.js","sortItemsByArray.js","breakpoint.js","breakpoints.js","position_x.js","width_x.js","length.js","layer_is_visible.js","common/append.js","common/default_if_undefined.js","common/default_if_undefined_or_blank.js","common/extract.js","common/extractTest.js","common/inArray.js","common/not.js","common/prepend.js","common/parseTrue.js","common/ternary.js","common/ternary_defined.js","common/yaml.js","array/arrayToObject.js","array/join.js","array/first.js","array/last.js","array/choose.js","css/css.js","css/ellipsis.js","format/formatBreakPoint.js","format/formatFloat.js","format/formatInteger.js","format/formatArray.js","format/formatMonth.js","math/eq.js","math/lte.js","math/gte.js","math/gt.js","string/replace.js","string/split.js","string/stringToObject.js","string/md2html.js","url/url_shapefile.js","url/url_geojson.js","url/url_kml.js","url/url_describefeaturetype.js"],"project":"geodash","id":"geodash-plugin-filters"},{"name":"geodash-plugin-legend","controllers":["GeoDashControllerLegend.js"],"directives":["geodashMapLegend.js"],"templates":["map_legend.tpl.html"],"less":["legend.less"],"schemas":["legend.yml"],"project":"geodash","id":"geodash-plugin-legend"},{"controllers":[],"directives":["geodashModalWelcome.js"],"templates":["modal/geodash_modal_welcome.tpl.html"],"project":"geodash","id":"welcome"},{"controllers":[],"directives":["geodashModalAbout.js"],"templates":["geodash_modal_about.tpl.html"],"project":"geodash","id":"about"},{"controllers":[],"directives":["geodashModalDownload.js"],"templates":["geodash_modal_download.tpl.html"],"project":"geodash","id":"download"},{"name":"geodash-plugin-overlays","controllers":["GeoDashControllerOverlays.js"],"directives":["geodashMapOverlays.js"],"templates":["map_overlays.tpl.html"],"less":["map_overlays.less"],"schemas":["map_overlays_schema.yml"],"project":"geodash","id":"geodash-plugin-overlays"},{"name":"geodash-plugin-navbars","controllers":["GeoDashControllerMapNavbars.js"],"directives":["geodashMapNavbars.js"],"templates":["map_navbars.tpl.html"],"less":["map_navbars.less"],"schemas":["map_navbars.yml"],"project":"geodash","id":"geodash-plugin-navbars"},{"controllers":[],"directives":["geodashSidebarToggleLeft.js"],"templates":["geodash_sidebar_toggle_left.tpl.html"],"project":"geodash","id":"sidebar_toggle_left"},{"controllers":[],"directives":["geodashSidebarToggleRight.js"],"templates":["geodash_sidebar_toggle_right.tpl.html"],"project":"geodash","id":"sidebar_toggle_right"},{"name":"sparc2","endpoints":["endpoints.yml"],"project":"sparc2","id":"sparc2"},{"name":"geodash-plugin-map-map","controllers":[{"name":"GeoDashControllerMapMap","path":"GeoDashControllerMapMap.js","handlers":[{"event":"toggleComponent","handler":"toggleComponent"}]}],"directives":["geodashMapMap.js"],"templates":["map_map.tpl.html"],"less":["map_map.less"],"project":"sparc2","id":"geodash-plugin-map-map"},{"name":"sparc2-plugin-sidebar","controllers":["SPARCControllerSidebar.js","SPARCControllerModalLayer.js"],"directives":["sparcSidebar.js","sparcSidebarFeatureLayer.js","sparcModalFilterMore.js","sparcFilterCheckbox.js","sparcFilterRadio.js","sparcFilterSlider.js","sparcModalLayer.js"],"templates":["sparc_sidebar.tpl.html","sparc_sidebar_featurelayer.tpl.html","filter/filter_checkbox.tpl.html","filter/filter_radio.tpl.html","filter/filter_slider.tpl.html","modal/sparc_modal_layer.tpl.html"],"less":["sidebar.less","sidebar-toggle.less","filter.less"],"modals":[{"name":"sparc_modal_layer","ui":{"mainClass":"","tabs":[{"target":"sparc-modal-layer-general","label":"General"},{"target":"sparc-modal-layer-source","label":"Source"},{"target":"sparc-modal-layer-download","label":"Download"},{"target":"sparc-modal-layer-links","label":"Links"}]}}],"project":"sparc2","id":"sparc2-plugin-sidebar"},{"name":"sparc2-plugin-welcome","controllers":["SPARCControllerModalWelcome.js"],"directives":["sparcModalWelcome.js"],"templates":["sparc_modal_welcome.tpl.html"],"less":["sparc_welcome.less"],"modals":[{"name":"sparc_welcome","ui":{"mainClass":"","tabs":[{"target":"modal-sparc-welcome-intro","label":"Introduction"},{"target":"modal-sparc-welcome-about","label":"About"}]}}],"project":"sparc2","id":"sparc2-plugin-welcome"},{"name":"geodash-plugin-main","controllers":[{"name":"GeoDashControllerMain","path":"GeoDashControllerMain.js","handlers":[{"event":"clickedOnMap","handler":"clickedOnMap"},{"event":"filterChanged","handler":"filterChanged"},{"event":"hideLayer","handler":"hideLayer"},{"event":"hideLayers","handler":"hideLayers"},{"event":"layerLoaded","handler":"layerLoaded"},{"event":"requestToggleComponent","handler":"requestToggleComponent"},{"event":"selectStyle","handler":"selectStyle"},{"event":"showLayer","handler":"showLayer"},{"event":"showLayers","handler":"showLayers"},{"event":"stateChanged","handler":"stateChanged"},{"event":"switchBaseLayer","handler":"switchBaseLayer"},{"event":"viewChanged","handler":"viewChanged"},{"event":"zoomIn","handler":"zoomIn"},{"event":"zoomOut","handler":"zoomOut"},{"event":"zoomToLayer","handler":"zoomToLayer"},{"event":"zoomToLocation","handler":"zoomToLocation"},{"event":"flyToLocation","handler":"flyToLocation"},{"event":"flyToExtent","handler":"flyToExtent"},{"event":"printMap","handler":"printMap"},{"event":"toggleFullScreen","handler":"toggleFullScreen"},{"event":"toggleFeatureLayer","handler":"toggleFeatureLayer"},{"event":"toggleControl","handler":"toggleControl"}]}],"directives":["geodashMain.js"],"templates":["main.tpl.html"],"handlers":[],"project":"sparc2","id":"geodash-plugin-main"}];
 geodash.meta.controllers = [{"name":"GeoDashControllerMapMap","handlers":[{"event":"toggleComponent","handler":"toggleComponent"}]},{"name":"GeoDashControllerMain","handlers":[{"event":"clickedOnMap","handler":"clickedOnMap"},{"event":"filterChanged","handler":"filterChanged"},{"event":"hideLayer","handler":"hideLayer"},{"event":"hideLayers","handler":"hideLayers"},{"event":"layerLoaded","handler":"layerLoaded"},{"event":"requestToggleComponent","handler":"requestToggleComponent"},{"event":"selectStyle","handler":"selectStyle"},{"event":"showLayer","handler":"showLayer"},{"event":"showLayers","handler":"showLayers"},{"event":"stateChanged","handler":"stateChanged"},{"event":"switchBaseLayer","handler":"switchBaseLayer"},{"event":"viewChanged","handler":"viewChanged"},{"event":"zoomIn","handler":"zoomIn"},{"event":"zoomOut","handler":"zoomOut"},{"event":"zoomToLayer","handler":"zoomToLayer"},{"event":"zoomToLocation","handler":"zoomToLocation"},{"event":"flyToLocation","handler":"flyToLocation"},{"event":"flyToExtent","handler":"flyToExtent"},{"event":"printMap","handler":"printMap"},{"event":"toggleFullScreen","handler":"toggleFullScreen"},{"event":"toggleFeatureLayer","handler":"toggleFeatureLayer"},{"event":"toggleControl","handler":"toggleControl"}]}];
 geodash.meta.modals = [{"name":"sparc_modal_layer","ui":{"mainClass":"","tabs":[{"target":"sparc-modal-layer-general","label":"General"},{"target":"sparc-modal-layer-source","label":"Source"},{"target":"sparc-modal-layer-download","label":"Download"},{"target":"sparc-modal-layer-links","label":"Links"}]}},{"name":"sparc_welcome","ui":{"mainClass":"","tabs":[{"target":"modal-sparc-welcome-intro","label":"Introduction"},{"target":"modal-sparc-welcome-about","label":"About"}]}}];
 geodash.templates = {static:{}};
@@ -269,7 +269,7 @@ geodash.templates.static["filter_checkbox.tpl.html"] = "<div\n  class=\"col-md-1
 geodash.templates.static["filter_radio.tpl.html"] = "<div\n  class=\"col-md-12 geodash-filter geodash-filter-radio\"\n  style=\"min-height: {{ filter.ui.height }};\">\n  <div class=\"geodash-filter-label\">\n    <a\n      class=\"geodash-intent\"\n      data-intent-name=\"toggleModal\"\n      data-intent-data=\"{&quot;id&quot;:&quot;geodash-modal-filter-more&quot;,&quot;static&quot;:{&quot;tab&quot;:&quot;modal-filter-more-general&quot;},&quot;dynamic&quot;:{&quot;value&quot;:[&quot;state&quot;,&quot;filters&quot;,&quot;popatrisk&quot;,&quot;{{ filter.output }}&quot;],&quot;filter&quot;:[&quot;map_config&quot;,&quot;featurelayers&quot;,&quot;popatrisk&quot;,&quot;filters&quot;,&quot;{{ $index }}&quot;]}}\"\n      data-intent-ctrl=\"geodash-map-filter\">\n      <i class=\"fa fa-info-circle\"></i>\n    </a>\n    <span ng-bind-html=\"filter.title | md2html\"></span> :\n  </div>\n  <div\n    class=\"btn-group\"\n    style=\"float:left;\"\n    data-toggle=\"buttons\"\n    data-layer=\"{{ filter.layer }}\"\n    data-output=\"{{ filter.output }}\">\n    <label\n      ng-repeat=\"opt in filter.ui.radio.options track by $index\"\n      ng-class=\"opt.checked ? \'btn btn-default active\' : \'btn btn-default\'\">\n      <input\n        type=\"radio\"\n        id=\"{{ opt.id }}\"\n        name=\"{{ opt.name }}\"\n        value=\"{{ opt.value }}\"\n        data-output=\"{{ filter.output }}\"\n        ng-checked=\"opt.checked || opt.selected\"/>\n      {{ opt.label }}\n    </label>\n  </div>\n</div>\n";
 geodash.templates.static["filter_slider.tpl.html"] = "<div\n  class=\"col-md-12 geodash-filter geodash-filter-slider\"\n  style=\"min-height: {{ filter.ui.height }};\">\n  <div class=\"geodash-filter-label\">\n    <a\n      class=\"geodash-intent\"\n      data-intent-name=\"toggleModal\"\n      data-intent-data=\"{&quot;id&quot;:&quot;geodash-modal-filter-more&quot;,&quot;static&quot;:{&quot;tab&quot;:&quot;modal-filter-more-general&quot;},&quot;dynamic&quot;:{&quot;value&quot;:[&quot;state&quot;,&quot;filters&quot;,&quot;popatrisk&quot;,&quot;{{ filter.output }}&quot;],&quot;filter&quot;:[&quot;map_config&quot;,&quot;featurelayers&quot;,&quot;popatrisk&quot;,&quot;filters&quot;,&quot;{{ $index }}&quot;]}}\"\n      data-intent-ctrl=\"geodash-map-filter\">\n      <i class=\"fa fa-info-circle\"></i>\n    </a>\n    <span ng-bind-html=\"filter.title | md2html\"></span> :\n  </div>\n  <div style=\"display:table; height:{{ filter.ui.height }};padding-left:10px;padding-right:10px;\">\n    <div style=\"display:table-cell;vertical-align:middle;\">\n      <div class=\"geodash-filter-slider-label\">Placeholder</div>\n      <div\n        class=\"geodash-filter-slider-slider\"\n        style=\"width:{{ filter.ui.slider.width }};\"\n        data-layer=\"{{ filter.layer }}\"\n        data-type=\"{{ filter.ui.slider.type }}\"\n        data-value=\"{{ filter.ui.slider.value ? filter.ui.slider.value : \'\' }}\"\n        data-values=\"{{ filter.ui.slider.values ? filter.ui.slider.values : \'\' }}\"\n        data-range=\"{{ filter.ui.slider.range == \'true\' ? \'true\': filter.ui.slider.range }}\"\n        data-output=\"{{ filter.output }}\"\n        data-min-value=\"{{ filter.ui.slider.min|default_if_undefined:\'\' }}\"\n        data-max-value=\"{{ filter.ui.slider.max|default_if_undefined:\'\' }}\"\n        data-step=\"{{ filter.ui.slider.step ? filter.ui.slider.step : \'\' }}\"\n        data-options=\"{{ filter.ui.slider.options ? filter.ui.slider.options : \'\' }}\"\n        data-label-template=\"{{ filter.ui.slider.label }}\"\n        ></div>\n    </div>\n  </div>\n</div>\n";
 geodash.templates.static["sparc_modal_layer.tpl.html"] = "<div\n  id=\"sparc-modal-layer\"\n  class=\"geodash-controller geodash-controller-modal geodash-modal modal fade\"\n  tabindex=\"-1\"\n  role=\"dialog\"\n  aria-labelledby=\"myModalLabel\">\n  <div class=\"modal-dialog\" data-backdrop=\"static\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"myModalLabel\" ng-bind-html=\"layer.title | prepend: \'Layer: \'\"></h5>\n      </div>\n      <div class=\"modal-body\">\n        <div>\n          <div geodash-tabs></div>\n          <div class=\"tab-content\">\n            <div\n              id=\"sparc-modal-layer-general\"\n              class=\"tab-pane fade in active\"\n              role=\"tabpanel\"\n              style=\"padding: 10px;\">\n              <span ng-bind-html=\"layer.description | md2html | default_if_undefined_or_blank : \'No description given.\'\"></span>\n              <div><b>Type: </b><span ng-bind-html=\"layer.type\"></span></div>\n            </div>\n            <div\n              id=\"sparc-modal-layer-attributes\"\n              class=\"tab-pane fade in active\"\n              role=\"tabpanel\"\n              style=\"padding: 10px;\">\n            </div>\n            <div\n              id=\"sparc-modal-layer-source\"\n              class=\"tab-pane fade in active\"\n              role=\"tabpanel\"\n              style=\"padding: 10px;\">\n              <span ng-bind-html=\"layer | extract : \'source\' : \'name\' | md2html | default_if_undefined_or_blank : \'No source given.\'\"></span>\n            </div>\n            <div\n              id=\"sparc-modal-layer-download\"\n              class=\"tab-pane fade in active\"\n              role=\"tabpanel\"\n              style=\"padding: 10px;\">\n              <div ng-if=\"layer.download.links | filter : {\'type\': \'api\'} : true | length | gt : 0\">\n                <h6>API</h6>\n                <a\n                  ng-repeat=\"link in layer.download.links | filter : {\'type\': \'api\'} : true track by $index\"\n                  class=\"btn btn-xs btn-primary\"\n                  style=\"display: inline-block;margin-right: 2px;\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"{{ link | extract : \'tooltip\' : \'placement\' | default_if_undefined : \'bottom\' }}\"\n                  data-container=\"#sparc-modal-layer\"\n                  title=\"{{ link | extract : \'tooltip\' : \'title\' }}\"\n                  target=\"_blank\"\n                  ng-href=\"{{ render_link(layer, link, \'api\') }}\"\n                  ng-bind-html=\"link.title\">\n                </a>\n              </div>\n              <div ng-if=\"layer.download.links | filter : {\'type\': \'export\'} : true | length | gt : 0\">\n                <h6>Export</h6>\n                <a\n                  ng-repeat=\"link in layer.download.links | filter : {\'type\': \'export\'} : true track by $index\"\n                  class=\"btn btn-xs btn-primary\"\n                  style=\"display: inline-block;margin-right: 2px;\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"{{ link | extract : \'tooltip\' : \'placement\' | default_if_undefined : \'bottom\' }}\"\n                  data-container=\"#sparc-modal-layer\"\n                  title=\"{{ link | extract : \'tooltip\' : \'title\' }}\"\n                  target=\"_blank\"\n                  ng-href=\"{{ render_link(layer, link, \'export\') }}\"\n                  ng-bind-html=\"link.title\">\n                </a>\n              </div>\n              <div ng-if=\"layer.download.links | filter : {\'type\': \'export_month\'} : true | length | gt : 0\">\n                <h6>Export Current Month</h6>\n                <a\n                  ng-repeat=\"link in layer.download.links | filter : {\'type\': \'export_month\'} : true track by $index\"\n                  class=\"btn btn-xs btn-primary\"\n                  style=\"display: inline-block;margin-right: 2px;\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"{{ link | extract : \'tooltip\' : \'placement\' | default_if_undefined : \'bottom\' }}\"\n                  data-container=\"#sparc-modal-layer\"\n                  title=\"{{ link | extract : \'tooltip\' : \'title\' }}\"\n                  target=\"_blank\"\n                  ng-href=\"{{ render_link(layer, link, \'export_month\') }}\"\n                  ng-bind-html=\"link.title\">\n                </a>\n              </div>\n              <div ng-if=\"layer.download.links | filter : {\'type\': \'export_month\'} : true | length | gt : 0\">\n                <h6>Export Current Month + Current Filters</h6>\n                <a\n                  ng-repeat=\"link in layer.download.links | filter : {\'type\': \'export_month\'} : true track by $index\"\n                  class=\"btn btn-xs btn-primary\"\n                  style=\"display: inline-block;margin-right: 2px;\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"{{ link | extract : \'tooltip\' : \'placement\' | default_if_undefined : \'bottom\' }}\"\n                  data-container=\"#sparc-modal-layer\"\n                  title=\"{{ link | extract : \'tooltip\' : \'title\' }}\"\n                  target=\"_blank\"\n                  ng-href=\"{{ render_link(layer, link, \'export_month_filters\') }}\"\n                  ng-bind-html=\"link.title\">\n                </a>\n              </div>\n            </div>\n            <div\n              id=\"sparc-modal-layer-links\"\n              class=\"tab-pane fade in active\"\n              role=\"tabpanel\"\n              style=\"padding: 10px;\">\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n      </div>\n    </div>\n  </div>\n</div>\n";
-geodash.templates.static["sparc_modal_welcome.tpl.html"] = "<div\n  id=\"geodash-modal-sparc-welcome\"\n  class=\"geodash-controller geodash-controller-modal geodash-modal modal fade geodash-sparc-welcome\"\n  tabindex=\"-1\"\n  role=\"dialog\"\n  aria-labelledby=\"myModalLabel\">\n  <div class=\"modal-dialog\" data-backdrop=\"static\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"row\">\n        <div class=\"col-sm-6 no-float left\">\n          <img src=\"http://www1.wfp.org/themes/custom/wfp_org/images/logos/wfp-logo-extended-white-en.svg\" alt=\"logo\" width=\"auto\" height=\"auto\">\n\n          <div class=\"search-risk-form\">\n\n            <!-- Search -->\n            <label>Select a country &amp; hazard</label>\n            <div class=\"input-group select2-bootstrap-prepend select2-bootstrap-append\">\n              <input\n                id=\"country-input\"\n                name=\"country-input\"\n                type=\"text\"\n                class=\"typeahead form-control\"\n                style=\"height: auto;\"\n                placeholder=\"Country (e.g., Haiti or Philippines)\"\n                aria-describedby=\"country-addon\"\n                data-placeholder=\"Country (e.g., Haiti, Nepal, or Philippines)\"\n                data-typeahead-datasets=\"Countries\"\n                data-target-scope-id=\"geodash-modal-sparc-welcome\"\n                data-target-scope-path=\"country\"\n                data-search-output=\"id\"\n                data-template-empty=\"<div class=&quot;alert alert-danger empty-message&quot;>Unable to find country</div>\">\n                <div\n                  class=\"input-group-addon btn btn-primary btn-show-options\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"bottom\"\n                  title=\"Show Options\"\n                  ng-click=\"showOptions(\'#country-input\')\">\n                  <i class=\"fa fa-chevron-down\"></i>\n                </div>\n                <div\n                  class=\"input-group-addon btn btn-danger geodash-clear\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"bottom\"\n                  title=\"Clear Selection\"\n                  data-target-input-id=\"country-input\">\n                  <i class=\"fa fa-times\"></i>\n                </div>\n            </div>\n            <div class=\"input-group select2-bootstrap-prepend select2-bootstrap-append\">\n              <!-- <span class=\"input-group-addon\" id=\"hazard-addon\">Hazard</span> -->\n              <input\n                id=\"hazard-input\"\n                name=\"hazard-input\"\n                type=\"text\"\n                class=\"typeahead form-control\"\n                style=\"height: auto;\"\n                placeholder=\"Hazard (e.g., Flood, Cyclone, Drought, or Landslide)\"\n                aria-describedby=\"hazard-addon\"\n                data-placeholder=\"Hazard (e.g., Flood, Cyclone, Drought, or Landslide)\"\n                data-typeahead-datasets=\"Hazards\"\n                data-target-scope-id=\"geodash-modal-sparc-welcome\"\n                data-target-scope-path=\"hazard\"\n                data-search-output=\"id\"\n                data-template-empty=\"<div class=&quot;empty-message&quot;>Unable to find hazard</div>\">\n                <div\n                  class=\"input-group-addon btn btn-primary btn-show-options\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"bottom\"\n                  title=\"Show Options\"\n                  ng-click=\"showOptions(\'#hazard-input\')\">\n                  <i class=\"fa fa-chevron-down\"></i>\n                </div>\n                <div\n                  class=\"input-group-addon btn btn-danger geodash-clear\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"bottom\"\n                  title=\"Clear Selection\"\n                  data-target-input-id=\"hazard-input\">\n                  <i class=\"fa fa-times\"></i>\n                </div>\n            </div>\n            <ul class=\"nav nav-justified welcome-go\">\n              <li>\n                <a\n                  ng-disabled=\"country == undefined || hazard == undefined || country == \'\' || hazard == \'\'\"\n                  ng-class=\"country == undefined || hazard == undefined || country == \'\' || hazard == \'\' ? \'btn btn-default\' : \'btn btn-primary\' \"\n                  ng-href=\"{{ country == undefined || hazard == undefined || country == \'\' || hazard == \'\' ? \'#\' : \'/country/\'+country+\'/hazard/\'+hazard +\'/month/1\' }}\">Go!</a>\n              </li>\n            </ul>\n\n\n            <!-- End of Search -->\n\n          </div>\n        </div>\n        <div class=\"col-sm-6 no-float right\">\n          <div class=\"modal-body\">\n            <h1>SPARC</h1>\n            <h3>Spatial Risk Calendar</h3>\n            <div>\n              <div class=\"tab-content\">\n                <!-- <div\n                  id=\"modal-sparc-welcome-intro\"\n                  class=\"\"\n                  role=\"\"\n                  style=\"padding: 0\">\n                  <span\n                    class=\"welcome-body\"\n                    ng-bind-html=\"dashboard.welcome.intro | md2html | default:\'No body given.\'\"></span>\n                </div> -->\n                <div\n                  id=\"modal-sparc-welcome-about\"\n                  class=\"\"\n                  role=\"\"\n                  style=\"padding: 0\">\n                  <span ng-bind-html=\"dashboard.welcome.about | md2html | default:\'No body given.\'\"></span>\n                </div>\n              </div>\n            </div>\n          </div>\n\n        </div>\n      </div>\n\n\n\n    </div>\n  </div>\n</div>\n";
+geodash.templates.static["sparc_modal_welcome.tpl.html"] = "<div\n  id=\"geodash-modal-sparc-welcome\"\n  class=\"geodash-controller geodash-controller-modal geodash-modal modal fade geodash-sparc-welcome\"\n  tabindex=\"-1\"\n  role=\"dialog\"\n  aria-labelledby=\"myModalLabel\">\n  <div class=\"modal-dialog\" data-backdrop=\"static\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"row\">\n        <div class=\"col-sm-6 no-float left\">\n          <img src=\"http://www1.wfp.org/themes/custom/wfp_org/images/logos/wfp-logo-extended-white-en.svg\" alt=\"logo\" width=\"auto\" height=\"auto\">\n\n          <div class=\"search-risk-form\">\n\n            <!-- Search -->\n            <label>Select a country &amp; hazard</label>\n            <div class=\"input-group select2-bootstrap-prepend select2-bootstrap-append\">\n              <input\n                id=\"country-input\"\n                name=\"country-input\"\n                type=\"text\"\n                class=\"typeahead form-control\"\n                style=\"height: auto;\"\n                placeholder=\"Country (e.g., Haiti or Philippines)\"\n                aria-describedby=\"country-addon\"\n                data-placeholder=\"Country (e.g., Haiti, Nepal, or Philippines)\"\n                data-typeahead-datasets=\"Countries\"\n                data-target-scope-id=\"geodash-modal-sparc-welcome\"\n                data-target-scope-path=\"country\"\n                data-search-output=\"id\"\n                data-template-empty=\"<div class=&quot;alert alert-danger empty-message&quot;>Unable to find country</div>\">\n                <div\n                  class=\"input-group-addon btn btn-primary btn-show-options\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"bottom\"\n                  title=\"Show Options\"\n                  ng-click=\"showOptions(\'#country-input\')\">\n                  <i class=\"fa fa-chevron-down\"></i>\n                </div>\n                <div\n                  class=\"input-group-addon btn btn-danger geodash-clear\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"bottom\"\n                  title=\"Clear Selection\"\n                  data-target-input-id=\"country-input\">\n                  <i class=\"fa fa-times\"></i>\n                </div>\n            </div>\n            <div class=\"input-group select2-bootstrap-prepend select2-bootstrap-append\">\n              <!-- <span class=\"input-group-addon\" id=\"hazard-addon\">Hazard</span> -->\n              <input\n                id=\"hazard-input\"\n                name=\"hazard-input\"\n                type=\"text\"\n                class=\"typeahead form-control\"\n                style=\"height: auto;\"\n                placeholder=\"Hazard (e.g., Flood, Cyclone, Drought, or Landslide)\"\n                aria-describedby=\"hazard-addon\"\n                data-placeholder=\"Hazard (e.g., Flood, Cyclone, Drought, or Landslide)\"\n                data-typeahead-datasets=\"Hazards\"\n                data-target-scope-id=\"geodash-modal-sparc-welcome\"\n                data-target-scope-path=\"hazard\"\n                data-search-output=\"id\"\n                data-template-empty=\"<div class=&quot;empty-message&quot;>Unable to find hazard</div>\">\n                <div\n                  class=\"input-group-addon btn btn-primary btn-show-options\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"bottom\"\n                  title=\"Show Options\"\n                  ng-click=\"showOptions(\'#hazard-input\')\">\n                  <i class=\"fa fa-chevron-down\"></i>\n                </div>\n                <div\n                  class=\"input-group-addon btn btn-danger geodash-clear\"\n                  data-toggle=\"tooltip\"\n                  data-placement=\"bottom\"\n                  title=\"Clear Selection\"\n                  data-target-input-id=\"hazard-input\">\n                  <i class=\"fa fa-times\"></i>\n                </div>\n            </div>\n            <ul class=\"nav nav-justified welcome-go\">\n              <li>\n                <a\n                  ng-disabled=\"country == undefined || hazard == undefined || country == \'\' || hazard == \'\'\"\n                  ng-class=\"country == undefined || hazard == undefined || country == \'\' || hazard == \'\' ? \'btn btn-default\' : \'btn btn-primary\' \"\n                  ng-href=\"{{ country == undefined || hazard == undefined || country == \'\' || hazard == \'\' ? \'#\' : \'/country/\'+country+\'/hazard/\'+hazard +\'/month/1\' }}\">Go!</a>\n              </li>\n            </ul>\n\n\n            <!-- End of Search -->\n\n          </div>\n        </div>\n        <div class=\"col-sm-6 no-float right\">\n          <div class=\"modal-body\">\n            <div class=\"tab-content\">\n              <div role=\"tabpanel\" class=\"tab-pane fade in active\" id=\"welcome\">\n                <h1>SPARC</h1>\n                <h3>Spatial Risk Calendar</h3>\n                <div>\n                  <div class=\"tab-content\">\n                    <div\n                      id=\"modal-sparc-welcome-about\"\n                      class=\"\"\n                      role=\"\"\n                      style=\"padding: 0\">\n                      <span ng-bind-html=\"dashboard.welcome.about | md2html | default:\'No body given.\'\"></span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n              <div role=\"tabpanel\" class=\"tab-pane fade\" id=\"tutorial\">\n                <h1>SPARC</h1>\n                <h3>Tutorial</h3>\n                <div class=\"tab-content\">\n                  <div class=\"embed-responsive embed-responsive-16by9 video-tutorial\">\n                    <iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/CQHMEaOiw0g\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>\n                  </div>\n                </div>\n              </div>\n              <ul class=\"nav nav-tabs\" role=\"tablist\">\n                <li role=\"presentation\" class=\"active\"><a href=\"#welcome\" aria-controls=\"welcome\" role=\"tab\" data-toggle=\"tab\">Welcome</a></li>\n                <li role=\"presentation\"><a href=\"#tutorial\" aria-controls=\"tutorial\" role=\"tab\" data-toggle=\"tab\">Tutorial</a></li>\n              </ul>\n            </div>\n          </div>\n\n        </div>\n      </div>\n\n\n\n    </div>\n  </div>\n</div>\n";
 geodash.templates.static["main.tpl.html"] = "<div\n  class=\"row geodash-row geodash-main geodash-dashboard geodash-controller\">\n  <div\n    id=\"geodash-map\"\n    class=\"row geodash-row geodash-map geodash-controller\"\n    geodash-base>\n    <div data-geodash-controllers=\"GeoDashControllerOverlays\" geodash-map-overlays></div>\n    <div data-geodash-controllers=\"GeoDashControllerMapNavbars\" geodash-map-navbars></div>\n    <div data-geodash-controllers=\"GeoDashControllerLegend\" geodash-map-legend></div>\n    <div id=\"map\" data-geodash-controllers=\"GeoDashControllerMapMap\" geodash-map-map></div>\n    <div id=\"geodash-popups\" style=\"display:none;\">\n      <div id=\"popup\"></div>\n    </div>\n  </div>\n  <div id=\"geodash-modals\"></div>\n</div>\n";
 
 var MONTHS_NUM = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -1250,10 +1250,9 @@ geodash.handlers["clickedOnMap"] = function($scope, $interpolate, $http, $q, eve
           'location': geodash.normalize.point(ol.proj.toLonLat(map.getCoordinateFromPixel([args.pixel.x, args.pixel.y]), map.getView().getProjection()))
         };
       },
-      {
-        layerFilter: function(layer) {
-          return $.inArray(layer.get('id'), featurelayers_geojson) != -1;
-        }
+      null,
+      function(layer) {
+        return $.inArray(layer.get('id'), featurelayers_geojson) != -1;
       }
     );
   }
@@ -1279,21 +1278,19 @@ geodash.handlers["clickedOnMap"] = function($scope, $interpolate, $http, $q, eve
           var fl = featurelayers_by_featuretype[featureAndLocation.feature.featuretype] || featurelayers_by_featuretype["geonode:"+featureAndLocation.feature.featuretype];
           $scope.$broadcast("openPopup", {
             'featureLayer': fl,
-            'feature': geodash.normalize.feature(featureAndLocation.feature),
+            'feature': featureAndLocation.feature,
             'location': geodash.normalize.point(featureAndLocation.location)
           });
         }
         else
         {
-          $("#popup").popover('dispose');
-          map.getOverlays().item(0).setPosition(undefined);
+          $("#popup").popover('destroy');
         }
       });
     }
     else
     {
-      $("#popup").popover('dispose');
-      map.getOverlays().item(0).setPosition(undefined);
+      $("#popup").popover('destroy');
     }
   }
 };
@@ -1342,44 +1339,6 @@ geodash.handlers["hideLayers"] = function($scope, $interpolate, $http, $q, event
         $scope.refreshMap($scope.state);
       }
     }
-};
-
-geodash.handlers.hideModal = function($scope, $interpolate, $http, $q, event, args)
-{
-  var id = args["id_hide"] || args["id"];
-
-  try { $("#"+id).modal('hide'); } catch(err){ console.log(err); };
-
-  try {
-    
-    var that = $("#"+id);
-    $("body").removeClass("modal-open");
-    $("body").css({"padding-right": "0"});
-    that.removeClass("show");
-    that.css({"display": "none"});
-    $(".modal-backdrop").remove();
-    var bsModal = that.data('bs.modal');
-    bsModal["_isShown"] = false;
-    bsModal["_isTransitioning"] = false;
-    that.data('bs.modal', bsModal);
-
-  } catch(err){ console.log(err); };
-
-  try {
-    var modal_scope = geodash.util.getScope(id);
-    var aClear = args["clear"];
-    if("clear" in args && args["clear"] != undefined)
-    {
-      modal_scope.$apply(function () {
-        $.each(aClear,function(i, x){
-          modal_scope[x] = undefined;
-        });
-      });
-    }
-  } catch(err) {
-    console.log(err);
-  }
-
 };
 
 geodash.handlers["layerLoaded"] = function($scope, $interpolate, $http, $q, event, args) {
@@ -1445,71 +1404,6 @@ geodash.handlers["showLayers"] = function($scope, $interpolate, $http, $q, event
         $scope.refreshMap($scope.state);
       }
     }
-};
-
-geodash.handlers.showModal = function($scope, $interpolate, $http, $q, event, args) {
-  console.log('event', event);
-  console.log('args', args);
-  //
-  var id = args["id_show"] || args["id"];
-  var modal_scope = geodash.util.getScope(id);
-  var modal_scope_new = geodash.api.buildScope(event, args);
-  var modalOptions = args['modal'] || {};
-  modalOptions['show'] = false;
-  modal_scope.$apply(function () {
-    // Update Scope
-    //modal_scope = $.extend(modal_scope, modal_scope_new);
-    //$.each(modal_scope_new, function(key, value){ modal_scope[key] = value; });
-    /////////////////
-    modal_scope.push(modal_scope_new);// Pushes New Scope to Modal's Stack
-    /////////////////
-    setTimeout(function(){
-      // Update Modal Tab Selection
-      // See https://github.com/angular-ui/bootstrap/issues/1741
-      var modalElement = $("#"+id);
-      if(geodash.util.isDefined(modal_scope.focus))
-      {
-        $(modal_scope.focus).focus();
-      }
-      var targetTab = modal_scope.tab;
-      if(geodash.util.isDefined(targetTab))
-      {
-        modalElement.find('.nav-tabs li').each(function(){
-          var that = $(this);
-          var thisTab = that.find('a').attr('href').substring(1);
-          if(targetTab == thisTab)
-          {
-              that.addClass('active');
-          }
-          else
-          {
-              that.removeClass('active');
-          }
-        });
-        modalElement.find('.tab-pane').each(function(){
-          var that = $(this);
-          if(targetTab == that.attr('id'))
-          {
-              that.addClass('in active');
-          }
-          else
-          {
-              that.removeClass('in active');
-          }
-        });
-      }
-      else
-      {
-        modalElement.find('.nav-tabs li').slice(0, 1).addClass('active');
-        modalElement.find('.nav-tabs li').slice(1).removeClass('active');
-        modalElement.find('.tab-pane').slice(0, 1).addClass('in active');
-        modalElement.find('.tab-pane').slice(1).removeClass('in active');
-      }
-      geodash.ui.update(id);
-      $("#"+id).modal(modalOptions);
-      $("#"+id).modal('toggle');
-    },0);
-  });
 };
 
 geodash.handlers["stateChanged"] = function($scope, $interpolate, $http, $q, event, args) {
@@ -1599,12 +1493,12 @@ geodash.handlers.toggleControl = function($scope, $interpolate, $http, $q, event
 geodash.handlers["viewChanged"] = function($scope, $interpolate, $http, $q, event, args) {
   console.log('event', event);
   console.log('args', args);
-
-  $.extend($scope.state.view, args);
-
-  geodash.history.pushState($interpolate, $scope);
-
-  $scope.refreshMap($scope.state); // Notify other components of view change
+  $scope.state.view = $.extend($scope.state.view, args);
+  var url = buildPageURL($interpolate, $scope.dashboard, $scope.state);
+  if(url != undefined)
+  {
+    history.replaceState($scope.state, "", url);
+  }
 };
 
 geodash.handlers.zoomIn = function($scope, $interpolate, $http, $q, event, args)
@@ -1612,8 +1506,7 @@ geodash.handlers.zoomIn = function($scope, $interpolate, $http, $q, event, args)
   var z = geodash.var.map.getView().getZoom();
   var maxZoom = extract("dashboard.view.maxZoom", $scope, 18);
   var newZoom = Math.min(z+1, maxZoom);
-  var animate = extract("animate", args, true);
-  $scope.$broadcast("changeView", { 'zoom': newZoom, 'animate': animate });
+  $scope.$broadcast("changeView", { 'zoom': newZoom });
 };
 
 geodash.handlers.zoomOut = function($scope, $interpolate, $http, $q, event, args)
@@ -1621,8 +1514,7 @@ geodash.handlers.zoomOut = function($scope, $interpolate, $http, $q, event, args
   var z = geodash.var.map.getView().getZoom();
   var minZoom = extract("dashboard.view.minZoom", $scope, 0);
   var newZoom = Math.max(z-1, minZoom);
-  var animate = extract("animate", args, true);
-  $scope.$broadcast("changeView", { 'zoom': newZoom, 'animate': animate });
+  $scope.$broadcast("changeView", { 'zoom': newZoom });
 };
 
 geodash.handlers["zoomToLayer"] = function($scope, $interpolate, $http, $q, event, args) {
@@ -1668,49 +1560,11 @@ geodash.handlers.flyToLocation = function($scope, $interpolate, $http, $q, event
     });
 };
 
-geodash.handlers.flyToCurrentLocation = function($scope, $interpolate, $http, $q, event, args)
-{
-    var $scope = geodash.util.getScope("geodash-main");
-    var v = geodash.var.map.getView();
-    if(navigator.geolocation)
-    {
-      var duration = extract("duration", args);
-      navigator.geolocation.getCurrentPosition(
-        function(position){
-          $scope.$broadcast("changeView", {
-            "lat": extract(["coords","latitude"], position, 0.0),
-            "lon": extract(["coords","longitude"], position, 0.0),
-            "zoom": 14,
-            "projection": "EPSG:4326",
-            "animations": ["pan", "bounce"],
-            "duration": duration
-          });
-        },
-        function showError(error) {
-          switch(error.code) {
-              case error.PERMISSION_DENIED:
-                  console.log("User denied the request for Geolocation.");
-                  break;
-              case error.POSITION_UNAVAILABLE:
-                  console.log("Location information is unavailable.");
-                  break;
-              case error.TIMEOUT:
-                  console.log("The request to get user location timed out.");
-                  break;
-              case error.UNKNOWN_ERROR:
-                  console.log("An unknown error occurred.");
-                  break;
-          }
-        }
-      );
-    }
-};
-
 geodash.handlers.printMap = function() {
   $('.geodash-sidebar-header-country, #geodash-sidebar-left-charts-chart-popatrisk, #map, .geodash-map-legend-layer, .ol-scale-line').printThis({
     canvas: true,
     header: "<div style='float:left; height: 1.5cm; width: 2.5cm;'><img style='height: 1.5cm; margin-right: 1cm' src='/static/sparc2/build/img/en-emblem.svg'></div><div style='float:left; margin-top: 0;'><h1 style='line-height:1rem'>SPARC</h1><span style='font-size: 1rem; font-weight:300;'>Spatial Risk Calendar</span></h2></div><div style='clear:both; margin-bottom:1cm'></div>",
-    footer: "<p style='margin-top: 1cm'><img style='height: 1cm; margin-left: 0.5cm; margin-right: 1cm; margin-top: -2cm; position: fixed; z-index: 99999' src='/static/sparc2/build/img/north_pointer.svg'><br><small>Data Sources:<br>Boundaries: WFP, UNGIWG, GAUL. Roads and settlements: OSM, GeoNames.<br>The boundaries and names and the designations used on this map do not imply official endorsement or acceptance by the United Nations.</small></p>"
+    footer: "<p style='margin-top: 1cm'><img style='height: 1cm; margin-left: 0.5cm; margin-right: 1cm; margin-top: -2cm; position: fixed; right: 0; z-index: 99999' src='/static/sparc2/build/img/north_pointer.svg'><br><small>Data Sources:<br>Boundaries: WFP, UNGIWG, GAUL. Roads and settlements: OSM, GeoNames.<br>The boundaries and names and the designations used on this map do not imply official endorsement or acceptance by the United Nations.</small></p>"
   });
 };
 
@@ -1733,152 +1587,6 @@ geodash.handlers.toggleFullScreen = function($scope, $interpolate, $http, $q, ev
         }
       }
     }
-};
-
-geodash.handlers.startGeolocation = function($scope, $interpolate, $http, $q, event, args)
-{
-  var $scope = geodash.util.getScope("geodash-main");
-  var v = geodash.var.map.getView();
-  if(navigator.geolocation)
-  {
-    if(! geodash.util.isDefined(extract("var.geolocation.watch", geodash)))
-    {
-      geodash.var.geolocation.watch = navigator.geolocation.watchPosition(
-        function(position){
-          var lon = extract(["coords", "longitude"], position, 0.0);
-          var lat = extract(["coords", "latitude"], position, 0.0);
-          if(lon != 0.0 && lat != 0.0)
-          {
-            var accuracy = extract(["coords", "accuracy"], position, 0.0);
-            var coords = [lon, lat];
-            geodash.var.geolocation.lonlat = coords;
-            var fl = extract("var.featurelayers.current_position", geodash);
-            if(geodash.util.isDefined(fl))
-            {
-              var geom = new ol.geom.Point(ol.proj.transform(coords, "EPSG:4326", v.getProjection()));
-              var source = fl.getSource();
-              var features = source.getFeatures();
-              if(features.length > 0)
-              {
-                features[0].setProperties({"accuracy": accuracy});
-                features[0].setGeometry(geom);
-              }
-              else
-              {
-                source.addFeature(new ol.Feature({
-                  "accuracy": accuracy,
-                  "geometry": geom
-                }));
-              }
-            }
-          }
-        },
-        function showError(error) {
-          switch(error.code) {
-              case error.PERMISSION_DENIED:
-                  console.log("User denied the request for Geolocation.");
-                  break;
-              case error.POSITION_UNAVAILABLE:
-                  console.log("Location information is unavailable.");
-                  break;
-              case error.TIMEOUT:
-                  console.log("The request to get user location timed out.");
-                  break;
-              case error.UNKNOWN_ERROR:
-                  console.log("An unknown error occurred.");
-                  break;
-          }
-        }
-      );
-    }
-  }
-};
-
-geodash.handlers.stopGeolocation = function($scope, $interpolate, $http, $q, event, args)
-{
-    if(navigator.geolocation)
-    {
-      var watch_id = extract("var.geolocation.watch", geodash, undefined);
-      if(geodash.util.isDefined(watch_id))
-      {
-        navigator.geolocation.clearWatch(watch_id);
-        geodash.var.geolocation.watch = undefined;
-        if(geodash.util.isDefined(fl))
-        {
-          fl.getSource().clear();
-        }
-      }
-    }
-};
-
-geodash.handlers.toggleGeolocation = function($scope, $interpolate, $http, $q, event, args)
-{
-  var $scope = geodash.util.getScope("geodash-main");
-  var v = geodash.var.map.getView();
-  if(navigator.geolocation)
-  {
-    var watch_id = extract("var.geolocation.watch", geodash, undefined);
-    if(geodash.util.isDefined(watch_id))
-    {
-      navigator.geolocation.clearWatch(watch_id)
-      geodash.var.geolocation.watch = undefined;
-      var fl = extract("var.featurelayers.current_position", geodash);
-      if(geodash.util.isDefined(fl))
-      {
-        fl.getSource().clear();
-      }
-    }
-    else
-    {
-      geodash.var.geolocation.watch = navigator.geolocation.watchPosition(
-        function(position){
-          var lon = extract(["coords", "longitude"], position, 0.0);
-          var lat = extract(["coords", "latitude"], position, 0.0);
-          if(lon != 0.0 && lat != 0.0)
-          {
-            var accuracy = extract(["coords", "accuracy"], position, 0.0);
-            var coords = [lon, lat];
-            geodash.var.geolocation.lonlat = coords;
-            var fl = extract("var.featurelayers.current_position", geodash);
-            if(geodash.util.isDefined(fl))
-            {
-              var geom = new ol.geom.Point(ol.proj.transform(coords, "EPSG:4326", v.getProjection()));
-              var source = fl.getSource();
-              var features = source.getFeatures();
-              if(features.length > 0)
-              {
-                features[0].setProperties({"accuracy": accuracy});
-                features[0].setGeometry(geom);
-              }
-              else
-              {
-                source.addFeature(new ol.Feature({
-                  "accuracy": accuracy,
-                  "geometry": geom
-                }));
-              }
-            }
-          }
-        },
-        function showError(error) {
-          switch(error.code) {
-              case error.PERMISSION_DENIED:
-                  console.log("User denied the request for Geolocation.");
-                  break;
-              case error.POSITION_UNAVAILABLE:
-                  console.log("Location information is unavailable.");
-                  break;
-              case error.TIMEOUT:
-                  console.log("The request to get user location timed out.");
-                  break;
-              case error.UNKNOWN_ERROR:
-                  console.log("An unknown error occurred.");
-                  break;
-          }
-        }
-      );
-    }
-  }
 };
 
 geodash.directives.ngSvgText = function()

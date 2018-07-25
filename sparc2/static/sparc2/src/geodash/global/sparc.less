@@ -379,7 +379,7 @@ body.modal-open {
   .ol-unselectable:first-child {
       display: block;
     }
-  // This is to print the scalebar but it must be fixed!
+  // This is to print the scalebar but code must be improved!
   .ol-unselectable:last-child {
       display: block;
     }
@@ -418,6 +418,10 @@ body.modal-open {
   .geodash-sidebar .footnote {
     font-size: 0.5rem;
   }
+  .ol-scale-line {
+    bottom: 10px;
+    position: absolute;
+  }
 }
 
 @media print and (orientation: portrait) {
@@ -431,5 +435,9 @@ body.modal-open {
   .geodash-map .sidebar-open {
     min-width: 5cm;
     max-width: 6cm;
+  }
+  .ol-scale-line {
+    bottom: 10px;
+    position: absolute;
   }
 }
